@@ -1,0 +1,383 @@
+﻿"Table G10: Primary Health Networks (PHN) – Women, aged 50–74, by drive time to a BreastScreen Australia screening service location, by service frequency and Indigenous status",,,,,,,,,,,,,,
+Jurisdiction,PHN code,PHN name,Service frequency,Indigenous status,Women (0–20 mins),Women (>20–60 mins),Women (>60–120 mins),Women (>120 mins),Women (total),Proportion (0–20 mins),Proportion (>20–60 mins),Proportion (>60–120 mins),Proportion (>120 mins),Proportion (total)
+New South Wales,PHN101,Central and Eastern Sydney,Open permanently,First Nations women aged 50–74,"1,778",12,–,7,"1,797",98.9%,0.7%,–,0.4%,100.0%
+New South Wales,PHN101,Central and Eastern Sydney,Open permanently,Non-Indigenous women aged 50–74,"191,996",733,–,537,"193,266",99.3%,0.4%,–,0.3%,100.0%
+New South Wales,PHN101,Central and Eastern Sydney,Open permanently,All women aged 50–74,"193,774",745,–,544,"195,063",99.3%,0.4%,–,0.3%,100.0%
+New South Wales,PHN101,Central and Eastern Sydney,Open at least annually,First Nations women aged 50–74,"1,779",11,–,7,"1,797",99.0%,0.6%,–,0.4%,100.0%
+New South Wales,PHN101,Central and Eastern Sydney,Open at least annually,Non-Indigenous women aged 50–74,"192,141",588,–,537,"193,266",99.4%,0.3%,–,0.3%,100.0%
+New South Wales,PHN101,Central and Eastern Sydney,Open at least annually,All women aged 50–74,"193,920",599,–,544,"195,063",99.4%,0.3%,–,0.3%,100.0%
+New South Wales,PHN101,Central and Eastern Sydney,Open at least every 2 years,First Nations women aged 50–74,"1,779",11,–,7,"1,797",99.0%,0.6%,–,0.4%,100.0%
+New South Wales,PHN101,Central and Eastern Sydney,Open at least every 2 years,Non-Indigenous women aged 50–74,"192,141",588,–,537,"193,266",99.4%,0.3%,–,0.3%,100.0%
+New South Wales,PHN101,Central and Eastern Sydney,Open at least every 2 years,All women aged 50–74,"193,920",599,–,544,"195,063",99.4%,0.3%,–,0.3%,100.0%
+New South Wales,PHN101,Central and Eastern Sydney,Open at least once from 2021 to 2024,First Nations women aged 50–74,"1,779",11,–,7,"1,797",99.0%,0.6%,–,0.4%,100.0%
+New South Wales,PHN101,Central and Eastern Sydney,Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"192,141",588,–,537,"193,266",99.4%,0.3%,–,0.3%,100.0%
+New South Wales,PHN101,Central and Eastern Sydney,Open at least once from 2021 to 2024,All women aged 50–74,"193,920",599,–,544,"195,063",99.4%,0.3%,–,0.3%,100.0%
+New South Wales,PHN102,Northern Sydney,Open permanently,First Nations women aged 50–74,377,35,–,–,412,91.5%,8.5%,–,–,100.0%
+New South Wales,PHN102,Northern Sydney,Open permanently,Non-Indigenous women aged 50–74,"122,163","9,571",–,–,"131,734",92.7%,7.3%,–,–,100.0%
+New South Wales,PHN102,Northern Sydney,Open permanently,All women aged 50–74,"122,540","9,605",–,–,"132,145",92.7%,7.3%,–,–,100.0%
+New South Wales,PHN102,Northern Sydney,Open at least annually,First Nations women aged 50–74,406,5,–,–,412,98.7%,1.3%,–,–,100.0%
+New South Wales,PHN102,Northern Sydney,Open at least annually,Non-Indigenous women aged 50–74,"130,811",923,–,–,"131,734",99.3%,0.7%,–,–,100.0%
+New South Wales,PHN102,Northern Sydney,Open at least annually,All women aged 50–74,"131,217",928,–,–,"132,145",99.3%,0.7%,–,–,100.0%
+New South Wales,PHN102,Northern Sydney,Open at least every 2 years,First Nations women aged 50–74,406,5,–,–,412,98.7%,1.3%,–,–,100.0%
+New South Wales,PHN102,Northern Sydney,Open at least every 2 years,Non-Indigenous women aged 50–74,"130,811",923,–,–,"131,734",99.3%,0.7%,–,–,100.0%
+New South Wales,PHN102,Northern Sydney,Open at least every 2 years,All women aged 50–74,"131,217",928,–,–,"132,145",99.3%,0.7%,–,–,100.0%
+New South Wales,PHN102,Northern Sydney,Open at least once from 2021 to 2024,First Nations women aged 50–74,406,5,–,–,412,98.7%,1.3%,–,–,100.0%
+New South Wales,PHN102,Northern Sydney,Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"130,811",923,–,–,"131,734",99.3%,0.7%,–,–,100.0%
+New South Wales,PHN102,Northern Sydney,Open at least once from 2021 to 2024,All women aged 50–74,"131,217",928,–,–,"132,145",99.3%,0.7%,–,–,100.0%
+New South Wales,PHN103,Western Sydney,Open permanently,First Nations women aged 50–74,"1,561",25,<1,–,"1,586",98.4%,1.6%,<0.1%,–,100.0%
+New South Wales,PHN103,Western Sydney,Open permanently,Non-Indigenous women aged 50–74,"118,374","1,613",3,–,"119,990",98.7%,1.3%,<0.1%,–,100.0%
+New South Wales,PHN103,Western Sydney,Open permanently,All women aged 50–74,"119,935","1,638",3,–,"121,576",98.7%,1.3%,<0.1%,–,100.0%
+New South Wales,PHN103,Western Sydney,Open at least annually,First Nations women aged 50–74,"1,582",4,–,–,"1,586",99.7%,0.3%,–,–,100.0%
+New South Wales,PHN103,Western Sydney,Open at least annually,Non-Indigenous women aged 50–74,"119,531",459,–,–,"119,990",99.6%,0.4%,–,–,100.0%
+New South Wales,PHN103,Western Sydney,Open at least annually,All women aged 50–74,"121,113",463,–,–,"121,576",99.6%,0.4%,–,–,100.0%
+New South Wales,PHN103,Western Sydney,Open at least every 2 years,First Nations women aged 50–74,"1,582",4,–,–,"1,586",99.8%,0.2%,–,–,100.0%
+New South Wales,PHN103,Western Sydney,Open at least every 2 years,Non-Indigenous women aged 50–74,"119,563",427,–,–,"119,990",99.6%,0.4%,–,–,100.0%
+New South Wales,PHN103,Western Sydney,Open at least every 2 years,All women aged 50–74,"121,145",431,–,–,"121,576",99.6%,0.4%,–,–,100.0%
+New South Wales,PHN103,Western Sydney,Open at least once from 2021 to 2024,First Nations women aged 50–74,"1,582",4,–,–,"1,586",99.8%,0.2%,–,–,100.0%
+New South Wales,PHN103,Western Sydney,Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"119,563",427,–,–,"119,990",99.6%,0.4%,–,–,100.0%
+New South Wales,PHN103,Western Sydney,Open at least once from 2021 to 2024,All women aged 50–74,"121,145",431,–,–,"121,576",99.6%,0.4%,–,–,100.0%
+New South Wales,PHN104,Nepean Blue Mountains,Open permanently,First Nations women aged 50–74,"1,128",527,6,–,"1,660",67.9%,31.7%,0.4%,–,100.0%
+New South Wales,PHN104,Nepean Blue Mountains,Open permanently,Non-Indigenous women aged 50–74,"38,055","15,215",179,–,"53,449",71.2%,28.5%,0.3%,–,100.0%
+New South Wales,PHN104,Nepean Blue Mountains,Open permanently,All women aged 50–74,"39,182","15,742",185,–,"55,109",71.1%,28.6%,0.3%,–,100.0%
+New South Wales,PHN104,Nepean Blue Mountains,Open at least annually,First Nations women aged 50–74,"1,596",61,3,–,"1,660",96.1%,3.7%,0.2%,–,100.0%
+New South Wales,PHN104,Nepean Blue Mountains,Open at least annually,Non-Indigenous women aged 50–74,"51,226","2,129",94,–,"53,449",95.8%,4.0%,0.2%,–,100.0%
+New South Wales,PHN104,Nepean Blue Mountains,Open at least annually,All women aged 50–74,"52,822","2,191",97,–,"55,109",95.8%,4.0%,0.2%,–,100.0%
+New South Wales,PHN104,Nepean Blue Mountains,Open at least every 2 years,First Nations women aged 50–74,"1,597",62,<1,–,"1,660",96.2%,3.8%,<0.1%,–,100.0%
+New South Wales,PHN104,Nepean Blue Mountains,Open at least every 2 years,Non-Indigenous women aged 50–74,"51,260","2,139",50,–,"53,449",95.9%,4.0%,<0.1%,–,100.0%
+New South Wales,PHN104,Nepean Blue Mountains,Open at least every 2 years,All women aged 50–74,"52,857","2,202",50,–,"55,109",95.9%,4.0%,<0.1%,–,100.0%
+New South Wales,PHN104,Nepean Blue Mountains,Open at least once from 2021 to 2024,First Nations women aged 50–74,"1,597",62,<1,–,"1,660",96.2%,3.8%,<0.1%,–,100.0%
+New South Wales,PHN104,Nepean Blue Mountains,Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"51,260","2,139",50,–,"53,449",95.9%,4.0%,<0.1%,–,100.0%
+New South Wales,PHN104,Nepean Blue Mountains,Open at least once from 2021 to 2024,All women aged 50–74,"52,857","2,201",50,–,"55,109",95.9%,4.0%,<0.1%,–,100.0%
+New South Wales,PHN105,South Western Sydney,Open permanently,First Nations women aged 50–74,"1,783",218,<1,<1,"2,002",89.1%,10.9%,<0.1%,<0.1%,100.0%
+New South Wales,PHN105,South Western Sydney,Open permanently,Non-Indigenous women aged 50–74,"126,869","9,541",9,<1,"136,418",93.0%,7.0%,<0.1%,<0.1%,100.0%
+New South Wales,PHN105,South Western Sydney,Open permanently,All women aged 50–74,"128,652","9,759",9,<1,"138,420",92.9%,7.1%,<0.1%,<0.1%,100.0%
+New South Wales,PHN105,South Western Sydney,Open at least annually,First Nations women aged 50–74,"1,831",171,<1,–,"2,002",91.5%,8.5%,<0.1%,–,100.0%
+New South Wales,PHN105,South Western Sydney,Open at least annually,Non-Indigenous women aged 50–74,"130,009","6,402",7,–,"136,418",95.3%,4.7%,<0.1%,–,100.0%
+New South Wales,PHN105,South Western Sydney,Open at least annually,All women aged 50–74,"131,840","6,573",7,–,"138,420",95.2%,4.7%,<0.1%,–,100.0%
+New South Wales,PHN105,South Western Sydney,Open at least every 2 years,First Nations women aged 50–74,"1,958",43,<1,–,"2,002",97.8%,2.2%,<0.1%,–,100.0%
+New South Wales,PHN105,South Western Sydney,Open at least every 2 years,Non-Indigenous women aged 50–74,"133,794","2,620",5,–,"136,418",98.1%,1.9%,<0.1%,–,100.0%
+New South Wales,PHN105,South Western Sydney,Open at least every 2 years,All women aged 50–74,"135,752","2,663",5,–,"138,420",98.1%,1.9%,<0.1%,–,100.0%
+New South Wales,PHN105,South Western Sydney,Open at least once from 2021 to 2024,First Nations women aged 50–74,"1,960",42,<1,–,"2,002",97.9%,2.1%,<0.1%,–,100.0%
+New South Wales,PHN105,South Western Sydney,Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"133,927","2,486",5,–,"136,418",98.2%,1.8%,<0.1%,–,100.0%
+New South Wales,PHN105,South Western Sydney,Open at least once from 2021 to 2024,All women aged 50–74,"135,887","2,528",5,–,"138,420",98.2%,1.8%,<0.1%,–,100.0%
+New South Wales,PHN106,South Eastern NSW,Open permanently,First Nations women aged 50–74,"1,930",841,104,4,"2,879",67.1%,29.2%,3.6%,0.1%,100.0%
+New South Wales,PHN106,South Eastern NSW,Open permanently,Non-Indigenous women aged 50–74,"67,016","28,362","4,966",243,"100,586",66.6%,28.2%,4.9%,0.2%,100.0%
+New South Wales,PHN106,South Eastern NSW,Open permanently,All women aged 50–74,"68,946","29,203","5,069",246,"103,465",66.6%,28.2%,4.9%,0.2%,100.0%
+New South Wales,PHN106,South Eastern NSW,Open at least annually,First Nations women aged 50–74,"2,249",623,7,–,"2,879",78.1%,21.6%,0.2%,–,100.0%
+New South Wales,PHN106,South Eastern NSW,Open at least annually,Non-Indigenous women aged 50–74,"78,521","21,637",428,–,"100,586",78.1%,21.5%,0.4%,–,100.0%
+New South Wales,PHN106,South Eastern NSW,Open at least annually,All women aged 50–74,"80,769","22,260",435,–,"103,465",78.1%,21.5%,0.4%,–,100.0%
+New South Wales,PHN106,South Eastern NSW,Open at least every 2 years,First Nations women aged 50–74,"2,403",475,<1,–,"2,879",83.5%,16.5%,<0.1%,–,100.0%
+New South Wales,PHN106,South Eastern NSW,Open at least every 2 years,Non-Indigenous women aged 50–74,"83,256","17,308",22,–,"100,586",82.8%,17.2%,<0.1%,–,100.0%
+New South Wales,PHN106,South Eastern NSW,Open at least every 2 years,All women aged 50–74,"85,659","17,782",23,–,"103,465",82.8%,17.2%,<0.1%,–,100.0%
+New South Wales,PHN106,South Eastern NSW,Open at least once from 2021 to 2024,First Nations women aged 50–74,"2,403",475,<1,–,"2,879",83.5%,16.5%,<0.1%,–,100.0%
+New South Wales,PHN106,South Eastern NSW,Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"83,256","17,308",22,–,"100,586",82.8%,17.2%,<0.1%,–,100.0%
+New South Wales,PHN106,South Eastern NSW,Open at least once from 2021 to 2024,All women aged 50–74,"85,659","17,782",23,–,"103,465",82.8%,17.2%,<0.1%,–,100.0%
+New South Wales,PHN107,Western NSW,Open permanently,First Nations women aged 50–74,"1,315",799,"1,070","1,005","4,189",31.4%,19.1%,25.5%,24.0%,100.0%
+New South Wales,PHN107,Western NSW,Open permanently,Non-Indigenous women aged 50–74,"17,841","7,474","11,895","5,209","42,419",42.1%,17.6%,28.0%,12.3%,100.0%
+New South Wales,PHN107,Western NSW,Open permanently,All women aged 50–74,"19,155","8,273","12,966","6,214","46,608",41.1%,17.7%,27.8%,13.3%,100.0%
+New South Wales,PHN107,Western NSW,Open at least annually,First Nations women aged 50–74,"1,758","1,308",750,373,"4,189",42.0%,31.2%,17.9%,8.9%,100.0%
+New South Wales,PHN107,Western NSW,Open at least annually,Non-Indigenous women aged 50–74,"24,634","13,561","3,291",932,"42,419",58.1%,32.0%,7.8%,2.2%,100.0%
+New South Wales,PHN107,Western NSW,Open at least annually,All women aged 50–74,"26,392","14,869","4,041","1,305","46,608",56.6%,31.9%,8.7%,2.8%,100.0%
+New South Wales,PHN107,Western NSW,Open at least every 2 years,First Nations women aged 50–74,"3,875",284,23,7,"4,189",92.5%,6.8%,0.5%,0.2%,100.0%
+New South Wales,PHN107,Western NSW,Open at least every 2 years,Non-Indigenous women aged 50–74,"38,330","3,854",179,56,"42,419",90.4%,9.1%,0.4%,0.1%,100.0%
+New South Wales,PHN107,Western NSW,Open at least every 2 years,All women aged 50–74,"42,205","4,138",202,63,"46,608",90.6%,8.9%,0.4%,0.1%,100.0%
+New South Wales,PHN107,Western NSW,Open at least once from 2021 to 2024,First Nations women aged 50–74,"3,916",243,23,7,"4,189",93.5%,5.8%,0.5%,0.2%,100.0%
+New South Wales,PHN107,Western NSW,Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"38,457","3,727",179,56,"42,419",90.7%,8.8%,0.4%,0.1%,100.0%
+New South Wales,PHN107,Western NSW,Open at least once from 2021 to 2024,All women aged 50–74,"42,372","3,970",202,63,"46,608",90.9%,8.5%,0.4%,0.1%,100.0%
+New South Wales,PHN108,Hunter New England and Central Coast,Open permanently,First Nations women aged 50–74,"3,584","3,372","1,254",986,"9,196",39.0%,36.7%,13.6%,10.7%,100.0%
+New South Wales,PHN108,Hunter New England and Central Coast,Open permanently,Non-Indigenous women aged 50–74,"94,963","69,113","22,255","8,552","194,882",48.7%,35.5%,11.4%,4.4%,100.0%
+New South Wales,PHN108,Hunter New England and Central Coast,Open permanently,All women aged 50–74,"98,547","72,485","23,508","9,538","204,078",48.3%,35.5%,11.5%,4.7%,100.0%
+New South Wales,PHN108,Hunter New England and Central Coast,Open at least annually,First Nations women aged 50–74,"7,407","1,730",56,3,"9,196",80.5%,18.8%,0.6%,<0.1%,100.0%
+New South Wales,PHN108,Hunter New England and Central Coast,Open at least annually,Non-Indigenous women aged 50–74,"167,489","26,624",755,14,"194,882",85.9%,13.7%,0.4%,<0.1%,100.0%
+New South Wales,PHN108,Hunter New England and Central Coast,Open at least annually,All women aged 50–74,"174,896","28,354",811,17,"204,078",85.7%,13.9%,0.4%,<0.1%,100.0%
+New South Wales,PHN108,Hunter New England and Central Coast,Open at least every 2 years,First Nations women aged 50–74,"8,306",880,11,<1,"9,196",90.3%,9.6%,0.1%,–,100.0%
+New South Wales,PHN108,Hunter New England and Central Coast,Open at least every 2 years,Non-Indigenous women aged 50–74,"181,564","13,194",124,<1,"194,882",93.2%,6.8%,<0.1%,<0.1%,100.0%
+New South Wales,PHN108,Hunter New England and Central Coast,Open at least every 2 years,All women aged 50–74,"189,870","14,073",134,<1,"204,078",93.0%,6.9%,<0.1%,<0.1%,100.0%
+New South Wales,PHN108,Hunter New England and Central Coast,Open at least once from 2021 to 2024,First Nations women aged 50–74,"8,306",880,11,<1,"9,196",90.3%,9.6%,0.1%,–,100.0%
+New South Wales,PHN108,Hunter New England and Central Coast,Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"181,563","13,192",126,<1,"194,882",93.2%,6.8%,<0.1%,<0.1%,100.0%
+New South Wales,PHN108,Hunter New England and Central Coast,Open at least once from 2021 to 2024,All women aged 50–74,"189,869","14,072",137,<1,"204,078",93.0%,6.9%,<0.1%,<0.1%,100.0%
+New South Wales,PHN109,North Coast,Open permanently,First Nations women aged 50–74,"1,595","1,705",506,4,"3,810",41.9%,44.7%,13.3%,0.1%,100.0%
+New South Wales,PHN109,North Coast,Open permanently,Non-Indigenous women aged 50–74,"40,628","42,726","9,432",23,"92,808",43.8%,46.0%,10.2%,<0.1%,100.0%
+New South Wales,PHN109,North Coast,Open permanently,All women aged 50–74,"42,223","44,431","9,937",27,"96,618",43.7%,46.0%,10.3%,<0.1%,100.0%
+New South Wales,PHN109,North Coast,Open at least annually,First Nations women aged 50–74,"2,919",865,26,–,"3,810",76.6%,22.7%,0.7%,–,100.0%
+New South Wales,PHN109,North Coast,Open at least annually,Non-Indigenous women aged 50–74,"75,222","17,385",201,–,"92,808",81.1%,18.7%,0.2%,–,100.0%
+New South Wales,PHN109,North Coast,Open at least annually,All women aged 50–74,"78,142","18,250",227,–,"96,618",80.9%,18.9%,0.2%,–,100.0%
+New South Wales,PHN109,North Coast,Open at least every 2 years,First Nations women aged 50–74,"3,377",428,5,–,"3,810",88.6%,11.2%,0.1%,–,100.0%
+New South Wales,PHN109,North Coast,Open at least every 2 years,Non-Indigenous women aged 50–74,"80,330","12,437",41,–,"92,808",86.6%,13.4%,<0.1%,–,100.0%
+New South Wales,PHN109,North Coast,Open at least every 2 years,All women aged 50–74,"83,708","12,865",46,–,"96,618",86.6%,13.3%,<0.1%,–,100.0%
+New South Wales,PHN109,North Coast,Open at least once from 2021 to 2024,First Nations women aged 50–74,"3,377",428,5,–,"3,810",88.6%,11.2%,0.1%,–,100.0%
+New South Wales,PHN109,North Coast,Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"80,330","12,437",41,–,"92,808",86.6%,13.4%,<0.1%,–,100.0%
+New South Wales,PHN109,North Coast,Open at least once from 2021 to 2024,All women aged 50–74,"83,708","12,865",46,–,"96,618",86.6%,13.3%,<0.1%,–,100.0%
+New South Wales,PHN110,Murrumbidgee,Open permanently,First Nations women aged 50–74,566,415,525,6,"1,511",37.5%,27.5%,34.7%,0.4%,100.0%
+New South Wales,PHN110,Murrumbidgee,Open permanently,Non-Indigenous women aged 50–74,"13,210","11,808","11,385",199,"36,602",36.1%,32.3%,31.1%,0.5%,100.0%
+New South Wales,PHN110,Murrumbidgee,Open permanently,All women aged 50–74,"13,777","12,223","11,910",205,"38,113",36.1%,32.1%,31.2%,0.5%,100.0%
+New South Wales,PHN110,Murrumbidgee,Open at least annually,First Nations women aged 50–74,681,645,185,<1,"1,511",45.1%,42.7%,12.2%,<0.1%,100.0%
+New South Wales,PHN110,Murrumbidgee,Open at least annually,Non-Indigenous women aged 50–74,"16,555","16,187","3,856",3,"36,602",45.2%,44.2%,10.5%,<0.1%,100.0%
+New South Wales,PHN110,Murrumbidgee,Open at least annually,All women aged 50–74,"17,237","16,833","4,041",4,"38,113",45.2%,44.2%,10.6%,<0.1%,100.0%
+New South Wales,PHN110,Murrumbidgee,Open at least every 2 years,First Nations women aged 50–74,"1,221",290,<1,–,"1,511",80.8%,19.2%,<0.1%,–,100.0%
+New South Wales,PHN110,Murrumbidgee,Open at least every 2 years,Non-Indigenous women aged 50–74,"29,898","6,693",12,–,"36,602",81.7%,18.3%,<0.1%,–,100.0%
+New South Wales,PHN110,Murrumbidgee,Open at least every 2 years,All women aged 50–74,"31,119","6,983",12,–,"38,113",81.6%,18.3%,<0.1%,–,100.0%
+New South Wales,PHN110,Murrumbidgee,Open at least once from 2021 to 2024,First Nations women aged 50–74,"1,235",275,<1,–,"1,511",81.7%,18.2%,<0.1%,–,100.0%
+New South Wales,PHN110,Murrumbidgee,Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"30,315","6,275",12,–,"36,602",82.8%,17.1%,<0.1%,–,100.0%
+New South Wales,PHN110,Murrumbidgee,Open at least once from 2021 to 2024,All women aged 50–74,"31,551","6,551",12,–,"38,113",82.8%,17.2%,<0.1%,–,100.0%
+Victoria,PHN201,North Western Melbourne,Open permanently,First Nations women aged 50–74,"1,222",16,–,–,"1,239",98.7%,1.3%,–,–,100.0%
+Victoria,PHN201,North Western Melbourne,Open permanently,Non-Indigenous women aged 50–74,"203,328","2,151",–,–,"205,478",99.0%,1.0%,–,–,100.0%
+Victoria,PHN201,North Western Melbourne,Open permanently,All women aged 50–74,"204,550","2,167",–,–,"206,717",99.0%,1.0%,–,–,100.0%
+Victoria,PHN201,North Western Melbourne,Open at least annually,First Nations women aged 50–74,"1,222",16,–,–,"1,239",98.7%,1.3%,–,–,100.0%
+Victoria,PHN201,North Western Melbourne,Open at least annually,Non-Indigenous women aged 50–74,"203,328","2,151",–,–,"205,478",99.0%,1.0%,–,–,100.0%
+Victoria,PHN201,North Western Melbourne,Open at least annually,All women aged 50–74,"204,550","2,167",–,–,"206,717",99.0%,1.0%,–,–,100.0%
+Victoria,PHN201,North Western Melbourne,Open at least every 2 years,First Nations women aged 50–74,"1,226",13,–,–,"1,239",99.0%,1.0%,–,–,100.0%
+Victoria,PHN201,North Western Melbourne,Open at least every 2 years,Non-Indigenous women aged 50–74,"203,869","1,609",–,–,"205,478",99.2%,0.8%,–,–,100.0%
+Victoria,PHN201,North Western Melbourne,Open at least every 2 years,All women aged 50–74,"205,095","1,622",–,–,"206,717",99.2%,0.8%,–,–,100.0%
+Victoria,PHN201,North Western Melbourne,Open at least once from 2021 to 2024,First Nations women aged 50–74,"1,226",13,–,–,"1,239",99.0%,1.0%,–,–,100.0%
+Victoria,PHN201,North Western Melbourne,Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"203,869","1,609",–,–,"205,478",99.2%,0.8%,–,–,100.0%
+Victoria,PHN201,North Western Melbourne,Open at least once from 2021 to 2024,All women aged 50–74,"205,095","1,622",–,–,"206,717",99.2%,0.8%,–,–,100.0%
+Victoria,PHN202,Eastern Melbourne,Open permanently,First Nations women aged 50–74,720,90,<1,–,810,88.9%,11.1%,<0.1%,–,100.0%
+Victoria,PHN202,Eastern Melbourne,Open permanently,Non-Indigenous women aged 50–74,"209,975","8,948",<1,–,"218,923",95.9%,4.1%,<0.1%,–,100.0%
+Victoria,PHN202,Eastern Melbourne,Open permanently,All women aged 50–74,"210,695","9,038",<1,–,"219,733",95.9%,4.1%,<0.1%,–,100.0%
+Victoria,PHN202,Eastern Melbourne,Open at least annually,First Nations women aged 50–74,720,90,<1,–,810,88.9%,11.1%,<0.1%,–,100.0%
+Victoria,PHN202,Eastern Melbourne,Open at least annually,Non-Indigenous women aged 50–74,"209,975","8,948",<1,–,"218,923",95.9%,4.1%,<0.1%,–,100.0%
+Victoria,PHN202,Eastern Melbourne,Open at least annually,All women aged 50–74,"210,695","9,038",<1,–,"219,733",95.9%,4.1%,<0.1%,–,100.0%
+Victoria,PHN202,Eastern Melbourne,Open at least every 2 years,First Nations women aged 50–74,770,40,<1,–,810,95.1%,4.9%,<0.1%,–,100.0%
+Victoria,PHN202,Eastern Melbourne,Open at least every 2 years,Non-Indigenous women aged 50–74,"214,700","4,223",<1,–,"218,923",98.1%,1.9%,<0.1%,–,100.0%
+Victoria,PHN202,Eastern Melbourne,Open at least every 2 years,All women aged 50–74,"215,470","4,263",<1,–,"219,733",98.1%,1.9%,<0.1%,–,100.0%
+Victoria,PHN202,Eastern Melbourne,Open at least once from 2021 to 2024,First Nations women aged 50–74,770,40,<1,–,810,95.1%,4.9%,<0.1%,–,100.0%
+Victoria,PHN202,Eastern Melbourne,Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"214,700","4,223",<1,–,"218,923",98.1%,1.9%,<0.1%,–,100.0%
+Victoria,PHN202,Eastern Melbourne,Open at least once from 2021 to 2024,All women aged 50–74,"215,470","4,263",<1,–,"219,733",98.1%,1.9%,<0.1%,–,100.0%
+Victoria,PHN203,South Eastern Melbourne,Open permanently,First Nations women aged 50–74,867,68,–,–,935,92.7%,7.3%,–,–,100.0%
+Victoria,PHN203,South Eastern Melbourne,Open permanently,Non-Indigenous women aged 50–74,"210,387","5,920",–,–,"216,307",97.3%,2.7%,–,–,100.0%
+Victoria,PHN203,South Eastern Melbourne,Open permanently,All women aged 50–74,"211,254","5,988",–,–,"217,242",97.2%,2.8%,–,–,100.0%
+Victoria,PHN203,South Eastern Melbourne,Open at least annually,First Nations women aged 50–74,867,68,–,–,935,92.7%,7.3%,–,–,100.0%
+Victoria,PHN203,South Eastern Melbourne,Open at least annually,Non-Indigenous women aged 50–74,"210,387","5,920",–,–,"216,307",97.3%,2.7%,–,–,100.0%
+Victoria,PHN203,South Eastern Melbourne,Open at least annually,All women aged 50–74,"211,254","5,988",–,–,"217,242",97.2%,2.8%,–,–,100.0%
+Victoria,PHN203,South Eastern Melbourne,Open at least every 2 years,First Nations women aged 50–74,921,14,–,–,935,98.5%,1.5%,–,–,100.0%
+Victoria,PHN203,South Eastern Melbourne,Open at least every 2 years,Non-Indigenous women aged 50–74,"214,261","2,046",–,–,"216,307",99.1%,0.9%,–,–,100.0%
+Victoria,PHN203,South Eastern Melbourne,Open at least every 2 years,All women aged 50–74,"215,182","2,060",–,–,"217,242",99.1%,0.9%,–,–,100.0%
+Victoria,PHN203,South Eastern Melbourne,Open at least once from 2021 to 2024,First Nations women aged 50–74,921,13,–,–,935,98.6%,1.4%,–,–,100.0%
+Victoria,PHN203,South Eastern Melbourne,Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"214,290","2,017",–,–,"216,307",99.1%,0.9%,–,–,100.0%
+Victoria,PHN203,South Eastern Melbourne,Open at least once from 2021 to 2024,All women aged 50–74,"215,211","2,031",–,–,"217,242",99.1%,0.9%,–,–,100.0%
+Victoria,PHN204,Gippsland,Open permanently,First Nations women aged 50–74,433,219,39,2,692,62.5%,31.6%,5.7%,0.3%,100.0%
+Victoria,PHN204,Gippsland,Open permanently,Non-Indigenous women aged 50–74,"33,569","17,752","1,749",117,"53,186",63.1%,33.4%,3.3%,0.2%,100.0%
+Victoria,PHN204,Gippsland,Open permanently,All women aged 50–74,"34,001","17,970","1,788",119,"53,878",63.1%,33.4%,3.3%,0.2%,100.0%
+Victoria,PHN204,Gippsland,Open at least annually,First Nations women aged 50–74,435,221,36,<1,692,62.8%,32.0%,5.2%,<0.1%,100.0%
+Victoria,PHN204,Gippsland,Open at least annually,Non-Indigenous women aged 50–74,"33,870","17,561","1,708",47,"53,186",63.7%,33.0%,3.2%,<0.1%,100.0%
+Victoria,PHN204,Gippsland,Open at least annually,All women aged 50–74,"34,304","17,782","1,744",47,"53,878",63.7%,33.0%,3.2%,<0.1%,100.0%
+Victoria,PHN204,Gippsland,Open at least every 2 years,First Nations women aged 50–74,600,91,1,<1,692,86.6%,13.2%,0.2%,<0.1%,100.0%
+Victoria,PHN204,Gippsland,Open at least every 2 years,Non-Indigenous women aged 50–74,"45,624","7,466",93,3,"53,186",85.8%,14.0%,0.2%,<0.1%,100.0%
+Victoria,PHN204,Gippsland,Open at least every 2 years,All women aged 50–74,"46,224","7,557",94,3,"53,878",85.8%,14.0%,0.2%,<0.1%,100.0%
+Victoria,PHN204,Gippsland,Open at least once from 2021 to 2024,First Nations women aged 50–74,600,91,1,<1,692,86.6%,13.2%,0.2%,<0.1%,100.0%
+Victoria,PHN204,Gippsland,Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"45,624","7,466",93,3,"53,186",85.8%,14.0%,0.2%,<0.1%,100.0%
+Victoria,PHN204,Gippsland,Open at least once from 2021 to 2024,All women aged 50–74,"46,224","7,557",94,3,"53,878",85.8%,14.0%,0.2%,<0.1%,100.0%
+Victoria,PHN205,Murray,Open permanently,First Nations women aged 50–74,"1,191",418,180,10,"1,798",66.2%,23.2%,10.0%,0.6%,100.0%
+Victoria,PHN205,Murray,Open permanently,Non-Indigenous women aged 50–74,"55,474","36,893","10,042",370,"102,778",54.0%,35.9%,9.8%,0.4%,100.0%
+Victoria,PHN205,Murray,Open permanently,All women aged 50–74,"56,665","37,311","10,221",380,"104,577",54.2%,35.7%,9.8%,0.4%,100.0%
+Victoria,PHN205,Murray,Open at least annually,First Nations women aged 50–74,"1,192",484,122,<1,"1,798",66.3%,26.9%,6.8%,<0.1%,100.0%
+Victoria,PHN205,Murray,Open at least annually,Non-Indigenous women aged 50–74,"55,551","40,182","7,024",21,"102,778",54.0%,39.1%,6.8%,<0.1%,100.0%
+Victoria,PHN205,Murray,Open at least annually,All women aged 50–74,"56,743","40,666","7,147",21,"104,577",54.3%,38.9%,6.8%,<0.1%,100.0%
+Victoria,PHN205,Murray,Open at least every 2 years,First Nations women aged 50–74,"1,490",303,5,–,"1,798",82.9%,16.8%,0.3%,–,100.0%
+Victoria,PHN205,Murray,Open at least every 2 years,Non-Indigenous women aged 50–74,"75,247","27,145",386,–,"102,778",73.2%,26.4%,0.4%,–,100.0%
+Victoria,PHN205,Murray,Open at least every 2 years,All women aged 50–74,"76,738","27,448",391,–,"104,577",73.4%,26.2%,0.4%,–,100.0%
+Victoria,PHN205,Murray,Open at least once from 2021 to 2024,First Nations women aged 50–74,"1,495",298,5,–,"1,798",83.1%,16.6%,0.3%,–,100.0%
+Victoria,PHN205,Murray,Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"75,406","26,986",386,–,"102,778",73.4%,26.3%,0.4%,–,100.0%
+Victoria,PHN205,Murray,Open at least once from 2021 to 2024,All women aged 50–74,"76,901","27,284",391,–,"104,577",73.5%,26.1%,0.4%,–,100.0%
+Victoria,PHN206,Western Victoria,Open permanently,First Nations women aged 50–74,705,282,65,<1,"1,053",67.0%,26.8%,6.2%,<0.1%,100.0%
+Victoria,PHN206,Western Victoria,Open permanently,Non-Indigenous women aged 50–74,"64,419","38,066","6,588",15,"109,088",59.1%,34.9%,6.0%,<0.1%,100.0%
+Victoria,PHN206,Western Victoria,Open permanently,All women aged 50–74,"65,125","38,348","6,653",15,"110,141",59.1%,34.8%,6.0%,<0.1%,100.0%
+Victoria,PHN206,Western Victoria,Open at least annually,First Nations women aged 50–74,705,295,53,<1,"1,053",67.0%,28.0%,5.0%,<0.1%,100.0%
+Victoria,PHN206,Western Victoria,Open at least annually,Non-Indigenous women aged 50–74,"64,419","39,424","5,230",15,"109,088",59.1%,36.1%,4.8%,<0.1%,100.0%
+Victoria,PHN206,Western Victoria,Open at least annually,All women aged 50–74,"65,125","39,718","5,283",15,"110,141",59.1%,36.1%,4.8%,<0.1%,100.0%
+Victoria,PHN206,Western Victoria,Open at least every 2 years,First Nations women aged 50–74,848,200,4,–,"1,053",80.6%,19.0%,0.4%,–,100.0%
+Victoria,PHN206,Western Victoria,Open at least every 2 years,Non-Indigenous women aged 50–74,"78,575","29,875",638,–,"109,088",72.0%,27.4%,0.6%,–,100.0%
+Victoria,PHN206,Western Victoria,Open at least every 2 years,All women aged 50–74,"79,424","30,075",643,–,"110,141",72.1%,27.3%,0.6%,–,100.0%
+Victoria,PHN206,Western Victoria,Open at least once from 2021 to 2024,First Nations women aged 50–74,889,160,4,–,"1,053",84.4%,15.2%,0.4%,–,100.0%
+Victoria,PHN206,Western Victoria,Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"87,468","20,982",638,–,"109,088",80.2%,19.2%,0.6%,–,100.0%
+Victoria,PHN206,Western Victoria,Open at least once from 2021 to 2024,All women aged 50–74,"88,357","21,142",643,–,"110,141",80.2%,19.2%,0.6%,–,100.0%
+Queensland,PHN301,Brisbane North,Open permanently,First Nations women aged 50–74,"2,380",192,<1,–,"2,573",92.5%,7.4%,<0.1%,–,100.0%
+Queensland,PHN301,Brisbane North,Open permanently,Non-Indigenous women aged 50–74,"129,234","9,234",15,–,"138,483",93.3%,6.7%,<0.1%,–,100.0%
+Queensland,PHN301,Brisbane North,Open permanently,All women aged 50–74,"131,614","9,426",16,–,"141,056",93.3%,6.7%,<0.1%,–,100.0%
+Queensland,PHN301,Brisbane North,Open at least annually,First Nations women aged 50–74,"2,519",54,<1,–,"2,573",97.9%,2.1%,<0.1%,–,100.0%
+Queensland,PHN301,Brisbane North,Open at least annually,Non-Indigenous women aged 50–74,"135,975","2,507",<1,–,"138,483",98.2%,1.8%,–,–,100.0%
+Queensland,PHN301,Brisbane North,Open at least annually,All women aged 50–74,"138,494","2,561",<1,–,"141,056",98.2%,1.8%,–,–,100.0%
+Queensland,PHN301,Brisbane North,Open at least every 2 years,First Nations women aged 50–74,"2,519",54,<1,–,"2,573",97.9%,2.1%,<0.1%,–,100.0%
+Queensland,PHN301,Brisbane North,Open at least every 2 years,Non-Indigenous women aged 50–74,"135,983","2,499",<1,–,"138,483",98.2%,1.8%,–,–,100.0%
+Queensland,PHN301,Brisbane North,Open at least every 2 years,All women aged 50–74,"138,502","2,553",<1,–,"141,056",98.2%,1.8%,–,–,100.0%
+Queensland,PHN301,Brisbane North,Open at least once from 2021 to 2024,First Nations women aged 50–74,"2,519",54,<1,–,"2,573",97.9%,2.1%,<0.1%,–,100.0%
+Queensland,PHN301,Brisbane North,Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"135,983","2,499",<1,–,"138,483",98.2%,1.8%,–,–,100.0%
+Queensland,PHN301,Brisbane North,Open at least once from 2021 to 2024,All women aged 50–74,"138,502","2,553",<1,–,"141,056",98.2%,1.8%,–,–,100.0%
+Queensland,PHN302,Brisbane South,Open permanently,First Nations women aged 50–74,"2,538",295,40,<1,"2,873",88.3%,10.3%,1.4%,<0.1%,100.0%
+Queensland,PHN302,Brisbane South,Open permanently,Non-Indigenous women aged 50–74,"145,007","8,369",398,47,"153,821",94.3%,5.4%,0.3%,<0.1%,100.0%
+Queensland,PHN302,Brisbane South,Open permanently,All women aged 50–74,"147,545","8,665",437,48,"156,695",94.2%,5.5%,0.3%,<0.1%,100.0%
+Queensland,PHN302,Brisbane South,Open at least annually,First Nations women aged 50–74,"2,706",129,37,<1,"2,873",94.2%,4.5%,1.3%,<0.1%,100.0%
+Queensland,PHN302,Brisbane South,Open at least annually,Non-Indigenous women aged 50–74,"150,443","3,019",313,47,"153,821",97.8%,2.0%,0.2%,<0.1%,100.0%
+Queensland,PHN302,Brisbane South,Open at least annually,All women aged 50–74,"153,149","3,148",350,48,"156,695",97.7%,2.0%,0.2%,<0.1%,100.0%
+Queensland,PHN302,Brisbane South,Open at least every 2 years,First Nations women aged 50–74,"2,706",129,37,<1,"2,873",94.2%,4.5%,1.3%,<0.1%,100.0%
+Queensland,PHN302,Brisbane South,Open at least every 2 years,Non-Indigenous women aged 50–74,"150,445","3,016",313,47,"153,821",97.8%,2.0%,0.2%,<0.1%,100.0%
+Queensland,PHN302,Brisbane South,Open at least every 2 years,All women aged 50–74,"153,151","3,145",350,48,"156,695",97.7%,2.0%,0.2%,<0.1%,100.0%
+Queensland,PHN302,Brisbane South,Open at least once from 2021 to 2024,First Nations women aged 50–74,"2,706",129,37,<1,"2,873",94.2%,4.5%,1.3%,<0.1%,100.0%
+Queensland,PHN302,Brisbane South,Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"150,447","3,014",313,47,"153,821",97.8%,2.0%,0.2%,<0.1%,100.0%
+Queensland,PHN302,Brisbane South,Open at least once from 2021 to 2024,All women aged 50–74,"153,153","3,143",350,48,"156,695",97.7%,2.0%,0.2%,<0.1%,100.0%
+Queensland,PHN303,Gold Coast,Open permanently,First Nations women aged 50–74,"1,109",52,<1,–,"1,162",95.5%,4.5%,<0.1%,–,100.0%
+Queensland,PHN303,Gold Coast,Open permanently,Non-Indigenous women aged 50–74,"89,211","4,655",9,–,"93,876",95.0%,5.0%,<0.1%,–,100.0%
+Queensland,PHN303,Gold Coast,Open permanently,All women aged 50–74,"90,321","4,707",10,–,"95,038",95.0%,5.0%,<0.1%,–,100.0%
+Queensland,PHN303,Gold Coast,Open at least annually,First Nations women aged 50–74,"1,154",7,<1,–,"1,162",99.4%,0.6%,<0.1%,–,100.0%
+Queensland,PHN303,Gold Coast,Open at least annually,Non-Indigenous women aged 50–74,"93,261",614,<1,–,"93,876",99.3%,0.7%,<0.1%,–,100.0%
+Queensland,PHN303,Gold Coast,Open at least annually,All women aged 50–74,"94,416",621,<1,–,"95,038",99.3%,0.7%,<0.1%,–,100.0%
+Queensland,PHN303,Gold Coast,Open at least every 2 years,First Nations women aged 50–74,"1,154",7,<1,–,"1,162",99.4%,0.6%,<0.1%,–,100.0%
+Queensland,PHN303,Gold Coast,Open at least every 2 years,Non-Indigenous women aged 50–74,"93,261",614,<1,–,"93,876",99.3%,0.7%,<0.1%,–,100.0%
+Queensland,PHN303,Gold Coast,Open at least every 2 years,All women aged 50–74,"94,416",621,<1,–,"95,038",99.3%,0.7%,<0.1%,–,100.0%
+Queensland,PHN303,Gold Coast,Open at least once from 2021 to 2024,First Nations women aged 50–74,"1,154",7,<1,–,"1,162",99.4%,0.6%,<0.1%,–,100.0%
+Queensland,PHN303,Gold Coast,Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"93,263",612,<1,–,"93,876",99.3%,0.7%,<0.1%,–,100.0%
+Queensland,PHN303,Gold Coast,Open at least once from 2021 to 2024,All women aged 50–74,"94,417",619,<1,–,"95,038",99.3%,0.7%,<0.1%,–,100.0%
+Queensland,PHN304,Darling Downs and West Moreton,Open permanently,First Nations women aged 50–74,"1,527",638,690,117,"2,973",51.4%,21.5%,23.2%,3.9%,100.0%
+Queensland,PHN304,Darling Downs and West Moreton,Open permanently,Non-Indigenous women aged 50–74,"45,941","19,335","14,091","2,514","81,881",56.1%,23.6%,17.2%,3.1%,100.0%
+Queensland,PHN304,Darling Downs and West Moreton,Open permanently,All women aged 50–74,"47,467","19,973","14,782","2,631","84,854",55.9%,23.5%,17.4%,3.1%,100.0%
+Queensland,PHN304,Darling Downs and West Moreton,Open at least annually,First Nations women aged 50–74,"2,020",859,83,10,"2,973",68.0%,28.9%,2.8%,0.4%,100.0%
+Queensland,PHN304,Darling Downs and West Moreton,Open at least annually,Non-Indigenous women aged 50–74,"60,540","19,440","1,636",265,"81,881",73.9%,23.7%,2.0%,0.3%,100.0%
+Queensland,PHN304,Darling Downs and West Moreton,Open at least annually,All women aged 50–74,"62,560","20,299","1,719",276,"84,854",73.7%,23.9%,2.0%,0.3%,100.0%
+Queensland,PHN304,Darling Downs and West Moreton,Open at least every 2 years,First Nations women aged 50–74,"2,809",162,2,–,"2,973",94.5%,5.5%,<0.1%,–,100.0%
+Queensland,PHN304,Darling Downs and West Moreton,Open at least every 2 years,Non-Indigenous women aged 50–74,"77,184","4,637",60,–,"81,881",94.3%,5.7%,<0.1%,–,100.0%
+Queensland,PHN304,Darling Downs and West Moreton,Open at least every 2 years,All women aged 50–74,"79,993","4,799",62,–,"84,854",94.3%,5.7%,<0.1%,–,100.0%
+Queensland,PHN304,Darling Downs and West Moreton,Open at least once from 2021 to 2024,First Nations women aged 50–74,"2,809",162,2,–,"2,973",94.5%,5.5%,<0.1%,–,100.0%
+Queensland,PHN304,Darling Downs and West Moreton,Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"77,184","4,637",60,–,"81,881",94.3%,5.7%,<0.1%,–,100.0%
+Queensland,PHN304,Darling Downs and West Moreton,Open at least once from 2021 to 2024,All women aged 50–74,"79,993","4,799",62,–,"84,854",94.3%,5.7%,<0.1%,–,100.0%
+Queensland,PHN305,Western Queensland,Open permanently,First Nations women aged 50–74,–,–,–,"1,359","1,359",–,–,–,100.0%,100.0%
+Queensland,PHN305,Western Queensland,Open permanently,Non-Indigenous women aged 50–74,–,–,–,"6,721","6,721",–,–,–,100.0%,100.0%
+Queensland,PHN305,Western Queensland,Open permanently,All women aged 50–74,–,–,–,"8,080","8,080",–,–,–,100.0%,100.0%
+Queensland,PHN305,Western Queensland,Open at least annually,First Nations women aged 50–74,381,107,166,705,"1,359",28.0%,7.9%,12.2%,51.9%,100.0%
+Queensland,PHN305,Western Queensland,Open at least annually,Non-Indigenous women aged 50–74,"1,407","1,094","1,009","3,210","6,721",20.9%,16.3%,15.0%,47.8%,100.0%
+Queensland,PHN305,Western Queensland,Open at least annually,All women aged 50–74,"1,788","1,202","1,175","3,915","8,080",22.1%,14.9%,14.5%,48.5%,100.0%
+Queensland,PHN305,Western Queensland,Open at least every 2 years,First Nations women aged 50–74,"1,277",42,27,14,"1,359",94.0%,3.1%,2.0%,1.0%,100.0%
+Queensland,PHN305,Western Queensland,Open at least every 2 years,Non-Indigenous women aged 50–74,"5,482",830,360,49,"6,721",81.6%,12.4%,5.4%,0.7%,100.0%
+Queensland,PHN305,Western Queensland,Open at least every 2 years,All women aged 50–74,"6,759",872,386,63,"8,080",83.7%,10.8%,4.8%,0.8%,100.0%
+Queensland,PHN305,Western Queensland,Open at least once from 2021 to 2024,First Nations women aged 50–74,"1,277",42,27,14,"1,359",94.0%,3.1%,2.0%,1.0%,100.0%
+Queensland,PHN305,Western Queensland,Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"5,482",830,360,49,"6,721",81.6%,12.4%,5.4%,0.7%,100.0%
+Queensland,PHN305,Western Queensland,Open at least once from 2021 to 2024,All women aged 50–74,"6,759",872,387,63,"8,080",83.7%,10.8%,4.8%,0.8%,100.0%
+Queensland,PHN306,"Central Queensland, Wide Bay, Sunshine Coast",Open permanently,First Nations women aged 50–74,"2,545",926,213,162,"3,846",66.2%,24.1%,5.5%,4.2%,100.0%
+Queensland,PHN306,"Central Queensland, Wide Bay, Sunshine Coast",Open permanently,Non-Indigenous women aged 50–74,"109,604","32,854","3,632","3,869","149,959",73.1%,21.9%,2.4%,2.6%,100.0%
+Queensland,PHN306,"Central Queensland, Wide Bay, Sunshine Coast",Open permanently,All women aged 50–74,"112,149","33,780","3,845","4,031","153,805",72.9%,22.0%,2.5%,2.6%,100.0%
+Queensland,PHN306,"Central Queensland, Wide Bay, Sunshine Coast",Open at least annually,First Nations women aged 50–74,"3,173",512,159,2,"3,846",82.5%,13.3%,4.1%,<0.1%,100.0%
+Queensland,PHN306,"Central Queensland, Wide Bay, Sunshine Coast",Open at least annually,Non-Indigenous women aged 50–74,"131,034","15,130","3,718",78,"149,959",87.4%,10.1%,2.5%,<0.1%,100.0%
+Queensland,PHN306,"Central Queensland, Wide Bay, Sunshine Coast",Open at least annually,All women aged 50–74,"134,207","15,642","3,877",80,"153,805",87.3%,10.2%,2.5%,<0.1%,100.0%
+Queensland,PHN306,"Central Queensland, Wide Bay, Sunshine Coast",Open at least every 2 years,First Nations women aged 50–74,"3,574",269,2,<1,"3,846",92.9%,7.0%,<0.1%,<0.1%,100.0%
+Queensland,PHN306,"Central Queensland, Wide Bay, Sunshine Coast",Open at least every 2 years,Non-Indigenous women aged 50–74,"140,907","8,928",112,12,"149,959",94.0%,6.0%,<0.1%,<0.1%,100.0%
+Queensland,PHN306,"Central Queensland, Wide Bay, Sunshine Coast",Open at least every 2 years,All women aged 50–74,"144,480","9,198",115,12,"153,805",93.9%,6.0%,<0.1%,<0.1%,100.0%
+Queensland,PHN306,"Central Queensland, Wide Bay, Sunshine Coast",Open at least once from 2021 to 2024,First Nations women aged 50–74,"3,578",265,2,<1,"3,846",93.0%,6.9%,<0.1%,<0.1%,100.0%
+Queensland,PHN306,"Central Queensland, Wide Bay, Sunshine Coast",Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"141,117","8,717",114,12,"149,959",94.1%,5.8%,<0.1%,<0.1%,100.0%
+Queensland,PHN306,"Central Queensland, Wide Bay, Sunshine Coast",Open at least once from 2021 to 2024,All women aged 50–74,"144,695","8,982",116,12,"153,805",94.1%,5.8%,<0.1%,<0.1%,100.0%
+Queensland,PHN307,Northern Queensland,Open permanently,First Nations women aged 50–74,"3,174",883,"1,335","2,023","7,414",42.8%,11.9%,18.0%,27.3%,100.0%
+Queensland,PHN307,Northern Queensland,Open permanently,Non-Indigenous women aged 50–74,"52,156","14,666","21,453","5,440","93,715",55.7%,15.6%,22.9%,5.8%,100.0%
+Queensland,PHN307,Northern Queensland,Open permanently,All women aged 50–74,"55,330","15,549","22,788","7,463","101,130",54.7%,15.4%,22.5%,7.4%,100.0%
+Queensland,PHN307,Northern Queensland,Open at least annually,First Nations women aged 50–74,"4,213","1,173",935,"1,093","7,414",56.8%,15.8%,12.6%,14.7%,100.0%
+Queensland,PHN307,Northern Queensland,Open at least annually,Non-Indigenous women aged 50–74,"72,069","15,225","5,253","1,169","93,715",76.9%,16.2%,5.6%,1.2%,100.0%
+Queensland,PHN307,Northern Queensland,Open at least annually,All women aged 50–74,"76,282","16,398","6,188","2,262","101,130",75.4%,16.2%,6.1%,2.2%,100.0%
+Queensland,PHN307,Northern Queensland,Open at least every 2 years,First Nations women aged 50–74,"6,965",284,81,85,"7,414",93.9%,3.8%,1.1%,1.1%,100.0%
+Queensland,PHN307,Northern Queensland,Open at least every 2 years,Non-Indigenous women aged 50–74,"89,673","3,821",171,51,"93,715",95.7%,4.1%,0.2%,<0.1%,100.0%
+Queensland,PHN307,Northern Queensland,Open at least every 2 years,All women aged 50–74,"96,638","4,105",251,135,"101,130",95.6%,4.1%,0.2%,0.1%,100.0%
+Queensland,PHN307,Northern Queensland,Open at least once from 2021 to 2024,First Nations women aged 50–74,"6,965",284,81,85,"7,414",93.9%,3.8%,1.1%,1.1%,100.0%
+Queensland,PHN307,Northern Queensland,Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"89,673","3,821",171,51,"93,715",95.7%,4.1%,0.2%,<0.1%,100.0%
+Queensland,PHN307,Northern Queensland,Open at least once from 2021 to 2024,All women aged 50–74,"96,637","4,105",252,135,"101,130",95.6%,4.1%,0.2%,0.1%,100.0%
+Western Australia,PHN501,Perth North,Open permanently,First Nations women aged 50–74,"1,674",150,–,–,"1,824",91.8%,8.2%,–,–,100.0%
+Western Australia,PHN501,Perth North,Open permanently,Non-Indigenous women aged 50–74,"145,684","6,649",–,–,"152,333",95.6%,4.4%,–,–,100.0%
+Western Australia,PHN501,Perth North,Open permanently,All women aged 50–74,"147,358","6,799",–,–,"154,157",95.6%,4.4%,–,–,100.0%
+Western Australia,PHN501,Perth North,Open at least annually,First Nations women aged 50–74,"1,678",146,–,–,"1,824",92.0%,8.0%,–,–,100.0%
+Western Australia,PHN501,Perth North,Open at least annually,Non-Indigenous women aged 50–74,"146,246","6,087",–,–,"152,333",96.0%,4.0%,–,–,100.0%
+Western Australia,PHN501,Perth North,Open at least annually,All women aged 50–74,"147,924","6,233",–,–,"154,157",96.0%,4.0%,–,–,100.0%
+Western Australia,PHN501,Perth North,Open at least every 2 years,First Nations women aged 50–74,"1,694",130,–,–,"1,824",92.9%,7.1%,–,–,100.0%
+Western Australia,PHN501,Perth North,Open at least every 2 years,Non-Indigenous women aged 50–74,"147,219","5,115",–,–,"152,333",96.6%,3.4%,–,–,100.0%
+Western Australia,PHN501,Perth North,Open at least every 2 years,All women aged 50–74,"148,912","5,245",–,–,"154,157",96.6%,3.4%,–,–,100.0%
+Western Australia,PHN501,Perth North,Open at least once from 2021 to 2024,First Nations women aged 50–74,"1,694",130,–,–,"1,824",92.9%,7.1%,–,–,100.0%
+Western Australia,PHN501,Perth North,Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"147,219","5,115",–,–,"152,333",96.6%,3.4%,–,–,100.0%
+Western Australia,PHN501,Perth North,Open at least once from 2021 to 2024,All women aged 50–74,"148,912","5,245",–,–,"154,157",96.6%,3.4%,–,–,100.0%
+Western Australia,PHN502,Perth South,Open permanently,First Nations women aged 50–74,"2,204",96,<1,3,"2,303",95.7%,4.2%,<0.1%,0.1%,100.0%
+Western Australia,PHN502,Perth South,Open permanently,Non-Indigenous women aged 50–74,"134,024","6,354",10,320,"140,708",95.2%,4.5%,<0.1%,0.2%,100.0%
+Western Australia,PHN502,Perth South,Open permanently,All women aged 50–74,"136,228","6,450",10,323,"143,011",95.3%,4.5%,<0.1%,0.2%,100.0%
+Western Australia,PHN502,Perth South,Open at least annually,First Nations women aged 50–74,"2,250",50,–,3,"2,303",97.7%,2.2%,–,0.1%,100.0%
+Western Australia,PHN502,Perth South,Open at least annually,Non-Indigenous women aged 50–74,"138,071","2,316",–,320,"140,708",98.1%,1.6%,–,0.2%,100.0%
+Western Australia,PHN502,Perth South,Open at least annually,All women aged 50–74,"140,321","2,367",–,323,"143,011",98.1%,1.7%,–,0.2%,100.0%
+Western Australia,PHN502,Perth South,Open at least every 2 years,First Nations women aged 50–74,"2,301",3,–,–,"2,303",99.9%,0.1%,–,–,100.0%
+Western Australia,PHN502,Perth South,Open at least every 2 years,Non-Indigenous women aged 50–74,"140,426",282,–,–,"140,708",99.8%,0.2%,–,–,100.0%
+Western Australia,PHN502,Perth South,Open at least every 2 years,All women aged 50–74,"142,727",284,–,–,"143,011",99.8%,0.2%,–,–,100.0%
+Western Australia,PHN502,Perth South,Open at least once from 2021 to 2024,First Nations women aged 50–74,"2,301",3,–,–,"2,303",99.9%,0.1%,–,–,100.0%
+Western Australia,PHN502,Perth South,Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"140,426",282,–,–,"140,708",99.8%,0.2%,–,–,100.0%
+Western Australia,PHN502,Perth South,Open at least once from 2021 to 2024,All women aged 50–74,"142,727",284,–,–,"143,011",99.8%,0.2%,–,–,100.0%
+Western Australia,PHN503,Country WA,Open permanently,First Nations women aged 50–74,493,346,434,"4,374","5,647",8.7%,6.1%,7.7%,77.5%,100.0%
+Western Australia,PHN503,Country WA,Open permanently,Non-Indigenous women aged 50–74,"19,397","18,904","12,482","25,044","75,827",25.6%,24.9%,16.5%,33.0%,100.0%
+Western Australia,PHN503,Country WA,Open permanently,All women aged 50–74,"19,891","19,250","12,916","29,418","81,474",24.4%,23.6%,15.9%,36.1%,100.0%
+Western Australia,PHN503,Country WA,Open at least annually,First Nations women aged 50–74,"2,420",919,430,"1,878","5,647",42.9%,16.3%,7.6%,33.3%,100.0%
+Western Australia,PHN503,Country WA,Open at least annually,Non-Indigenous women aged 50–74,"34,971","27,722","9,447","3,687","75,827",46.1%,36.6%,12.5%,4.9%,100.0%
+Western Australia,PHN503,Country WA,Open at least annually,All women aged 50–74,"37,392","28,641","9,877","5,566","81,474",45.9%,35.2%,12.1%,6.8%,100.0%
+Western Australia,PHN503,Country WA,Open at least every 2 years,First Nations women aged 50–74,"4,791",271,189,397,"5,647",84.8%,4.8%,3.3%,7.0%,100.0%
+Western Australia,PHN503,Country WA,Open at least every 2 years,Non-Indigenous women aged 50–74,"68,914","6,189",432,291,"75,827",90.9%,8.2%,0.6%,0.4%,100.0%
+Western Australia,PHN503,Country WA,Open at least every 2 years,All women aged 50–74,"73,705","6,461",621,688,"81,474",90.5%,7.9%,0.8%,0.8%,100.0%
+Western Australia,PHN503,Country WA,Open at least once from 2021 to 2024,First Nations women aged 50–74,"4,791",271,189,397,"5,647",84.8%,4.8%,3.3%,7.0%,100.0%
+Western Australia,PHN503,Country WA,Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"68,914","6,189",432,291,"75,827",90.9%,8.2%,0.6%,0.4%,100.0%
+Western Australia,PHN503,Country WA,Open at least once from 2021 to 2024,All women aged 50–74,"73,705","6,461",621,688,"81,474",90.5%,7.9%,0.8%,0.8%,100.0%
+South Australia,PHN401,Adelaide,Open permanently,First Nations women aged 50–74,"2,112",9,–,–,"2,121",99.6%,0.4%,–,–,100.0%
+South Australia,PHN401,Adelaide,Open permanently,Non-Indigenous women aged 50–74,"184,770","1,221",–,–,"185,991",99.3%,0.7%,–,–,100.0%
+South Australia,PHN401,Adelaide,Open permanently,All women aged 50–74,"186,882","1,230",–,–,"188,112",99.3%,0.7%,–,–,100.0%
+South Australia,PHN401,Adelaide,Open at least annually,First Nations women aged 50–74,"2,112",9,–,–,"2,121",99.6%,0.4%,–,–,100.0%
+South Australia,PHN401,Adelaide,Open at least annually,Non-Indigenous women aged 50–74,"184,798","1,193",–,–,"185,991",99.4%,0.6%,–,–,100.0%
+South Australia,PHN401,Adelaide,Open at least annually,All women aged 50–74,"186,910","1,202",–,–,"188,112",99.4%,0.6%,–,–,100.0%
+South Australia,PHN401,Adelaide,Open at least every 2 years,First Nations women aged 50–74,"2,121",<1,–,–,"2,121",>99.9%,<0.1%,–,–,100.0%
+South Australia,PHN401,Adelaide,Open at least every 2 years,Non-Indigenous women aged 50–74,"185,964",26,–,–,"185,991",>99.9%,<0.1%,–,–,100.0%
+South Australia,PHN401,Adelaide,Open at least every 2 years,All women aged 50–74,"188,085",26,–,–,"188,112",>99.9%,<0.1%,–,–,100.0%
+South Australia,PHN401,Adelaide,Open at least once from 2021 to 2024,First Nations women aged 50–74,"2,121",<1,–,–,"2,121",>99.9%,<0.1%,–,–,100.0%
+South Australia,PHN401,Adelaide,Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"185,964",26,–,–,"185,991",>99.9%,<0.1%,–,–,100.0%
+South Australia,PHN401,Adelaide,Open at least once from 2021 to 2024,All women aged 50–74,"188,085",26,–,–,"188,112",>99.9%,<0.1%,–,–,100.0%
+South Australia,PHN402,Country SA,Open permanently,First Nations women aged 50–74,152,316,452,"1,254","2,175",7.0%,14.5%,20.8%,57.7%,100.0%
+South Australia,PHN402,Country SA,Open permanently,Non-Indigenous women aged 50–74,"17,265","25,579","23,560","19,729","86,133",20.0%,29.7%,27.4%,22.9%,100.0%
+South Australia,PHN402,Country SA,Open permanently,All women aged 50–74,"17,417","25,895","24,012","20,983","88,307",19.7%,29.3%,27.2%,23.8%,100.0%
+South Australia,PHN402,Country SA,Open at least annually,First Nations women aged 50–74,267,637,541,730,"2,175",12.3%,29.3%,24.9%,33.6%,100.0%
+South Australia,PHN402,Country SA,Open at least annually,Non-Indigenous women aged 50–74,"22,816","42,843","10,139","10,334","86,133",26.5%,49.7%,11.8%,12.0%,100.0%
+South Australia,PHN402,Country SA,Open at least annually,All women aged 50–74,"23,083","43,480","10,680","11,064","88,307",26.1%,49.2%,12.1%,12.5%,100.0%
+South Australia,PHN402,Country SA,Open at least every 2 years,First Nations women aged 50–74,"1,573",351,50,201,"2,175",72.3%,16.1%,2.3%,9.2%,100.0%
+South Australia,PHN402,Country SA,Open at least every 2 years,Non-Indigenous women aged 50–74,"64,178","21,358",485,112,"86,133",74.5%,24.8%,0.6%,0.1%,100.0%
+South Australia,PHN402,Country SA,Open at least every 2 years,All women aged 50–74,"65,751","21,709",535,313,"88,307",74.5%,24.6%,0.6%,0.4%,100.0%
+South Australia,PHN402,Country SA,Open at least once from 2021 to 2024,First Nations women aged 50–74,"1,576",351,48,201,"2,175",72.5%,16.1%,2.2%,9.2%,100.0%
+South Australia,PHN402,Country SA,Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"64,417","21,266",338,112,"86,133",74.8%,24.7%,0.4%,0.1%,100.0%
+South Australia,PHN402,Country SA,Open at least once from 2021 to 2024,All women aged 50–74,"65,992","21,617",386,312,"88,307",74.7%,24.5%,0.4%,0.4%,100.0%
+Tasmania,PHN601,Tasmania,Open permanently,First Nations women aged 50–74,"1,119",903,"1,033",299,"3,354",33.4%,26.9%,30.8%,8.9%,100.0%
+Tasmania,PHN601,Tasmania,Open permanently,Non-Indigenous women aged 50–74,"42,873","21,664","20,077","3,943","88,557",48.4%,24.5%,22.7%,4.5%,100.0%
+Tasmania,PHN601,Tasmania,Open permanently,All women aged 50–74,"43,992","22,567","21,109","4,243","91,911",47.9%,24.6%,23.0%,4.6%,100.0%
+Tasmania,PHN601,Tasmania,Open at least annually,First Nations women aged 50–74,"2,236",767,303,49,"3,354",66.7%,22.9%,9.0%,1.5%,100.0%
+Tasmania,PHN601,Tasmania,Open at least annually,Non-Indigenous women aged 50–74,"63,656","19,086","4,866",949,"88,557",71.9%,21.6%,5.5%,1.1%,100.0%
+Tasmania,PHN601,Tasmania,Open at least annually,All women aged 50–74,"65,892","19,853","5,169",997,"91,911",71.7%,21.6%,5.6%,1.1%,100.0%
+Tasmania,PHN601,Tasmania,Open at least every 2 years,First Nations women aged 50–74,"3,015",321,15,3,"3,354",89.9%,9.6%,0.5%,<0.1%,100.0%
+Tasmania,PHN601,Tasmania,Open at least every 2 years,Non-Indigenous women aged 50–74,"80,585","7,543",345,84,"88,557",91.0%,8.5%,0.4%,<0.1%,100.0%
+Tasmania,PHN601,Tasmania,Open at least every 2 years,All women aged 50–74,"83,600","7,863",360,88,"91,911",91.0%,8.6%,0.4%,<0.1%,100.0%
+Tasmania,PHN601,Tasmania,Open at least once from 2021 to 2024,First Nations women aged 50–74,"3,015",321,15,3,"3,354",89.9%,9.6%,0.5%,<0.1%,100.0%
+Tasmania,PHN601,Tasmania,Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"80,585","7,543",345,84,"88,557",91.0%,8.5%,0.4%,<0.1%,100.0%
+Tasmania,PHN601,Tasmania,Open at least once from 2021 to 2024,All women aged 50–74,"83,600","7,863",360,88,"91,911",91.0%,8.6%,0.4%,<0.1%,100.0%
+Australian Capital Territory,PHN801,Australian Capital Territory,Open permanently,First Nations women aged 50–74,673,2,–,–,675,99.8%,0.2%,–,–,100.0%
+Australian Capital Territory,PHN801,Australian Capital Territory,Open permanently,Non-Indigenous women aged 50–74,"54,502",63,–,–,"54,565",99.9%,0.1%,–,–,100.0%
+Australian Capital Territory,PHN801,Australian Capital Territory,Open permanently,All women aged 50–74,"55,175",65,–,–,"55,240",99.9%,0.1%,–,–,100.0%
+Australian Capital Territory,PHN801,Australian Capital Territory,Open at least annually,First Nations women aged 50–74,673,2,–,–,675,99.8%,0.2%,–,–,100.0%
+Australian Capital Territory,PHN801,Australian Capital Territory,Open at least annually,Non-Indigenous women aged 50–74,"54,502",63,–,–,"54,565",99.9%,0.1%,–,–,100.0%
+Australian Capital Territory,PHN801,Australian Capital Territory,Open at least annually,All women aged 50–74,"55,175",65,–,–,"55,240",99.9%,0.1%,–,–,100.0%
+Australian Capital Territory,PHN801,Australian Capital Territory,Open at least every 2 years,First Nations women aged 50–74,673,2,–,–,675,99.8%,0.2%,–,–,100.0%
+Australian Capital Territory,PHN801,Australian Capital Territory,Open at least every 2 years,Non-Indigenous women aged 50–74,"54,502",63,–,–,"54,565",99.9%,0.1%,–,–,100.0%
+Australian Capital Territory,PHN801,Australian Capital Territory,Open at least every 2 years,All women aged 50–74,"55,175",65,–,–,"55,240",99.9%,0.1%,–,–,100.0%
+Australian Capital Territory,PHN801,Australian Capital Territory,Open at least once from 2021 to 2024,First Nations women aged 50–74,673,2,–,–,675,99.8%,0.2%,–,–,100.0%
+Australian Capital Territory,PHN801,Australian Capital Territory,Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"54,502",63,–,–,"54,565",99.9%,0.1%,–,–,100.0%
+Australian Capital Territory,PHN801,Australian Capital Territory,Open at least once from 2021 to 2024,All women aged 50–74,"55,175",65,–,–,"55,240",99.9%,0.1%,–,–,100.0%
+Northern Territory,PHN701,Northern Territory,Open permanently,First Nations women aged 50–74,"1,644",162,72,"4,917","6,796",24.2%,2.4%,1.1%,72.4%,100.0%
+Northern Territory,PHN701,Northern Territory,Open permanently,Non-Indigenous women aged 50–74,"13,997","1,152",352,"5,236","20,738",67.5%,5.6%,1.7%,25.3%,100.0%
+Northern Territory,PHN701,Northern Territory,Open permanently,All women aged 50–74,"15,642","1,314",424,"10,154","27,534",56.8%,4.8%,1.5%,36.9%,100.0%
+Northern Territory,PHN701,Northern Territory,Open at least annually,First Nations women aged 50–74,"3,159",298,422,"2,917","6,796",46.5%,4.4%,6.2%,42.9%,100.0%
+Northern Territory,PHN701,Northern Territory,Open at least annually,Non-Indigenous women aged 50–74,"17,905","1,247",446,"1,140","20,738",86.3%,6.0%,2.2%,5.5%,100.0%
+Northern Territory,PHN701,Northern Territory,Open at least annually,All women aged 50–74,"21,064","1,545",868,"4,057","27,534",76.5%,5.6%,3.2%,14.7%,100.0%
+Northern Territory,PHN701,Northern Territory,Open at least every 2 years,First Nations women aged 50–74,"4,392",538,477,"1,390","6,796",64.6%,7.9%,7.0%,20.4%,100.0%
+Northern Territory,PHN701,Northern Territory,Open at least every 2 years,Non-Indigenous women aged 50–74,"18,945","1,312",157,325,"20,738",91.4%,6.3%,0.8%,1.6%,100.0%
+Northern Territory,PHN701,Northern Territory,Open at least every 2 years,All women aged 50–74,"23,337","1,850",633,"1,714","27,534",84.8%,6.7%,2.3%,6.2%,100.0%
+Northern Territory,PHN701,Northern Territory,Open at least once from 2021 to 2024,First Nations women aged 50–74,"4,423",525,458,"1,390","6,796",65.1%,7.7%,6.7%,20.4%,100.0%
+Northern Territory,PHN701,Northern Territory,Open at least once from 2021 to 2024,Non-Indigenous women aged 50–74,"19,061","1,267",85,325,"20,738",91.9%,6.1%,0.4%,1.6%,100.0%
+Northern Territory,PHN701,Northern Territory,Open at least once from 2021 to 2024,All women aged 50–74,"23,484","1,792",543,"1,714","27,534",85.3%,6.5%,2.0%,6.2%,100.0%
+–  nil or rounded to zero,,,,,,,,,,,,,,
+. .  not applicable,,,,,,,,,,,,,,
+Notes,,,,,,,,,,,,,,
+"1. Original data for BreastScreen Australia service locations included all sites delivering screening from 2021 to 2023, as well as sites expected to deliver screening in 2024. Data were received from state and territory BreastScreen organisations between July and October 2023.",,,,,,,,,,,,,,
+"2. Service frequency describes the frequency at which the accessibility of screening sites was measured, for women needing to access a site.",,,,,,,,,,,,,,
+"3. Population estimates were modelled by the AIHW, based primarily on Australian Bureau of Statistics (ABS) population data. The reference point for the population is 30 June 2021.",,,,,,,,,,,,,,
+4. Drive times were calculated using ArcGIS StreetMap Premium Asia Pacific 2023 Release 1.,,,,,,,,,,,,,,
+"5. Primary Health Networks (PHN) refer to the 2017 boundaries, allocated from 2021 Mesh Blocks. ",,,,,,,,,,,,,,
+Sources: AIHW analysis of ABS population data and state/territory BreastScreen service locations.,,,,,,,,,,,,,,
