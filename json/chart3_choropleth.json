@@ -1,0 +1,83 @@
+{
+  "title": "Bowel Cancer Screening Participation (2020-2021)",
+  "width": "container",
+  "height": 480,
+  "projection": {
+    "type": "conicConformal",
+    "parallels": [-18, -36],
+    "rotate": [-133, 0, 0],
+    "center": [0, -28]
+  },
+  "data": {
+    "url": "data/au_sa3.json",
+    "format": {
+      "type": "topojson",
+      "feature": "SA3_2021_AUST_GDA2020"
+    }
+  },
+  "transform": [
+    {
+      "lookup": "properties.SA3_CODE21",
+      "from": {
+        "data": {
+          "url": "data/bowel_cancer_bySA3.csv",
+          "format": {
+            "type": "csv",
+            "parse": {
+              "SA3 code": "number",
+              "Participation (%)": "number"
+            }
+          }
+        },
+        "key": "SA3 code",
+        "fields": [
+          "SA3 name",
+          "Participation (%)"
+        ]
+      }
+    },
+    {
+      "filter": "isValid(datum['Participation (%)']) && datum['Participation (%)'] > 0"
+    }
+  ],
+  "mark": {
+    "type": "geoshape",
+    "stroke": "white",
+    "strokeWidth": 0.3
+  },
+  "encoding": {
+    "color": {
+      "field": "Participation (%)",
+      "type": "quantitative",
+      "title": "Participation Rate (%)",
+      "scale": {
+        "type": "linear",
+        "domain": [5, 55],
+        "scheme": "greens",
+        "clamp": true
+      },
+      "legend": {
+        "values": [5, 15, 25, 35, 45, 55],
+        "format": ".0f"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "properties.SA3_NAME21",
+        "type": "nominal",
+        "title": "SA3 Region"
+      },
+      {
+        "field": "SA3 code",
+        "type": "nominal",
+        "title": "SA3 Code"
+      },
+      {
+        "field": "Participation (%)",
+        "type": "quantitative",
+        "title": "Participation Rate (%)",
+        "format": ".1f"
+      }
+    ]
+  }
+}

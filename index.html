@@ -1,33 +1,38 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Preventive Health Screening in Australia | Data Visualisation</title>
-  
+
   <!-- Pure.css Framework -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css">
-  
+
   <!-- Custom Styling -->
   <link rel="stylesheet" href="css/styles.css">
-  
+
   <!-- Vega & Vega-Lite Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.25.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.16.3"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.24.0"></script>
 </head>
-<body>
 
+<body>
   <!-- 1000px Centered Dashboard Wrapper -->
   <div class="dashboard-wrapper">
-    
+
     <!-- Header -->
     <header class="dashboard-header pure-g">
       <div class="pure-u-1">
         <span class="badge">National Health Surveillance</span>
         <h1>Preventive Health Screening in Australia</h1>
-        <p class="subtitle">An evaluation of population-level participation, demographic disparities, and regional accessibility across the National Bowel, BreastScreen, and Cervical Screening Programs.</p>
+        <p class="subtitle">
+          An evaluation of population-level participation, demographic disparities,
+          and regional accessibility across the National Bowel, BreastScreen,
+          and Cervical Screening Programs.
+        </p>
       </div>
     </header>
 
@@ -35,22 +40,37 @@
     <section class="dashboard-section">
       <div class="section-title pure-g">
         <div class="pure-u-1">
-          <h2>1. National Screening Activity & Scale</h2>
-          <p class="section-desc">Over the last decade, Australia's population-based screening frameworks have undergone technological shifts and external disruptions, notably the COVID-19 pandemic and the renewal of the National Cervical Screening Program.</p>
+          <h2>1. National Screening Activity &amp; Scale</h2>
+          <p class="section-desc">
+            Over the last decade, Australia's population-based screening frameworks
+            have undergone technological shifts and external disruptions, notably
+            the COVID-19 pandemic and the renewal of the National Cervical Screening Program.
+          </p>
         </div>
       </div>
 
       <!-- Chart 1: Stream Graph -->
       <div class="pure-g chart-row">
         <div class="pure-u-1-3 narrative-panel">
-          <h3>Pandemic Shock & Diagnostic Recovery</h3>
-          <p>Quarterly testing capacity experienced significant disruption during early 2020. BreastScreen services briefly suspended routine screenings in Q2 2020 to divert acute clinical resources and reduce infection vectors.</p>
-          <p>Conversely, the <strong>National Bowel Cancer Screening Program (NBCSP)</strong> retained steadier volumes due to its distributed at-home immunochemical faecal occult blood test (iFOBT) kit model.</p>
+          <h3>Pandemic Shock &amp; Diagnostic Recovery</h3>
+          <p>
+            Quarterly testing capacity experienced significant disruption during
+            early 2020. BreastScreen services briefly suspended routine screenings
+            in Q2 2020 to divert acute clinical resources and reduce infection vectors.
+          </p>
+          <p>
+            Conversely, the <strong>National Bowel Cancer Screening Program (NBCSP)</strong>
+            retained steadier volumes due to its distributed at-home immunochemical
+            faecal occult blood test (iFOBT) kit model.
+          </p>
           <div class="metric-callout">
             <span class="metric-val">-38%</span>
-            <span class="metric-label">Decline in BreastScreen mammograms during Q2 2020</span>
+            <span class="metric-label">
+              Decline in BreastScreen mammograms during Q2 2020
+            </span>
           </div>
         </div>
+
         <div class="pure-u-2-3 chart-panel">
           <div id="vis_chart1_stream_graph" class="vis-container"></div>
         </div>
@@ -61,10 +81,39 @@
         <div class="pure-u-2-3 chart-panel">
           <div id="vis_chart2_connected_dot_plot" class="vis-container"></div>
         </div>
+
         <div class="pure-u-1-3 narrative-panel">
           <h3>The Gender Participation Gap</h3>
-          <p>National participation rates vary substantially across programs and sexes. In the bowel screening program, eligible women consistently screen at a higher rate than eligible men, despite incidence being slightly higher in males.</p>
-          <p>Across all programs, participation sits below the AIHW aspirational benchmark of <strong>50%</strong>, highlighting ongoing opportunities for targeted public health messaging.</p>
+          <p>
+            National participation rates vary substantially across programs and sexes.
+            In the bowel screening program, eligible women consistently screen at a
+            higher rate than eligible men, despite incidence being slightly higher in males.
+          </p>
+          <p>
+            Across all programs, participation sits below the AIHW aspirational
+            benchmark of <strong>50%</strong>, highlighting ongoing opportunities
+            for targeted public health messaging.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 2 ==================== -->
+    <section class="dashboard-section">
+      <div class="section-title pure-g">
+        <div class="pure-u-1">
+          <h2>2. Regional Screening Participation</h2>
+          <p class="section-desc">
+            Explore the geographic distribution of bowel cancer screening
+            participation across Australia to identify regional differences.
+          </p>
+        </div>
+      </div>
+
+      <!-- Chart 3: Choropleth Map -->
+      <div class="pure-g chart-row">
+        <div class="pure-u-1 chart-panel">
+          <div id="vis_chart3_choropleth" class="vis-container"></div>
         </div>
       </div>
     </section>
@@ -73,8 +122,13 @@
     <footer class="dashboard-footer pure-g">
       <div class="pure-u-1">
         <hr>
-        <p><strong>FIT3179 Data Visualisation 2 Dashboard</strong> | Author: Anujah Muthukrishna Selvam </p>
-        <p>Data Sources: Australian Institute of Health and Welfare (AIHW) — <em>National Cancer Screening Programs Participation</em>, <em>Cancer Screening Programs Activity</em>, and <em>BreastScreen Australia Monitoring Reports</em>.</p>
+        <p>
+          <strong>FIT3179 Data Visualisation 2 Dashboard</strong>
+          | Author: Anujah Muthukrishna Selvam
+        </p>
+        <p>
+          Data Sources: Australian Institute of Health and Welfare (AIHW).
+        </p>
       </div>
     </footer>
 
@@ -84,3 +138,4 @@
   <script src="js/vega_lite_vis.js"></script>
 </body>
 </html>
+```

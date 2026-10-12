@@ -1,0 +1,342 @@
+﻿State/territory,SA3 code,SA3 name,Participated,Invited,Participation (%)
+NSW,10102,Queanbeyan,"6,417","15,851",40.5
+NSW,10103,Snowy Mountains,"2,448","5,902",41.5
+NSW,10104,South Coast,"12,588","26,691",47.2
+NSW,10105,Goulburn - Mulwaree,"4,389","10,773",40.7
+NSW,10106,Young - Yass,"4,000","9,929",40.3
+NSW,10201,Gosford,"19,686","47,708",41.3
+NSW,10202,Wyong,"16,935","43,411",39.0
+NSW,10301,Bathurst,"5,234","12,603",41.5
+NSW,10302,Lachlan Valley,"5,880","15,492",38.0
+NSW,10303,Lithgow - Mudgee,"5,277","13,343",39.5
+NSW,10304,Orange,"6,118","14,963",40.9
+NSW,10401,Clarence Valley,"7,022","16,533",42.5
+NSW,10402,Coffs Harbour,"11,519","26,848",42.9
+NSW,10501,Bourke - Cobar - Coonamble,"1,642","6,238",26.3
+NSW,10502,Broken Hill and Far West,"1,786","5,480",32.6
+NSW,10503,Dubbo,"6,328","18,175",34.8
+NSW,10601,Lower Hunter,"9,242","23,154",39.9
+NSW,10602,Maitland,"7,914","18,686",42.4
+NSW,10603,Port Stephens,"10,244","22,282",46.0
+NSW,10604,Upper Hunter,"2,792","7,561",36.9
+NSW,10701,Dapto - Port Kembla,"7,737","19,863",39.0
+NSW,10702,Illawarra Catchment Reserve,n.p.,n.p.,n.p.
+NSW,10703,Kiama - Shellharbour,"10,999","25,050",43.9
+NSW,10704,Wollongong,"13,875","31,809",43.6
+NSW,10801,Great Lakes,"5,173","11,269",45.9
+NSW,10802,Kempsey - Nambucca,"6,518","16,634",39.2
+NSW,10803,Lord Howe Island,56,129,43.4
+NSW,10804,Port Macquarie,"10,575","24,527",43.1
+NSW,10805,Taree - Gloucester,"8,215","18,423",44.6
+NSW,10901,Albury,"7,320","16,477",44.4
+NSW,10902,Lower Murray,"1,341","3,296",40.7
+NSW,10903,Upper Murray exc. Albury,"5,585","12,480",44.8
+NSW,11001,Armidale,"4,348","10,090",43.1
+NSW,11002,Inverell - Tenterfield,"4,290","11,281",38.0
+NSW,11003,Moree - Narrabri,"1,762","6,002",29.3
+NSW,11004,Tamworth - Gunnedah,"7,988","21,042",38.0
+NSW,11101,Lake Macquarie - East,"15,099","32,757",46.1
+NSW,11102,Lake Macquarie - West,"9,537","21,881",43.6
+NSW,11103,Newcastle,"17,688","40,983",43.2
+NSW,11201,Richmond Valley - Coastal,"10,780","25,868",41.7
+NSW,11202,Richmond Valley - Hinterland,"8,333","22,108",37.7
+NSW,11203,Tweed Valley,"10,762","27,269",39.5
+NSW,11301,Griffith - Murrumbidgee (West),"4,295","12,127",35.4
+NSW,11302,Tumut - Tumbarumba,"1,718","4,120",41.7
+NSW,11303,Wagga Wagga,"9,228","22,781",40.5
+NSW,11401,Shoalhaven,"14,284","31,783",44.9
+NSW,11402,Southern Highlands,"6,579","14,941",44.0
+NSW,11501,Baulkham Hills,"16,937","39,890",42.5
+NSW,11502,Dural - Wisemans Ferry,"3,071","7,457",41.2
+NSW,11503,Hawkesbury,"2,768","6,659",41.6
+NSW,11504,Rouse Hill - McGraths Hill,"3,944","9,751",40.5
+NSW,11601,Blacktown,"11,073","32,316",34.3
+NSW,11602,Blacktown - North,"7,721","21,513",35.9
+NSW,11603,Mount Druitt,"7,691","26,351",29.2
+NSW,11701,Botany,"3,917","11,240",34.9
+NSW,11702,Marrickville - Sydenham - Petersham,"4,817","12,851",37.5
+NSW,11703,Sydney Inner City,"15,363","45,739",33.6
+NSW,11801,Eastern Suburbs - North,"10,118","30,061",33.7
+NSW,11802,Eastern Suburbs - South,"11,413","30,905",36.9
+NSW,11901,Bankstown,"15,244","43,452",35.1
+NSW,11902,Canterbury,"10,823","33,020",32.8
+NSW,11903,Hurstville,"12,787","33,138",38.6
+NSW,11904,Kogarah - Rockdale,"11,720","33,149",35.4
+NSW,12001,Canada Bay,"8,120","20,232",40.1
+NSW,12002,Leichhardt,"6,221","14,898",41.8
+NSW,12003,Strathfield - Burwood - Ashfield,"13,211","35,804",36.9
+NSW,12101,Chatswood - Lane Cove,"11,760","28,416",41.4
+NSW,12102,Hornsby,"8,798","20,748",42.4
+NSW,12103,Ku-ring-gai,"14,453","33,347",43.3
+NSW,12104,North Sydney - Mosman,"10,674","25,876",41.3
+NSW,12201,Manly,"5,232","11,420",45.8
+NSW,12202,Pittwater,"8,492","18,375",46.2
+NSW,12203,Warringah,"17,741","39,548",44.9
+NSW,12301,Camden,"5,803","14,564",39.8
+NSW,12302,Campbelltown (NSW),"13,712","40,231",34.1
+NSW,12303,Wollondilly,"4,353","10,508",41.4
+NSW,12401,Blue Mountains,"10,408","23,451",44.4
+NSW,12402,Blue Mountains - South,n.p.,n.p.,n.p.
+NSW,12403,Penrith,"12,358","32,732",37.8
+NSW,12404,Richmond - Windsor,"3,404","9,246",36.8
+NSW,12405,St Marys,"4,684","13,797",33.9
+NSW,12501,Auburn,"6,447","19,326",33.4
+NSW,12502,Carlingford,"6,949","18,048",38.5
+NSW,12503,Merrylands - Guildford,"11,872","35,064",33.9
+NSW,12504,Parramatta,"10,053","29,050",34.6
+NSW,12601,Pennant Hills - Epping,"5,866","13,320",44.0
+NSW,12602,Ryde - Hunters Hill,"13,728","33,113",41.5
+NSW,12701,Bringelly - Green Valley,"9,803","27,668",35.4
+NSW,12702,Fairfield,"21,434","55,577",38.6
+NSW,12703,Liverpool,"9,720","29,019",33.5
+NSW,12801,Cronulla - Miranda - Caringbah,"12,444","29,076",42.8
+NSW,12802,Sutherland - Menai - Heathcote,"12,060","27,242",44.3
+Vic,20101,Ballarat,"13,397","27,935",48.0
+Vic,20102,Creswick - Daylesford - Ballan,"4,304","9,472",45.4
+Vic,20103,Maryborough - Pyrenees,"3,770","8,606",43.8
+Vic,20201,Bendigo,"12,853","26,405",48.7
+Vic,20202,Heathcote - Castlemaine - Kyneton,"7,410","15,337",48.3
+Vic,20203,Loddon - Elmore,"1,485","3,440",43.2
+Vic,20301,Barwon - West,"2,584","5,500",47.0
+Vic,20302,Geelong,"22,789","49,887",45.7
+Vic,20303,Surf Coast - Bellarine Peninsula,"12,706","23,701",53.6
+Vic,20401,Upper Goulburn Valley,"7,957","17,466",45.6
+Vic,20402,Wangaratta - Benalla,"7,034","14,260",49.3
+Vic,20403,Wodonga - Alpine,"9,982","20,810",48.0
+Vic,20501,Baw Baw,"6,656","14,147",47.0
+Vic,20502,Gippsland - East,"8,224","16,246",50.6
+Vic,20503,Gippsland - South West,"10,637","21,514",49.4
+Vic,20504,Latrobe Valley,"9,515","21,403",44.5
+Vic,20505,Wellington,"6,034","13,428",44.9
+Vic,20601,Brunswick - Coburg,"7,956","18,530",42.9
+Vic,20602,Darebin - South,"5,798","12,262",47.3
+Vic,20603,Essendon,"7,515","16,209",46.4
+Vic,20604,Melbourne City,"8,579","24,708",34.7
+Vic,20605,Port Phillip,"10,487","25,459",41.2
+Vic,20606,Stonnington - West,"5,575","14,081",39.6
+Vic,20607,Yarra,"8,521","19,290",44.2
+Vic,20701,Boroondara,"20,599","43,219",47.7
+Vic,20702,Manningham - West,"11,493","26,012",44.2
+Vic,20703,Whitehorse - West,"11,677","24,809",47.1
+Vic,20801,Bayside,"13,922","27,883",49.9
+Vic,20802,Glen Eira,"15,090","35,287",42.8
+Vic,20803,Kingston,"13,703","30,895",44.4
+Vic,20804,Stonnington - East,"4,707","10,085",46.7
+Vic,20901,Banyule,"15,235","31,137",48.9
+Vic,20902,Darebin - North,"8,510","21,264",40.0
+Vic,20903,Nillumbik - Kinglake,"9,703","18,925",51.3
+Vic,20904,Whittlesea - Wallan,"20,806","51,562",40.4
+Vic,21001,Keilor,"7,301","15,631",46.7
+Vic,21002,Macedon Ranges,"4,170","8,609",48.4
+Vic,21003,Moreland - North,"6,205","15,714",39.5
+Vic,21004,Sunbury,"4,852","10,738",45.2
+Vic,21005,Tullamarine - Broadmeadows,"14,911","40,277",37.0
+Vic,21101,Knox,"18,681","41,772",44.7
+Vic,21102,Manningham - East,"3,807","7,669",49.6
+Vic,21103,Maroondah,"12,904","27,611",46.7
+Vic,21104,Whitehorse - East,"7,498","15,576",48.1
+Vic,21105,Yarra Ranges,"18,601","41,059",45.3
+Vic,21201,Cardinia,"9,636","23,125",41.7
+Vic,21202,Casey - North,"13,215","32,978",40.1
+Vic,21203,Casey - South,"13,772","38,339",35.9
+Vic,21204,Dandenong,"17,110","44,646",38.3
+Vic,21205,Monash,"18,653","42,955",43.4
+Vic,21301,Brimbank,"19,070","47,219",40.4
+Vic,21302,Hobsons Bay,"10,080","22,372",45.1
+Vic,21303,Maribyrnong,"7,467","17,690",42.2
+Vic,21304,Melton - Bacchus Marsh,"14,047","36,144",38.9
+Vic,21305,Wyndham,"17,678","46,167",38.3
+Vic,21401,Frankston,"13,568","34,541",39.3
+Vic,21402,Mornington Peninsula,"21,714","46,299",46.9
+Vic,21501,Grampians,"7,881","17,566",44.9
+Vic,21502,Mildura,"5,920","14,670",40.4
+Vic,21503,Murray River - Swan Hill,"4,899","11,032",44.4
+Vic,21601,Campaspe,"5,143","11,346",45.3
+Vic,21602,Moira,"4,194","9,256",45.3
+Vic,21603,Shepparton,"7,747","17,291",44.8
+Vic,21701,Glenelg - Southern Grampians,"5,518","11,875",46.5
+Vic,21703,Colac - Corangamite,"4,987","11,463",43.5
+Vic,21704,Warrnambool,"6,736","14,478",46.5
+Qld,30101,Capalaba,"7,443","18,967",39.2
+Qld,30102,Cleveland - Stradbroke,"9,994","25,167",39.7
+Qld,30103,Wynnum - Manly,"6,653","17,383",38.3
+Qld,30201,Bald Hills - Everton Park,"3,897","9,072",43.0
+Qld,30202,Chermside,"5,849","15,253",38.3
+Qld,30203,Nundah,"3,357","9,171",36.6
+Qld,30204,Sandgate,"5,538","14,077",39.3
+Qld,30301,Carindale,"4,414","10,994",40.1
+Qld,30302,Holland Park - Yeronga,"5,522","14,852",37.2
+Qld,30303,Mt Gravatt,"6,433","16,962",37.9
+Qld,30304,Nathan,"2,937","7,864",37.3
+Qld,30305,Rocklea - Acacia Ridge,"4,677","13,053",35.8
+Qld,30306,Sunnybank,"3,808","10,180",37.4
+Qld,30401,Centenary,"3,212","7,649",42.0
+Qld,30402,Kenmore - Brookfield - Moggill,"4,858","11,305",43.0
+Qld,30403,Sherwood - Indooroopilly,"4,028","9,873",40.8
+Qld,30404,The Gap - Enoggera,"5,037","12,031",41.9
+Qld,30501,Brisbane Inner,"4,925","14,644",33.6
+Qld,30502,Brisbane Inner - East,"3,402","8,922",38.1
+Qld,30503,Brisbane Inner - North,"7,165","18,742",38.2
+Qld,30504,Brisbane Inner - West,"4,733","11,898",39.8
+Qld,30601,Cairns - North,"5,399","13,756",39.2
+Qld,30602,Cairns - South,"9,221","27,023",34.1
+Qld,30603,Innisfail - Cassowary Coast,"3,459","9,295",37.2
+Qld,30604,Port Douglas - Daintree,"1,396","3,729",37.4
+Qld,30605,Tablelands (East) - Kuranda,"5,420","13,681",39.6
+Qld,30701,Darling Downs (West) - Maranoa,"3,522","10,375",33.9
+Qld,30702,Darling Downs - East,"4,074","10,924",37.3
+Qld,30703,Granite Belt,"4,806","12,222",39.3
+Qld,30801,Central Highlands (Qld),"1,591","5,227",30.4
+Qld,30803,Rockhampton,"11,535","30,349",38.0
+Qld,30804,Biloela,"1,079","2,993",36.1
+Qld,30805,Gladstone,"4,900","14,574",33.6
+Qld,30901,Broadbeach - Burleigh,"6,958","17,560",39.6
+Qld,30902,Coolangatta,"5,933","15,435",38.4
+Qld,30903,Gold Coast - North,"7,591","20,064",37.8
+Qld,30904,Gold Coast Hinterland,"2,344","5,999",39.1
+Qld,30905,Mudgeeraba - Tallebudgera,"3,405","9,158",37.2
+Qld,30906,Nerang,"6,143","17,405",35.3
+Qld,30907,Ormeau - Oxenford,"11,143","31,331",35.6
+Qld,30908,Robina,"4,810","12,676",37.9
+Qld,30909,Southport,"6,021","17,606",34.2
+Qld,30910,Surfers Paradise,"3,933","11,023",35.7
+Qld,31001,Forest Lake - Oxley,"5,624","16,117",34.9
+Qld,31002,Ipswich Hinterland,"6,530","18,094",36.1
+Qld,31003,Ipswich Inner,"8,559","25,721",33.3
+Qld,31004,Springfield - Redbank,"5,364","17,490",30.7
+Qld,31101,Beaudesert,"1,286","3,791",33.9
+Qld,31102,Beenleigh,"3,099","9,978",31.1
+Qld,31103,Browns Plains,"5,973","19,381",30.8
+Qld,31104,Jimboomba,"4,260","12,618",33.8
+Qld,31105,Loganlea - Carbrook,"4,907","14,401",34.1
+Qld,31106,Springwood - Kingston,"5,674","18,528",30.6
+Qld,31201,Bowen Basin - North,"2,167","6,643",32.6
+Qld,31202,Mackay,"10,879","28,477",38.2
+Qld,31203,Whitsunday,"2,071","5,496",37.7
+Qld,31301,Bribie - Beachmere,"5,483","12,155",45.1
+Qld,31302,Caboolture,"6,008","17,729",33.9
+Qld,31303,Caboolture Hinterland,"1,388","3,488",39.8
+Qld,31304,Narangba - Burpengary,"5,880","15,976",36.8
+Qld,31305,Redcliffe,"7,545","18,916",39.9
+Qld,31401,The Hills District,"9,051","21,111",42.9
+Qld,31402,North Lakes,"5,563","15,379",36.2
+Qld,31403,Strathpine,"3,409","9,463",36.0
+Qld,31501,Far North,"1,722","6,977",24.7
+Qld,31502,Outback - North,"1,235","5,898",20.9
+Qld,31503,Outback - South,"1,524","4,479",34.0
+Qld,31601,Buderim,"5,934","13,690",43.3
+Qld,31602,Caloundra,"10,694","24,588",43.5
+Qld,31603,Maroochy,"7,645","17,935",42.6
+Qld,31605,Noosa,"6,505","14,974",43.4
+Qld,31606,Sunshine Coast Hinterland,"6,644","16,057",41.4
+Qld,31607,Nambour,"5,396","13,618",39.6
+Qld,31608,Noosa Hinterland,"3,282","7,551",43.5
+Qld,31701,Toowoomba,"14,143","36,330",38.9
+Qld,31801,Charters Towers - Ayr - Ingham,"3,188","10,093",31.6
+Qld,31802,Townsville,"14,149","43,613",32.4
+Qld,31901,Bundaberg,"10,678","25,551",41.8
+Qld,31902,Burnett,"5,903","15,190",38.9
+Qld,31903,Gympie - Cooloola,"5,967","14,842",40.2
+Qld,31904,Hervey Bay,"7,972","18,056",44.2
+Qld,31905,Maryborough,"6,949","16,617",41.8
+WA,50101,Augusta - Margaret River - Busselton,"7,540","15,437",48.8
+WA,50102,Bunbury,"12,150","28,232",43.0
+WA,50103,Manjimup,"3,659","7,760",47.2
+WA,50201,Mandurah,"13,247","29,651",44.7
+WA,50301,Cottesloe - Claremont,"7,885","17,398",45.3
+WA,50302,Perth City,"10,604","26,251",40.4
+WA,50401,Bayswater - Bassendean,"8,094","19,980",40.5
+WA,50402,Mundaring,"5,196","12,208",42.6
+WA,50403,Swan,"11,933","31,625",37.7
+WA,50501,Joondalup,"21,784","45,318",48.1
+WA,50502,Stirling,"19,326","45,064",42.9
+WA,50503,Wanneroo,"17,562","44,392",39.6
+WA,50601,Armadale,"7,412","19,227",38.5
+WA,50602,Belmont - Victoria Park,"6,020","16,016",37.6
+WA,50603,Canning,"9,377","22,150",42.3
+WA,50604,Gosnells,"10,280","27,164",37.8
+WA,50605,Kalamunda,"6,472","15,082",42.9
+WA,50606,Serpentine - Jarrahdale,"2,604","6,501",40.1
+WA,50607,South Perth,"4,711","10,613",44.4
+WA,50701,Cockburn,"10,196","24,937",40.9
+WA,50702,Fremantle,"4,866","11,230",43.3
+WA,50703,Kwinana,"2,808","8,458",33.2
+WA,50704,Melville,"13,224","27,586",47.9
+WA,50705,Rockingham,"12,700","31,771",40.0
+WA,50901,Albany,"8,533","18,634",45.8
+WA,50902,Wheat Belt - North,"6,869","17,320",39.7
+WA,50903,Wheat Belt - South,"2,319","5,697",40.7
+WA,51001,Kimberley,"1,445","6,632",21.8
+WA,51002,East Pilbara,614,"3,296",18.6
+WA,51003,West Pilbara,"1,022","3,933",26.0
+WA,51101,Esperance,"1,936","4,421",43.8
+WA,51102,Gascoyne,759,"2,266",33.5
+WA,51103,Goldfields,"2,344","8,658",27.1
+WA,51104,Mid West,"5,943","15,233",39.0
+SA,40101,Adelaide City,"2,377","6,617",35.9
+SA,40102,Adelaide Hills,"10,365","21,621",47.9
+SA,40103,Burnside,"5,848","11,735",49.8
+SA,40104,Campbelltown (SA),"5,563","12,742",43.7
+SA,40105,Norwood - Payneham - St Peters,"4,335","9,380",46.2
+SA,40106,Prospect - Walkerville,"3,395","7,225",47.0
+SA,40107,Unley,"4,731","9,792",48.3
+SA,40201,Gawler - Two Wells,"4,348","10,136",42.9
+SA,40202,Playford,"7,286","21,098",34.5
+SA,40203,Port Adelaide - East,"5,884","14,505",40.6
+SA,40204,Salisbury,"12,885","32,793",39.3
+SA,40205,Tea Tree Gully,"11,624","24,883",46.7
+SA,40301,Holdfast Bay,"5,079","9,745",52.1
+SA,40302,Marion,"11,084","23,464",47.2
+SA,40303,Mitcham,"8,225","16,381",50.2
+SA,40304,Onkaparinga,"21,068","45,889",45.9
+SA,40401,Charles Sturt,"12,917","29,497",43.8
+SA,40402,Port Adelaide - West,"6,591","16,410",40.2
+SA,40403,West Torrens,"6,457","14,687",44.0
+SA,40501,Barossa,"4,603","9,596",48.0
+SA,40502,Lower North,"3,047","6,719",45.3
+SA,40503,Mid North,"3,528","8,296",42.5
+SA,40504,Yorke Peninsula,"4,393","8,733",50.3
+SA,40601,Eyre Peninsula and South West,"6,541","15,804",41.4
+SA,40602,Outback - North and East,"2,051","5,850",35.1
+SA,40701,Fleurieu - Kangaroo Island,"8,647","16,943",51.0
+SA,40702,Limestone Coast,"8,010","18,583",43.1
+SA,40703,Murray and Mallee,"8,971","20,835",43.1
+Tas,60101,Brighton,"1,622","4,224",38.4
+Tas,60102,Hobart - North East,"7,019","14,485",48.5
+Tas,60103,Hobart - North West,"5,399","14,228",37.9
+Tas,60104,Hobart - South and West,"4,711","9,149",51.5
+Tas,60105,Hobart Inner,"6,766","13,919",48.6
+Tas,60106,Sorell - Dodges Ferry,"2,292","5,160",44.4
+Tas,60201,Launceston,"9,330","21,454",43.5
+Tas,60202,Meander Valley - West Tamar,"3,380","7,496",45.1
+Tas,60203,North East,"5,305","12,177",43.6
+Tas,60301,Central Highlands (Tas),"1,341","3,487",38.5
+Tas,60302,Huon - Bruny Island,"3,086","6,758",45.7
+Tas,60303,South East Coast,"1,480","2,955",50.1
+Tas,60401,Burnie - Ulverstone,"6,436","14,778",43.6
+Tas,60402,Devonport,"6,250","14,098",44.3
+Tas,60403,West Coast,"2,042","5,235",39.0
+ACT,80101,Belconnen,"9,584","22,039",43.5
+ACT,80103,Canberra East,92,283,32.5
+ACT,80104,Gungahlin,"5,710","13,581",42.0
+ACT,80105,North Canberra,"5,020","11,338",44.3
+ACT,80106,South Canberra,"3,792","8,324",45.6
+ACT,80107,Tuggeranong,"10,059","23,090",43.6
+ACT,80108,Weston Creek,"2,518","5,386",46.7
+ACT,80109,Woden Valley,"4,110","8,819",46.6
+ACT,80110,Molonglo,594,"1,296",45.8
+ACT,80111,Urriarra - Namadgi,175,479,36.5
+NT,70101,Darwin City,"2,137","7,744",27.6
+NT,70102,Darwin Suburbs,"3,413","11,085",30.8
+NT,70103,Litchfield,"1,492","4,571",32.6
+NT,70104,Palmerston,"1,044","4,323",24.1
+NT,70201,Alice Springs,"1,893","8,559",22.1
+NT,70202,Barkly,121,953,12.7
+NT,70203,Daly - Tiwi - West Arnhem,276,"1,633",16.9
+NT,70204,East Arnhem,239,"1,921",12.4
+NT,70205,Katherine,484,"3,050",15.9
+Other,90101,Christmas Island,34,375,9.1
+Other,90102,Cocos (Keeling) Islands,n.p.,n.p.,n.p.
+Other,90103,Jervis Bay,n.p.,n.p.,n.p.
+Other,90104,Norfolk Island,143,624,22.9
+Unknown,,Unknown,820,"3,004",27.3

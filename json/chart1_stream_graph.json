@@ -1,7 +1,6 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
-  "height": 380,
+  "height": 280,
   "data": {
     "url": "data/Screening_Activity_Data_20230714.csv",
     "format": {
