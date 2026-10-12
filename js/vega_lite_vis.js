@@ -1,4 +1,3 @@
-// Configuration options (actions: false disables the "..." menu)
 const embedOpt = { "actions": false };
 
 // 1. File paths to Vega-Lite JSON specifications
