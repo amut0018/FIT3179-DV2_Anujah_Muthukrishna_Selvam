@@ -1,0 +1,132 @@
+{
+  "title": {
+    "text": "Breast Cancer Screening Eligible Women by State and Indigenous Status (2021)",
+    "anchor": "start",
+    "fontSize": 15
+  },
+  "width": "container",
+  "height": 320,
+  "data": {
+    "url": "data/sa3_drivetime_screeningbreastcancer.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum['Service frequency'] === 'Open permanently' && (datum['Indigenous status'] === 'First Nations women aged 50–74' || datum['Indigenous status'] === 'Non-Indigenous women aged 50–74')"
+    },
+    {
+      "calculate": "toNumber(replace(datum['Women (total)'], ',', ''))",
+      "as": "WomenTotal"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "WomenTotal",
+          "as": "WomenTotal"
+        }
+      ],
+      "groupby": ["Jurisdiction", "Indigenous status"]
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "sum",
+          "field": "WomenTotal",
+          "as": "StateWomenTotal"
+        }
+      ],
+      "groupby": ["Jurisdiction"]
+    },
+    {
+      "calculate": "datum.WomenTotal / datum.StateWomenTotal * 100",
+      "as": "WomenPercentage"
+    },
+    {
+      "calculate": "datum['Indigenous status'] === 'First Nations women aged 50–74' ? 'First Nations women' : 'Non-Indigenous women'",
+      "as": "IndigenousGroup"
+    }
+  ],
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 2
+  },
+  "encoding": {
+    "y": {
+      "field": "Jurisdiction",
+      "type": "nominal",
+      "title": "Jurisdiction",
+      "sort": [
+        "New South Wales",
+        "Victoria",
+        "Queensland",
+        "South Australia",
+        "Western Australia",
+        "Tasmania",
+        "Northern Territory",
+        "Australian Capital Territory"
+      ],
+      "axis": {
+        "labelFontSize": 11
+      }
+    },
+    "x": {
+      "field": "WomenPercentage",
+      "type": "quantitative",
+      "title": "Percentage of State (%)",
+      "stack": "zero",
+      "scale": {
+        "domain": [0, 100]
+      },
+      "axis": {
+        "format": ".0f",
+        "grid": true,
+        "titleFontSize": 12,
+        "title": "Percentage of State (%)"
+      }
+    },
+    "color": {
+      "field": "IndigenousGroup",
+      "type": "nominal",
+      "title": "Indigenous Status",
+      "scale": {
+        "domain": [
+          "First Nations women",
+          "Non-Indigenous women"
+        ],
+        "range": ["#d95f02", "#4c78a8"]
+      },
+      "legend": {
+        "orient": "top",
+        "title": "Indigenous Status"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Jurisdiction",
+        "type": "nominal",
+        "title": "State"
+      },
+      {
+        "field": "IndigenousGroup",
+        "type": "nominal",
+        "title": "Indigenous Status"
+      },
+      {
+        "field": "WomenPercentage",
+        "type": "quantitative",
+        "title": "Percentage of State (%)",
+        "format": ".1f",
+        "suffix": "%"
+      },
+      {
+        "field": "WomenTotal",
+        "type": "quantitative",
+        "title": "Eligible Women",
+        "format": ",.0f"
+      }
+    ]
+  }
+}

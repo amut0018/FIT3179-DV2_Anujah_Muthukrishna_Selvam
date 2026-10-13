@@ -1,0 +1,91 @@
+{
+  "title": "Bowel Cancer Screening Participation by Primary Health Network",
+  "width": "container",
+  "height": 380,
+  "projection": {
+    "type": "conicConformal",
+    "parallels": [-18, -36],
+    "rotate": [-133, 0, 0],
+    "center": [0, -28],
+    "scale": 700
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/au_states.json",
+        "format": {
+          "type": "topojson",
+          "feature": "STE_2021_AUST_GDA2020"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#f1f4f6",
+        "stroke": "#b8c2cc",
+        "strokeWidth": 0.8
+      }
+    },
+    {
+      "data": {
+        "url": "data/bowel_cancer_byPHN.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "Latitude": "number",
+            "Longitude": "number",
+            "Participation (%)": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "calculate": "toNumber(replace(datum.Invited, ',', ''))",
+          "as": "EligiblePopulation"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "opacity": 0.72,
+        "stroke": "#1a252c",
+        "strokeWidth": 0.6
+      },
+      "encoding": {
+        "longitude": {"field": "Longitude", "type": "quantitative"},
+        "latitude": {"field": "Latitude", "type": "quantitative"},
+        "size": {
+            "field": "EligiblePopulation",
+            "type": "quantitative",
+            "title": "Eligible Population",
+            "scale": {
+                "type": "linear",
+                "domain": [13716, 372823],
+                "range": [40, 750],
+                "clamp": true,
+                "zero": false
+            },
+            "legend": {
+                "orient": "bottom-left",
+                "values": [13716, 100000, 200000, 300000, 372823],
+                "format": ",.0f",
+                "title": "Eligible Population",
+                "symbolType": "circle",
+                "symbolStrokeColor": "#1a252c",
+                "symbolFillColor": "#b8a4d9"
+            }
+            },
+        "color": {
+          "field": "Participation (%)",
+          "type": "quantitative",
+          "title": "Participation Rate (%)",
+          "scale": {"scheme": "purples"},
+          "legend": {"orient": "bottom-right", "format": ".1f"}
+        },
+        "tooltip": [
+          {"field": "PHN name", "type": "nominal", "title": "Primary Health Network"},
+          {"field": "EligiblePopulation", "type": "quantitative", "title": "Eligible Population", "format": ","},
+          {"field": "Participation (%)", "type": "quantitative", "title": "Participation Rate (%)", "format": ".1f"}
+        ]
+      }
+    }
+  ]
+}

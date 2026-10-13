@@ -1,0 +1,145 @@
+{
+  "title": "Breast Screening Eligible Female Cohort by Primary Health Network",
+  "width": "container",
+  "height": 380,
+  "projection": {
+    "type": "conicConformal",
+    "parallels": [
+      -18,
+      -36
+    ],
+    "rotate": [
+      -133,
+      0,
+      0
+    ],
+    "center": [
+      0,
+      -28
+    ],
+    "scale": 700
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/au_states.json",
+        "format": {
+          "type": "topojson",
+          "feature": "STE_2021_AUST_GDA2020"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#f4f6f8",
+        "stroke": "#cbd5e1",
+        "strokeWidth": 0.7
+      }
+    },
+    {
+      "data": {
+        "url": "data/breastscreen_dotmap_200_women.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "DotLongitude": "number",
+            "DotLatitude": "number",
+            "Women (total)": "number",
+            "DotIndex": "number"
+          }
+        }
+      },
+      "mark": {
+        "type": "circle",
+        "size": 6,
+        "opacity": 0.65,
+        "color": "#d95f02"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "DotLongitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "DotLatitude",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "PHN name",
+            "type": "nominal",
+            "title": "Primary Health Network"
+          },
+          {
+            "field": "PHN code",
+            "type": "nominal",
+            "title": "PHN Code"
+          },
+          {
+            "field": "Women (total)",
+            "type": "quantitative",
+            "title": "Total Eligible Cohort",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "lon": 113.5,
+            "lat": -42
+          }
+        ]
+      },
+      "mark": {
+        "type": "circle",
+        "size": 6,
+        "color": "#d95f02",
+        "opacity": 0.65
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "lon": 115,
+            "lat": -42,
+            "label": "1 Dot = 200 Eligible Women"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 11,
+        "fontWeight": 600,
+        "color": "#2c3e50"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    }
+  ]
+}

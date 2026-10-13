@@ -1,0 +1,165 @@
+{
+  "title": {
+    "text": "Breast Cancer Screening Participation Rates by Age Group (2021-2022)",
+    "fontSize": 14,
+    "anchor": "start"
+  },
+  "width": "container",
+  "height": 280,
+  "data": {
+    "url": "data/AIHW_CAN_114_Cancer_screening_quarterly_data_Participation_14072023.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "Value": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.Program == 'Breast'"
+    },
+    {
+      "filter": "datum.MeasureName == 'Participation rate (%)' || datum.MeasureName == 'Participation rate' || test(/rate/i, datum.MeasureName)"
+    },
+    {
+      "filter": "datum.State == 'Australia' || datum.State == 'Aust' || datum.State == 'National' || datum.GeographicAreaName == 'Australia'"
+    },
+    {
+      "filter": "datum.Period == '2021-2022' || test(/2021.*2022/, datum.Period)"
+    },
+    {
+      "filter": "datum.Sex == 'Females' || datum.Sex == 'Persons' || !isValid(datum.Sex)"
+    },
+    {
+      "filter": "test(/^(50.54|55.59|60.64|65.69|70.74)$/, datum.AgeGroup)"
+    },
+    {
+      "filter": "isValid(datum.Value) && datum.Value > 0"
+    },
+    {
+      "calculate": "indexof(datum.AgeGroup, '50') == 0 ? 50 : indexof(datum.AgeGroup, '55') == 0 ? 55 : indexof(datum.AgeGroup, '60') == 0 ? 60 : indexof(datum.AgeGroup, '65') == 0 ? 65 : indexof(datum.AgeGroup, '70') == 0 ? 70 : 50",
+      "as": "AgeStart"
+    },
+    {
+      "calculate": "datum.AgeStart + 5",
+      "as": "AgeEnd"
+    },
+    {
+      "calculate": "datum.AgeStart + 2.5",
+      "as": "AgeMid"
+    },
+    {
+      "calculate": "0",
+      "as": "BarBase"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "color": "#d95f02",
+        "stroke": "#ffffff",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "AgeStart",
+          "type": "quantitative",
+          "title": "Age (Years)",
+          "scale": {
+            "domain": [
+              50,
+              75
+            ]
+          },
+          "axis": {
+            "values": [
+              50,
+              55,
+              60,
+              65,
+              70,
+              75
+            ],
+            "labelAngle": 0,
+            "labelFontSize": 11,
+            "titleFontSize": 12,
+            "titlePadding": 8
+          }
+        },
+        "x2": {
+          "field": "AgeEnd"
+        },
+        "y": {
+          "field": "Value",
+          "type": "quantitative",
+          "title": "Participation Rate (%)",
+          "scale": {
+            "domain": [
+              0,
+              60
+            ]
+          },
+          "axis": {
+            "grid": true,
+            "tickCount": 6,
+            "titleFontSize": 12
+          }
+        },
+        "y2": {
+          "field": "BarBase"
+        },
+        "tooltip": [
+          {
+            "field": "AgeGroup",
+            "type": "nominal",
+            "title": "Age Group"
+          },
+          {
+            "field": "Program",
+            "type": "nominal",
+            "title": "Program"
+          },
+          {
+            "field": "Period",
+            "type": "nominal",
+            "title": "Period"
+          },
+          {
+            "field": "Value",
+            "type": "quantitative",
+            "title": "Participation Rate (%)",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "bottom",
+        "dy": -5,
+        "fontSize": 11,
+        "fontWeight": 600,
+        "color": "#2c3e50"
+      },
+      "encoding": {
+        "x": {
+          "field": "AgeMid",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Value",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "Value",
+          "type": "quantitative",
+          "format": ".1f"
+        }
+      }
+    }
+  ]
+}

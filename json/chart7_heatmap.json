@@ -1,0 +1,163 @@
+{
+  "title": {
+    "text": "Breast Screening Eligible Women by State and Drive Time to Screening Service",
+    "anchor": "start",
+    "fontSize": 15
+  },
+  "width": "container",
+  "height": 320,
+  "data": {
+    "url": "data/sa3_drivetime_screeningbreastcancer.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum['Service frequency'] === 'Open permanently' && datum['Indigenous status'] === 'All women aged 50–74'"
+    },
+    {
+      "calculate": "toNumber(replace(replace(replace(datum['Women (0–20 mins)'], ',', ''), '–', '0'), '<1', '0'))",
+      "as": "Within20"
+    },
+    {
+      "calculate": "toNumber(replace(replace(replace(datum['Women (>20–60 mins)'], ',', ''), '–', '0'), '<1', '0'))",
+      "as": "Within20To60"
+    },
+    {
+      "calculate": "toNumber(replace(replace(replace(datum['Women (>60–120 mins)'], ',', ''), '–', '0'), '<1', '0'))",
+      "as": "Within60To120"
+    },
+    {
+      "calculate": "toNumber(replace(replace(replace(datum['Women (>120 mins)'], ',', ''), '–', '0'), '<1', '0'))",
+      "as": "Over120"
+    },
+    {
+      "aggregate": [
+        {"op": "sum", "field": "Within20", "as": "Within20"},
+        {"op": "sum", "field": "Within20To60", "as": "Within20To60"},
+        {"op": "sum", "field": "Within60To120", "as": "Within60To120"},
+        {"op": "sum", "field": "Over120", "as": "Over120"}
+      ],
+      "groupby": ["Jurisdiction"]
+    },
+    {
+      "fold": ["Within20", "Within20To60", "Within60To120", "Over120"],
+      "as": ["Band", "Women"]
+    },
+    {
+      "calculate": "datum.Band === 'Within20' ? 'Women (0–20 mins)' : datum.Band === 'Within20To60' ? 'Women (>20–60 mins)' : datum.Band === 'Within60To120' ? 'Women (>60–120 mins)' : 'Women (>120 mins)'",
+      "as": "DriveTime"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "stroke": "white",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "DriveTime",
+          "type": "ordinal",
+          "title": "Drive Time to Screening Service",
+          "sort": [
+            "Women (0–20 mins)",
+            "Women (>20–60 mins)",
+            "Women (>60–120 mins)",
+            "Women (>120 mins)"
+          ],
+          "axis": {
+            "labelAngle": -20,
+            "labelLimit": 180,
+            "labelFontSize": 10
+          }
+        },
+        "y": {
+          "field": "Jurisdiction",
+          "type": "ordinal",
+          "title": "State / Territory",
+          "sort": [
+            "New South Wales",
+            "Victoria",
+            "Queensland",
+            "South Australia",
+            "Western Australia",
+            "Tasmania",
+            "Northern Territory",
+            "Australian Capital Territory"
+          ],
+          "axis": {
+            "labelFontSize": 11
+          }
+        },
+        "color": {
+          "field": "Women",
+          "type": "quantitative",
+          "title": "Eligible Women",
+          "scale": {
+            "domain": [0, 900000],
+            "scheme": "blues",
+            "clamp": true
+          },
+          "legend": {
+            "orient": "right",
+            "format": ",.0f",
+            "title": "Eligible Women"
+          }
+        },
+        "tooltip": [
+          {"field": "Jurisdiction", "type": "nominal", "title": "State / Territory"},
+          {"field": "DriveTime", "type": "nominal", "title": "Drive Time Category"},
+          {"field": "Women", "type": "quantitative", "title": "Eligible Women", "format": ",.0f"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 10,
+        "fontWeight": 600
+      },
+      "encoding": {
+        "x": {
+          "field": "DriveTime",
+          "type": "ordinal",
+          "sort": [
+            "Women (0–20 mins)",
+            "Women (>20–60 mins)",
+            "Women (>60–120 mins)",
+            "Women (>120 mins)"
+          ]
+        },
+        "y": {
+          "field": "Jurisdiction",
+          "type": "ordinal",
+          "sort": [
+            "New South Wales",
+            "Victoria",
+            "Queensland",
+            "South Australia",
+            "Western Australia",
+            "Tasmania",
+            "Northern Territory",
+            "Australian Capital Territory"
+          ]
+        },
+        "text": {
+          "field": "Women",
+          "type": "quantitative",
+          "format": ",.0f"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.Women > 400000",
+            "value": "white"
+          },
+          "value": "#243746"
+        }
+      }
+    }
+  ]
+}
