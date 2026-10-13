@@ -1,7 +1,7 @@
 {
-  "title": "Bowel Cancer Screening Participation by Primary Health Network",
+  "title": "Bowel Cancer Screening Participation by PHN",
   "width": "container",
-  "height": 380,
+  "height": 650,
   "projection": {
     "type": "conicConformal",
     "parallels": [-18, -36],

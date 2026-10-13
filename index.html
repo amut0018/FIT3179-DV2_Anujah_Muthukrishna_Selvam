@@ -35,119 +35,176 @@
       </div>
     </header>
 
+    <main>
     <!-- ==================== SECTION 1 ==================== -->
     <section class="dashboard-section">
       <div class="section-title pure-g">
         <div class="pure-u-1">
-          <h2>1. National Screening Activity &amp; Scale</h2>
+          <h2>1. National activity and participation</h2>
           <p class="section-desc">
-            Over the last decade, Australia's population-based screening frameworks
-            have undergone technological shifts and external disruptions, notably
-            the COVID-19 pandemic and the renewal of the National Cervical Screening Program.
+            Annual screening activity and participation rates reveal how outcomes differ
+            across programs, age groups, and sexes.
           </p>
         </div>
       </div>
 
-      <!-- Chart 1: Stream Graph -->
-      <div class="pure-g chart-row">
-        <div class="pure-u-1-3 narrative-panel">
-          <h3>Pandemic Shock &amp; Diagnostic Recovery</h3>
+      <article class="chart-story" aria-labelledby="insight-chart1">
+        <div class="narrative-panel">
+          <h3 id="insight-chart1">Cervical activity fell most in 2020</h3>
           <p>
-            Quarterly testing capacity experienced significant disruption during
-            early 2020. BreastScreen services briefly suspended routine screenings
-            in Q2 2020 to divert acute clinical resources and reduce infection vectors.
+            Between 2019 and 2020, the annual cervical screening-test total fell
+            56.8% (1.54 million to 667,481), compared with a 15.5% fall in Breast
+            screening visits and 4.8% in returned bowel kits. The larger shift
+            highlights how differently program activity changed over the same period.
+            2023 shows only January–March in the source data.
           </p>
-          <p>
-            Conversely, the <strong>National Bowel Cancer Screening Program (NBCSP)</strong>
-            retained steadier volumes due to its distributed at-home immunochemical
-            faecal occult blood test (iFOBT) kit model.
-          </p>
-          <div class="metric-callout">
-            <span class="metric-val">-38%</span>
-            <span class="metric-label">
-              Decline in BreastScreen mammograms during Q2 2020
-            </span>
-          </div>
         </div>
+        <div class="chart-panel">
+          <div id="vis_chart1_stream_graph" class="vis-container"
+            role="img" aria-label="Stream graph of annual screening activity by program"></div>
+        </div>
+      </article>
 
-        <div class="pure-u-2-3 chart-panel">
-          <div id="vis_chart1_stream_graph" class="vis-container"></div>
-        </div>
-      </div>
-
-      <!-- Chart 2: Connected Dot Plot -->
-      <div class="pure-g chart-row">
-        <div class="pure-u-2-3 chart-panel">
-          <div id="vis_chart2_connected_dot_plot" class="vis-container"></div>
-        </div>
-
-        <div class="pure-u-1-3 narrative-panel">
-          <h3>The Gender Participation Gap</h3>
+      <article class="chart-story chart-story--chart-first" aria-labelledby="insight-chart2">
+        <div class="narrative-panel">
+          <h3 id="insight-chart2">Women’s bowel participation was higher</h3>
           <p>
-            National participation rates vary substantially across programs and sexes.
-            In the bowel screening program, eligible women consistently screen at a
-            higher rate than eligible men, despite incidence being slightly higher in males.
-          </p>
-          <p>
-            Across all programs, participation sits below the AIHW aspirational
-            benchmark of <strong>50%</strong>, highlighting ongoing opportunities
-            for targeted public health messaging.
+            In 2020–2021, national bowel-screening participation for ages 50–74
+            was 42.8% for females and 38.9% for males, a 3.9 percentage-point gap.
+            Female rates were higher in each of the five age bands shown, making
+            the overall difference consistent across the displayed age range.
           </p>
         </div>
-      </div>
+        <div class="chart-panel">
+          <div id="vis_chart2_connected_dot_plot" class="vis-container"
+            role="img" aria-label="Connected dot plot comparing bowel participation by sex and age"></div>
+        </div>
+      </article>
     </section>
 
     <!-- ==================== SECTION 2 ==================== -->
     <section class="dashboard-section">
       <div class="section-title pure-g">
         <div class="pure-u-1">
-          <h2>2. Regional Screening Participation</h2>
+          <h2>2. Regional patterns and population differences</h2>
           <p class="section-desc">
-            Explore the geographic distribution of bowel cancer screening
-            participation across Australia to identify regional differences.
+            State, SA3, and Primary Health Network results show how participation,
+            eligible population, and age-related rates vary across Australia.
           </p>
         </div>
       </div>
 
-      <!-- Chart 3: Choropleth Map -->
-      <div class="pure-g chart-row">
-        <div class="pure-u-1 chart-panel">
-          <div id="vis_chart3_choropleth" class="vis-container"></div>
+      <article class="chart-story" aria-labelledby="insight-chart3">
+        <div class="narrative-panel">
+          <h3 id="insight-chart3">SA3 participation spans a wide range</h3>
+          <p>
+            Among the 337 SA3 areas with numeric rates, participation ranges from
+            9.1% at Christmas Island to 53.6% in Surf Coast–Bellarine Peninsula,
+            a 44.5-point spread. Such local variation matters when targeting
+            outreach; the map shows where rates differ, not why.
+          </p>
         </div>
-      </div>
-      <!-- Chart 4: Proportional Symbol Map -->
-      <div class="pure-g chart-row">
-        <div class="pure-u-1 chart-panel">
-          <div id="vis_chart4_prop_symbol" class="vis-container"></div>
+        <div class="chart-panel">
+          <div id="vis_chart3_choropleth" class="vis-container"
+            role="img" aria-label="Choropleth map of bowel screening participation by SA3"></div>
         </div>
-      </div>
-      <!-- Chart 5: Dot Map -->
-      <div class="pure-g chart-row">
-        <div class="pure-u-1 chart-panel">
-          <div id="vis_chart5_dot_map" class="vis-container"></div>
+      </article>
+
+      <article class="chart-story chart-story--chart-first" aria-labelledby="insight-chart4">
+        <div class="narrative-panel">
+          <h3 id="insight-chart4">Participation also varies between PHNs</h3>
+          <p>
+            In the 31 PHNs shown, bowel participation ranges from 25.3% in the
+            Northern Territory to 47.3% in Gippsland. Even the highest PHN rate
+            is below half, while the spread points to substantial differences
+            between regional screening populations.
+          </p>
         </div>
-      </div>
-      <!-- Chart 6: Bar Chart -->
-      <div class="pure-g chart-row">
-        <div class="pure-u-1 chart-panel">
-          <div id="vis_chart6_bar_chart" class="vis-container"></div>
+        <div class="chart-panel">
+          <div id="vis_chart4_prop_symbol" class="vis-container"
+            role="img" aria-label="Proportional symbol map of bowel participation by Primary Health Network"></div>
         </div>
-      </div>
-      <!-- Chart 7: State Drive-Time Heatmap -->
-      <div class="pure-g chart-row">
-        <div class="pure-u-1 chart-panel">
-          <div id="vis_chart7_heatmap" class="vis-container"></div>
+      </article>
+
+      <article class="chart-story" aria-labelledby="insight-chart5">
+        <div class="narrative-panel">
+          <h3 id="insight-chart5">Eligible BreastScreen populations differ in size</h3>
+          <p>
+            The dot map represents 200 eligible women per dot. Eastern Melbourne,
+            the largest PHN cohort shown, has 219,733 eligible women (about 1,098
+            dots); Western Queensland has 8,080 (40 dots). These counts describe
+            the eligible population, not how many women attended screening.
+          </p>
         </div>
-      </div>
-      <!-- Chart 8: State Indigenous Status Stacked Bar Chart -->
-      <div class="pure-g chart-row">
-        <div class="pure-u-1 chart-panel">
-          <div id="vis_chart8_stacked_bar" class="vis-container"></div>
+        <div class="chart-panel">
+          <div id="vis_chart5_dot_map" class="vis-container"
+            role="img" aria-label="Dot map of eligible BreastScreen women by Primary Health Network"></div>
         </div>
-      </div>
+      </article>
+
+      <article class="chart-story chart-story--chart-first" aria-labelledby="insight-chart6">
+        <div class="narrative-panel">
+          <h3 id="insight-chart6">Breast participation peaks at ages 65–69</h3>
+          <p>
+            Female participation in 2021–2022 rises from 45.4% at ages 50–54
+            to a peak of 54.5% at ages 65–69, then eases to 52.0% at ages 70–74.
+            The younger eligible age band has the lowest rate among those shown.
+          </p>
+        </div>
+        <div class="chart-panel">
+          <div id="vis_chart6_bar_chart" class="vis-container"
+            role="img" aria-label="Bar chart of Breast screening participation by age group"></div>
+        </div>
+      </article>
     </section>
 
-    
+    <!-- ==================== SECTION 3 ==================== -->
+    <section class="dashboard-section">
+      <div class="section-title pure-g">
+        <div class="pure-u-1">
+          <h2>3. Access and equity</h2>
+          <p class="section-desc">
+            Travel distance and the makeup of eligible populations add context
+            for planning screening services that are reachable and inclusive.
+          </p>
+        </div>
+      </div>
+
+      <article class="chart-story" aria-labelledby="insight-chart7">
+        <div class="narrative-panel">
+          <h3 id="insight-chart7">Long travel distances are concentrated in the NT</h3>
+          <p>
+            For the permanently open service scenario, 36.9% of the Northern
+            Territory’s eligible women are in SA3s more than 120 minutes from a
+            service, versus 0.1% in Victoria. The state-level contrast highlights
+            geographic access as an important part of screening-service planning.
+          </p>
+        </div>
+        <div class="chart-panel">
+          <div id="vis_chart7_heatmap" class="vis-container"
+            role="img" aria-label="Heatmap of eligible women by state and drive time to BreastScreen services"></div>
+        </div>
+      </article>
+
+      <article class="chart-story chart-story--chart-first" aria-labelledby="insight-chart8">
+        <div class="narrative-panel">
+          <h3 id="insight-chart8">Eligible population composition differs by state</h3>
+          <p>
+            First Nations women make up 24.7% of the combined First Nations and
+            non-Indigenous eligible-women total in the Northern Territory, compared
+            with 0.7% in Victoria. This chart shows population composition—not
+            screening participation—so it informs equitable planning rather than
+            indicating a difference in screening behaviour.
+          </p>
+        </div>
+        <div class="chart-panel">
+          <div id="vis_chart8_stacked_bar" class="vis-container"
+            role="img" aria-label="Stacked percentage bars of eligible women by state and Indigenous status"></div>
+        </div>
+      </article>
+    </section>
+    </main>
+
     <!-- Footer Metadata -->
     <footer class="dashboard-footer pure-g">
       <div class="pure-u-1">
