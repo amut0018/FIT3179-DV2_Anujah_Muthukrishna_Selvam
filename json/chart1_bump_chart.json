@@ -1,153 +1,87 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-  "text": "Annual Bowel, Breast and Cervical Cancer Screening Activity",
-  "subtitle": "2018-2023",
-  "fontSize": 14,
-  "subtitleFontSize": 11,
-  "anchor": "middle",
-  "align": "center"
-},
+    "text": "Annual Bowel, Breast and Cervical Cancer Screening Participation Rates",
+    "subtitle": "2018-2023",
+    "fontSize": 14,
+    "subtitleFontSize": 11,
+    "anchor": "start"
+  },
   "width": "container",
-  "height": 300,
+  "height": 280,
   "data": {
-    "url": "data/Screening_Activity_Data_20230714.csv",
+    "url": "data/participation_rates_over_time.csv",
     "format": {
       "type": "csv",
       "parse": {
         "Year": "number",
-        "Value": "string"
+        "Value": "number"
       }
     }
   },
-  "transform": [
-    {
-      "filter": "datum.State === 'Australia' && datum.Year >= 2018 && datum.Year <= 2023 && ((datum.Program === 'Bowel' && datum.Sex === 'Persons' && datum.MeasureName === 'Number of kits returned') || (datum.Program === 'Breast' && datum.Sex === 'Females' && datum.MeasureName === 'Number of screening visits') || (datum.Program === 'Cervical' && datum.Sex === 'Females' && datum.MeasureName === 'Number of screening tests'))"
-    },
-    {
-      "calculate": "toNumber(replace(datum.Value, /,/g, ''))",
-      "as": "NumericValue"
-    },
-    {
-      "filter": "isValid(datum.NumericValue) && isFinite(datum.NumericValue)"
-    },
-    {
-      "aggregate": [
-        {
-          "op": "sum",
-          "field": "NumericValue",
-          "as": "AnnualValue"
-        }
-      ],
-      "groupby": [
-        "Year",
-        "Program"
-      ]
+  "mark": {
+    "type": "line",
+    "strokeWidth": 3,
+    "point": {
+      "filled": true,
+      "size": 90
     }
-  ],
-  "layer": [
-    {
-      "mark": {
-        "type": "line",
-        "strokeWidth": 3
-      },
-      "encoding": {
-        "x": {
-          "field": "Year",
-          "type": "ordinal",
-          "title": "Year",
-          "scale": {
-            "domain": [
-              2018,
-              2019,
-              2020,
-              2021,
-              2022,
-              2023
-            ]
-          },
-          "axis": {
-            "labelAngle": 0,
-            "labelOverlap": false,
-            "labelFontSize": 12,
-            "grid": false
-          }
-        },
-        "y": {
-          "field": "AnnualValue",
-          "type": "quantitative",
-          "title": "Number of Participants",
-          "scale": {
-            "zero": true,
-            "nice": true
-          },
-          "axis": {
-            "grid": true,
-            "format": "~s"
-          }
-        },
-        "color": {
-          "field": "Program",
-          "type": "nominal",
-          "scale": {
-            "domain": [
-              "Bowel",
-              "Breast",
-              "Cervical"
-            ],
-            "range": [
-              "#1b9e77",
-              "#d95f02",
-              "#7570b3"
-            ]
-          },
-          "legend": {
-            "orient": "top",
-            "title": "Screening Program",
-            "labelFont": "sans-serif",
-            "symbolType": "circle"
-          }
-        }
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "ordinal",
+      "title": "Year",
+      "sort": "ascending",
+      "axis": {
+        "labelAngle": 0,
+        "labelFontSize": 12,
+        "grid": false
       }
     },
-    {
-      "mark": {
-        "type": "point",
-        "filled": true,
-        "size": 110
+    "y": {
+      "field": "Value",
+      "type": "quantitative",
+      "title": "Participation Rate (%)",
+      "scale": {
+        "domain": [0, 75]
       },
-      "encoding": {
-        "x": {
-          "field": "Year",
-          "type": "ordinal"
-        },
-        "y": {
-          "field": "AnnualValue",
-          "type": "quantitative"
-        },
-        "color": {
-          "field": "Program",
-          "type": "nominal"
-        },
-        "tooltip": [
-          {
-            "field": "Year",
-            "type": "ordinal",
-            "title": "Year"
-          },
-          {
-            "field": "Program",
-            "type": "nominal",
-            "title": "Screening Program"
-          },
-          {
-            "field": "AnnualValue",
-            "type": "quantitative",
-            "title": "Number of Participants",
-            "format": ","
-          }
-        ]
+      "axis": {
+        "grid": true,
+        "labelExpr": "datum.value + '%'"
       }
-    }
-  ]
+    },
+    "color": {
+      "field": "Program",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Bowel", "Breast", "Cervical"],
+        "range": ["#1b9e77", "#d95f02", "#7570b3"]
+      },
+      "legend": {
+        "orient": "top",
+        "title": "Screening Program",
+        "labelFont": "sans-serif",
+        "symbolType": "circle"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Year",
+        "type": "ordinal",
+        "title": "Year"
+      },
+      {
+        "field": "Program",
+        "type": "nominal",
+        "title": "Screening Program"
+      },
+      {
+        "field": "Value",
+        "type": "quantitative",
+        "title": "Participation Rate (%)",
+        "format": ".1f"
+      }
+    ]
+  }
 }
