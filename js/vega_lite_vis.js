@@ -1,7 +1,7 @@
 const embedOpt = { "actions": false };
 
 // 1. File paths to Vega-Lite JSON specifications
-const spec1 = "json/chart1_stream_graph.json";
+const spec1 = "json/chart1_bump_chart.json";
 const spec2 = "json/chart2_connected_dot_plot.json";
 const spec3 = "json/chart3_choropleth.json";
 const spec4 = "json/chart4_prop_symbol.json";
@@ -10,15 +10,16 @@ const spec6 = "json/chart6_bar_chart.json";
 const spec7 = "json/chart7_heatmap.json";
 const spec8 = "json/chart8_stacked_bar.json";
 const spec9 = "json/chart9_lollipop_chart.json";
+const spec10 = "json/chart10_slope_chart.json";
 
-// 2. Embed Chart 1 (Stream Graph)
-vegaEmbed('#vis_chart1_stream_graph', spec1, embedOpt)
+// 2. Embed Chart 1 (Bump Chart)
+vegaEmbed('#vis_chart1_bump_chart', spec1, embedOpt)
   .then(result => {
     console.log("Chart 1 loaded successfully", result);
   })
   .catch(error => {
     console.error("Error loading Chart 1:", error);
-    const container = document.getElementById('vis_chart1_stream_graph');
+    const container = document.getElementById('vis_chart1_bump_chart');
     if (container) {
       container.innerHTML =
         `<div style="color: red; padding: 20px; border: 1px solid red; background: #fff0f0;">
@@ -151,6 +152,22 @@ vegaEmbed('#vis_chart9_lollipop_chart', spec9, embedOpt)
       container.innerHTML =
         `<div style="color: red; padding: 20px; border: 1px solid red; background: #fff0f0;">
            <strong>Vega-Lite Embedding Error (Chart 9):</strong><br>${error.message}
+         </div>`;
+    }
+  });
+
+    // 10. Embed Chart 10 (Slope Chart)
+vegaEmbed('#vis_chart10_slope_chart', spec10, embedOpt)
+  .then(result => {
+    console.log("Chart 10 loaded successfully", result);
+  })
+  .catch(error => {
+    console.error("Error loading Chart 10:", error);
+    const container = document.getElementById('vis_chart10_slope_chart');
+    if (container) {
+      container.innerHTML =
+        `<div style="color: red; padding: 20px; border: 1px solid red; background: #fff0f0;">
+           <strong>Vega-Lite Embedding Error (Chart 10):</strong><br>${error.message}
          </div>`;
     }
   });

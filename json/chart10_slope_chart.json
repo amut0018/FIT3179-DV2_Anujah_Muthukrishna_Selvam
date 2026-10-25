@@ -1,0 +1,186 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Cervical Screening Participation Rate (%) by State (2018 vs 2024)",
+    "fontSize": 14,
+    "subtitleFontSize": 11,
+    "anchor": "start"
+  },
+  "width": "container",
+  "height": 350,
+  "data": {
+    "url": "data/cervical_participation_states.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "Period": "string",
+        "Age_Standardised_Rate": "number"
+      }
+    }
+  },
+  "transform": [
+    {"filter": "datum.State != 'Australia'"},
+    {"filter": "datum.Period == '2018' || datum.Period == '2024'"},
+    {
+      "window": [{"op": "row_number", "as": "rankUp"}],
+      "sort": [{"field": "Age_Standardised_Rate", "order": "ascending"}],
+      "groupby": ["Period"]
+    },
+    {
+      "calculate": "datum.Age_Standardised_Rate - datum.rankUp * 0.36",
+      "as": "upBase"
+    },
+    {
+      "window": [{"op": "max", "field": "upBase", "as": "upMax"}],
+      "sort": [{"field": "Age_Standardised_Rate", "order": "ascending"}],
+      "groupby": ["Period"],
+      "frame": [null, 0]
+    },
+    {
+      "window": [{"op": "row_number", "as": "rankDown"}],
+      "sort": [{"field": "Age_Standardised_Rate", "order": "descending"}],
+      "groupby": ["Period"]
+    },
+    {
+      "calculate": "datum.Age_Standardised_Rate + datum.rankDown * 0.36",
+      "as": "downBase"
+    },
+    {
+      "window": [{"op": "min", "field": "downBase", "as": "downMin"}],
+      "sort": [{"field": "Age_Standardised_Rate", "order": "descending"}],
+      "groupby": ["Period"],
+      "frame": [null, 0]
+    },
+    {
+      "calculate": "((datum.upMax + datum.rankUp * 0.36) + (datum.downMin - datum.rankDown * 0.36)) / 2",
+      "as": "LabelY"
+    }
+  ],
+  "config": {
+    "legend": {
+      "layout": {"right": {"anchor": "middle"}}
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "x": {
+          "field": "Period",
+          "type": "nominal",
+          "title": null,
+          "scale": {"padding": 0.4},
+          "axis": {
+            "orient": "bottom",
+            "labelAngle": 0,
+            "labelFontSize": 13,
+            "labelFontWeight": 600,
+            "labelPadding": 8,
+            "ticks": false,
+            "domain": false,
+            "grid": true,
+            "gridWidth": 3,
+            "gridColor": "#999999"
+          }
+        },
+        "y": {
+          "field": "Age_Standardised_Rate",
+          "type": "quantitative",
+          "scale": {"domain": [74, 83]},
+          "axis": null
+        },
+        "color": {
+          "field": "State",
+          "type": "nominal",
+          "title": "State",
+          "scale": {
+            "domain": [
+              "NSW", "Vic", "Qld", "SA", "WA",
+              "Tas", "NT", "ACT"
+            ],
+            "range": [
+                "#E69F00",
+                "#56B4E9",
+                "#009E73",
+                "#0072B2",
+                "#D55E00",
+                "#F0A3D2",
+                "#882255",
+                "#332288"
+                            ]
+          },
+          "legend": {
+            "orient": "right",
+            "symbolType": "circle"
+          }
+        },
+        "tooltip": [
+          {"field": "State", "type": "nominal", "title": "State/Territory"},
+          {"field": "Period", "type": "nominal", "title": "Period"},
+          {
+            "field": "Age_Standardised_Rate",
+            "type": "quantitative",
+            "title": "Participation Rate (%)",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 20,
+        "opacity": 1
+      },
+      "encoding": {
+        "x": {"field": "Period", "type": "nominal"},
+        "y": {"field": "Age_Standardised_Rate", "type": "quantitative"},
+        "color": {"field": "State", "type": "nominal"}
+      }
+    },
+    {
+      "transform": [{"filter": "datum.Period == '2018'"}],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -10,
+        "fontSize": 11,
+        "fontWeight": 600
+      },
+      "encoding": {
+        "x": {"field": "Period", "type": "nominal"},
+        "y": {"field": "LabelY", "type": "quantitative"},
+        "text": {
+          "field": "Age_Standardised_Rate",
+          "type": "quantitative",
+          "format": ".1f"
+        },
+        "color": {"field": "State", "type": "nominal"}
+      }
+    },
+    {
+      "transform": [{"filter": "datum.Period == '2024'"}],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 10,
+        "fontSize": 11,
+        "fontWeight": 600
+      },
+      "encoding": {
+        "x": {"field": "Period", "type": "nominal"},
+        "y": {"field": "LabelY", "type": "quantitative"},
+        "text": {
+          "field": "Age_Standardised_Rate",
+          "type": "quantitative",
+          "format": ".1f"
+        },
+        "color": {"field": "State", "type": "nominal"}
+      }
+    }
+  ]
+}
