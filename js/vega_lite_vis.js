@@ -11,6 +11,8 @@ const spec7 = "json/chart7_heatmap.json";
 const spec8 = "json/chart8_stacked_bar.json";
 const spec9 = "json/chart9_lollipop_chart.json";
 const spec10 = "json/chart10_slope_chart.json";
+const spec11 = "json/chart11_sankey_diagram.json";
+
 
 // 2. Embed Chart 1 (Bump Chart)
 vegaEmbed('#vis_chart1_bump_chart', spec1, embedOpt)
@@ -140,7 +142,7 @@ vegaEmbed('#vis_chart8_stacked_bar', spec8, embedOpt)
     }
   });
 
-  // 10. Embed Chart 9 (Lollipop Chart)
+  // 11. Embed Chart 9 (Lollipop Chart)
 vegaEmbed('#vis_chart9_lollipop_chart', spec9, embedOpt)
   .then(result => {
     console.log("Chart 9 loaded successfully", result);
@@ -156,7 +158,7 @@ vegaEmbed('#vis_chart9_lollipop_chart', spec9, embedOpt)
     }
   });
 
-    // 10. Embed Chart 10 (Slope Chart)
+    // 12. Embed Chart 10 (Slope Chart)
 vegaEmbed('#vis_chart10_slope_chart', spec10, embedOpt)
   .then(result => {
     console.log("Chart 10 loaded successfully", result);
@@ -168,6 +170,22 @@ vegaEmbed('#vis_chart10_slope_chart', spec10, embedOpt)
       container.innerHTML =
         `<div style="color: red; padding: 20px; border: 1px solid red; background: #fff0f0;">
            <strong>Vega-Lite Embedding Error (Chart 10):</strong><br>${error.message}
+         </div>`;
+    }
+  });
+
+      // 13. Embed Chart 11 (Sankey Diagram)
+vegaEmbed('#vis_chart11_sankey_diagram', spec11, embedOpt)
+  .then(result => {
+    console.log("Chart 11 loaded successfully", result);
+  })
+  .catch(error => {
+    console.error("Error loading Chart 11:", error);
+    const container = document.getElementById('vis_chart11_sankey_diagram');
+    if (container) {
+      container.innerHTML =
+        `<div style="color: red; padding: 20px; border: 1px solid red; background: #fff0f0;">
+           <strong>Vega-Lite Embedding Error (Chart 11):</strong><br>${error.message}
          </div>`;
     }
   });

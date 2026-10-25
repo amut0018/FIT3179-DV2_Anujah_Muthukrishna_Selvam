@@ -1,0 +1,173 @@
+
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Preventive Screening Diagnostic Outcome Pathway (2017/2018)",
+    "fontSize": 14,
+    "subtitleFontSize": 10,
+    "anchor": "start"
+  },
+  "width": "container",
+  "height": 400,
+  "data": {
+    "url": "data/abs_nhs_preventative_screening_outcomes.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "Percentage": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.Screening_Status == 'Screened (iFOBT Returned)' || datum.Screening_Status == 'Screened (Mammogram Attended)' || datum.Screening_Status == 'Screened (HPV Test Completed)'"
+    },
+    {
+      "aggregate": [{"op": "sum", "field": "Percentage", "as": "Flow"}],
+      "groupby": ["Program", "Outcome_Category"]
+    },
+    {
+      "calculate": "datum.Program == 'Bowel' ? 80 : datum.Program == 'Breast' ? 50 : 20",
+      "as": "yStart"
+    },
+    {
+      "calculate": "datum.Outcome_Category == 'Negative' ? 80 : datum.Outcome_Category == 'Further Assessment Required' ? 50 : 20",
+      "as": "yEnd"
+    },
+    {
+      "calculate": "sequence(0, 21)",
+      "as": "step"
+    },
+    {
+      "flatten": ["step"]
+    },
+    {
+      "calculate": "datum.step / 20",
+      "as": "t"
+    },
+    {
+      "calculate": "datum.yStart + (datum.yEnd - datum.yStart) * (3 * datum.t * datum.t - 2 * datum.t * datum.t * datum.t)",
+      "as": "yCurve"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "interpolate": "linear",
+        "strokeCap": "butt",
+        "opacity": 0.85
+      },
+      "encoding": {
+        "x": {
+          "field": "t",
+          "type": "quantitative",
+          "scale": {"domain": [-0.35, 1.35]},
+          "axis": null
+        },
+        "y": {
+          "field": "yCurve",
+          "type": "quantitative",
+          "scale": {"domain": [0, 115]},
+          "axis": null
+        },
+        "color": {
+          "field": "Program",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Bowel", "Breast", "Cervical"],
+            "range": ["#1b9e77", "#d95f02", "#7570b3"]
+          },
+          "legend": null
+        },
+        "size": {
+          "field": "Flow",
+          "type": "quantitative",
+          "scale": {"domain": [0, 100], "range": [2, 55]},
+          "legend": null
+        },
+        "detail": {
+          "field": "Outcome_Category",
+          "type": "nominal"
+        },
+        "tooltip": [
+          {"field": "Program", "type": "nominal", "title": "Program"},
+          {"field": "Outcome_Category", "type": "nominal", "title": "Diagnostic Outcome"},
+          {"field": "Flow", "type": "quantitative", "title": "Proportion (%)", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"x0": -0.02, "x1": 0, "yc": 80, "name": "Bowel", "col": "#1b9e77", "halfHeight": 12},
+          {"x0": -0.02, "x1": 0, "yc": 50, "name": "Breast", "col": "#d95f02", "halfHeight": 12},
+          {"x0": -0.02, "x1": 0, "yc": 20, "name": "Cervical", "col": "#7570b3", "halfHeight": 12},
+          {"x0": 1.0, "x1": 1.02, "yc": 80, "name": "Negative", "col": "#555555", "halfHeight": 14},
+          {"x0": 1.0, "x1": 1.02, "yc": 50, "name": "Further Assessment Required", "col": "#555555", "halfHeight": 6},
+          {"x0": 1.0, "x1": 1.02, "yc": 20, "name": "Positive", "col": "#555555", "halfHeight": 3}
+        ]
+      },
+      "transform": [
+        {"calculate": "datum.yc - datum.halfHeight", "as": "yLow"},
+        {"calculate": "datum.yc + datum.halfHeight", "as": "yHigh"}
+      ],
+      "mark": {"type": "rect", "opacity": 1},
+      "encoding": {
+        "x": {"field": "x0", "type": "quantitative"},
+        "x2": {"field": "x1"},
+        "y": {"field": "yLow", "type": "quantitative"},
+        "y2": {"field": "yHigh"},
+        "color": {"field": "col", "type": "nominal", "scale": null},
+        "tooltip": [{"field": "name", "type": "nominal", "title": "Node"}]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"x": 0, "y": 80, "name": "Bowel"},
+          {"x": 0, "y": 50, "name": "Breast"},
+          {"x": 0, "y": 20, "name": "Cervical"}
+        ]
+      },
+      "mark": {"type": "text", "align": "right", "dx": -12, "fontSize": 9, "fontWeight": 600},
+      "encoding": {
+        "x": {"field": "x", "type": "quantitative"},
+        "y": {"field": "y", "type": "quantitative"},
+        "text": {"field": "name", "type": "nominal"}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"x": 1, "y": 80, "name": "Negative"},
+          {"x": 1, "y": 50, "name": "Further Assessment Required"},
+          {"x": 1, "y": 20, "name": "Positive"}
+        ]
+      },
+      "mark": {"type": "text", "align": "left", "dx": 14, "fontSize": 9, "fontWeight": 600},
+      "encoding": {
+        "x": {"field": "x", "type": "quantitative"},
+        "y": {"field": "y", "type": "quantitative"},
+        "text": {"field": "name", "type": "nominal"}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"x": 0, "y": 105, "name": "Screening Program"},
+          {"x": 1, "y": 105, "name": "Diagnostic Outcome"}
+        ]
+      },
+      "mark": {"type": "text", "align": "center", "fontSize": 11, "fontWeight": "bold"},
+      "encoding": {
+        "x": {"field": "x", "type": "quantitative"},
+        "y": {"field": "y", "type": "quantitative"},
+        "text": {"field": "name", "type": "nominal"}
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null}
+  }
+}

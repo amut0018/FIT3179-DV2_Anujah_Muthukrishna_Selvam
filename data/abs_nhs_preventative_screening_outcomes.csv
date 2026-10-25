@@ -1,0 +1,13 @@
+﻿Program,Target_Age_Group,Sex,Screening_Status,Outcome_Category,Percentage,Sample_Standard_Error
+Bowel,50–74,All Persons,Screened (iFOBT Returned),Negative,92.8,0.6
+Bowel,50–74,All Persons,Screened (iFOBT Returned),Further Assessment Required,6.4,0.4
+Bowel,50–74,All Persons,Screened (iFOBT Returned),Positive,0.8,0.1
+Breast,50–74,Females,Screened (Mammogram Attended),Negative,94.2,0.5
+Breast,50–74,Females,Screened (Mammogram Attended),Further Assessment Required,5.2,0.3
+Breast,50–74,Females,Screened (Mammogram Attended),Positive,0.6,0.1
+Cervical,25–74,Females,Screened (HPV Test Completed),Negative,91.5,0.7
+Cervical,25–74,Females,Screened (HPV Test Completed),Further Assessment Required,7.8,0.4
+Cervical,25–74,Females,Screened (HPV Test Completed),Positive,0.7,0.1
+,,,,,,
+,,,,,,
+,,,,,,
