@@ -20,7 +20,7 @@
       "filter": "datum.Program == 'Breast'"
     },
     {
-      "filter": "datum.MeasureName == 'Participation rate (%)' || datum.MeasureName == 'Participation rate' || test(/rate/i, datum.MeasureName)"
+      "filter": "datum.MeasureName == 'Participation rate (%)'"
     },
     {
       "filter": "datum.State == 'Australia' || datum.State == 'Aust' || datum.State == 'National' || datum.GeographicAreaName == 'Australia'"
@@ -29,7 +29,7 @@
       "filter": "datum.Period == '2021-2022' || test(/2021.*2022/, datum.Period)"
     },
     {
-      "filter": "datum.Sex == 'Females' || datum.Sex == 'Persons' || !isValid(datum.Sex)"
+      "filter": "datum.Sex == 'Females' || datum.Sex == 'Persons'"
     },
     {
       "filter": "test(/^(50.54|55.59|60.64|65.69|70.74)$/, datum.AgeGroup)"

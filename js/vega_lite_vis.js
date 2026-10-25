@@ -8,7 +8,8 @@ const spec4 = "json/chart4_prop_symbol.json";
 const spec5 = "json/chart5_dot_map.json";
 const spec6 = "json/chart6_bar_chart.json";
 const spec7 = "json/chart7_heatmap.json";
-const spec8 = "json/chart8_diverging_bar.json";
+const spec8 = "json/chart8_stacked_bar.json";
+const spec9 = "json/chart9_lollipop_chart.json";
 
 // 2. Embed Chart 1 (Stream Graph)
 vegaEmbed('#vis_chart1_stream_graph', spec1, embedOpt)
@@ -134,6 +135,22 @@ vegaEmbed('#vis_chart8_stacked_bar', spec8, embedOpt)
       container.innerHTML =
         `<div style="color: red; padding: 20px; border: 1px solid red; background: #fff0f0;">
            <strong>Vega-Lite Embedding Error (Chart 8):</strong><br>${error.message}
+         </div>`;
+    }
+  });
+
+  // 10. Embed Chart 9 (Lollipop Chart)
+vegaEmbed('#vis_chart9_lollipop_chart', spec9, embedOpt)
+  .then(result => {
+    console.log("Chart 9 loaded successfully", result);
+  })
+  .catch(error => {
+    console.error("Error loading Chart 9:", error);
+    const container = document.getElementById('vis_chart9_lollipop_chart');
+    if (container) {
+      container.innerHTML =
+        `<div style="color: red; padding: 20px; border: 1px solid red; background: #fff0f0;">
+           <strong>Vega-Lite Embedding Error (Chart 9):</strong><br>${error.message}
          </div>`;
     }
   });

@@ -13,7 +13,7 @@
       "filter": "datum.Program == 'Bowel'"
     },
     {
-      "filter": "test(/rate/i, datum.MeasureName)"
+      "filter": "datum.MeasureName == 'Participation rate (%)'"
     },
     {
       "filter": "datum.State == 'Australia' || datum.State == 'Aust' || datum.State == 'National' || datum.GeographicAreaName == 'Australia'"

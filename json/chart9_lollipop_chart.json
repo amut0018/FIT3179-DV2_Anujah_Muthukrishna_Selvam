@@ -1,0 +1,91 @@
+
+{
+  "title": {
+    "text": "Median Time to Colposcopy Following Cervical Screening by State",
+    "subtitle": "Aged 25-74, 2023",
+    "fontSize": 14,
+    "subtitleFontSize": 11,
+    "anchor": "middle"
+  },
+  "width": "container",
+  "height": 320,
+  "data": {
+    "url": "data/time to colposcopy in median days_cervical.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "First Follow Up Result": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "isValid(datum['First Follow Up Result']) && datum['First Follow Up Result'] >= 0"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "State",
+      "type": "nominal",
+      "title": "State and Territory",
+      "sort": null,
+      "axis": {
+        "labelAngle": 0,
+        "labelFontSize": 11,
+        "titleFontSize": 12,
+        "titlePadding": 8
+      }
+    },
+    "y": {
+      "field": "First Follow Up Result",
+      "type": "quantitative",
+      "title": "Median Time (Days)",
+      "scale": {
+        "zero": true
+      },
+      "axis": {
+        "grid": true,
+        "tickCount": 6,
+        "titleFontSize": 12
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#2563EB",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "y2": {
+          "datum": 0
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "color": "#2563EB",
+        "filled": true,
+        "size": 130,
+        "opacity": 1
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "State",
+            "type": "nominal",
+            "title": "State/Territory"
+          },
+          {
+            "field": "First Follow Up Result",
+            "type": "quantitative",
+            "title": "First Follow-up Result (Days)",
+            "format": ".0f"
+          }
+        ]
+      }
+    }
+  ]
+}
