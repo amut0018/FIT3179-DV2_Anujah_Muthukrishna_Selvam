@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Breast Cancer Participation Rates by Age Group",
-    "subtitle": "2021",
+    "subtitle": "2022",
     "fontSize": 20,
     "subtitleFontSize": 14,
     "anchor": "middle"
