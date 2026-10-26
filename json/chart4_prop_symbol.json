@@ -3,12 +3,12 @@
   "title": {
     "text": "Bowel Cancer Screening Participation by PHN",
     "subtitle": "2020–2021",
-    "fontSize": 20,
-    "subtitleFontSize": 14,
+    "fontSize": 14,
+    "subtitleFontSize": 11,
     "anchor": "middle"
   },
   "width": "container",
-  "height": 550,
+  "height": 530,
   "projection": {
     "type": "conicConformal",
     "parallels": [-18, -36],
@@ -82,13 +82,13 @@
           "legend": {
             "orient": "top-left",
             "title": "Eligible Population",
-            "values": [10000, 100000, 200000, 300000, 400000],
+            "values": [100000, 200000, 300000, 400000],
             "format": ",.0f",
             "symbolType": "circle",
             "symbolStrokeColor": "#1a252c",
             "symbolFillColor": "#b8a4d9",
-            "titleFontSize": 14,
-            "labelFontSize": 12,
+            "titleFontSize": 11,
+            "labelFontSize": 11,
             "symbolSize": 100,
             "padding": 10
           }
@@ -98,13 +98,15 @@
           "type": "quantitative",
           "title": "Participation Rate (%)",
           "scale": {
-            "scheme": "purples"
+            "scheme": "purples",
+            "domain": [20, 50],
+            "clamp": true
           },
           "legend": {
             "orient": "top-right",
             "format": ".1f",
-            "titleFontSize": 14,
-            "labelFontSize": 12,
+            "titleFontSize": 11,
+            "labelFontSize": 11,
             "gradientLength": 180,
             "gradientThickness": 14,
             "padding": 10

@@ -1,10 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Cervical Screening Participation Rate (%) by State (2018 vs 2024)",
+    "text": "Cervical Screening Participation Rate (%) by State",
+    "subtitle": "2018 vs 2024",
     "fontSize": 14,
     "subtitleFontSize": 11,
-    "anchor": "start"
+    "anchor": "middle"
   },
   "width": "container",
   "height": 350,

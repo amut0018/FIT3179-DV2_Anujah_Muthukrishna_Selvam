@@ -1,13 +1,15 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Breast Screening Eligible Women by State and Access",
+    "text": "Breast Screening Population by State and Access",
     "subtitle": "2021-2022",
     "anchor": "middle",
-    "fontSize": 15
+    "align": "center",
+    "fontSize": 14,
+    "subtitleFontSize": 11
   },
   "width": "container",
-  "height": 320,
+  "height":350,
   "autosize": {
     "type": "fit",
     "contains": "padding"
@@ -19,6 +21,7 @@
     }
   },
   "transform": [
+    
     {
       "filter": "datum['Service frequency'] === 'Open permanently' && datum['Indigenous status'] === 'All women aged 50–74'"
     },
@@ -37,6 +40,7 @@
       "calculate": "toNumber(replace(replace(replace(replace(datum['Proportion (>20–60 mins)'], '%', ''), '–', '0'), '<0.1', '0'), '>99.9', '100')) * datum.TotalWomen",
       "as": "Within20To60"
     },
+    
     {
       "calculate": "toNumber(replace(replace(replace(replace(datum['Proportion (>60–120 mins)'], '%', ''), '–', '0'), '<0.1', '0'), '>99.9', '100')) * datum.TotalWomen",
       "as": "Within60To120"

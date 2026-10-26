@@ -1,131 +1,159 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Breast Cancer Screening Eligible Population by State",
-  "subtitle": "2021",
-  "width": "container",
-  "height": 450,
-  "projection": {
-    "type": "conicConformal",
-    "parallels": [-18, -36],
-    "rotate": [-133, 0, 0],
-    "center": [0, -28],
-    "scale": 700
+  "title": {
+    "text": "Breast Cancer Participation Rates by Age Group",
+    "subtitle": "2022",
+    "fontSize": 14,
+    "subtitleFontSize": 11,
+    "anchor": "middle"
   },
-  "layer": [
-    {
-      "data": {
-        "url": "data/au_states.json",
-        "format": {
-          "type": "topojson",
-          "feature": "STE_2021_AUST_GDA2020"
-        }
-      },
-      "mark": {
-        "type": "geoshape",
-        "fill": "#f4f6f8",
-        "stroke": "#cbd5e1",
-        "strokeWidth": 0.7
+  "width": "container",
+  "height": 280,
+  "data": {
+    "url": "data/AIHW_CAN_114_Cancer_screening_quarterly_data_Participation_14072023.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "Value": "number"
       }
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.Program == 'Breast'"
     },
     {
-      "data": {
-        "url": "data/au_states.json",
-        "format": {
-          "type": "topojson",
-          "feature": "STE_2021_AUST_GDA2020"
-        }
-      },
-      "transform": [
-        {
-          "lookup": "properties.STE_NAME21",
-          "from": {
-            "data": {
-              "url": "data/breastscreen_eligible_bystate.csv",
-              "format": {
-                "type": "csv",
-                "parse": {
-                  "Eligible Population": "number"
-                }
-              }
-            },
-            "key": "State",
-            "fields": ["Eligible Population"]
-          }
-        },
-        {
-          "filter": "isValid(datum['Eligible Population'])"
-        },
-        {
-          "calculate": "floor(datum['Eligible Population'] / 1000000) * 1000000",
-          "as": "BinStart"
-        },
-        {
-          "calculate": "datum.BinStart == 0 ? '0–1 Million' : datum.BinStart == 1000000 ? '1–2 Million' : datum.BinStart == 2000000 ? '2–3 Million' : datum.BinStart == 3000000 ? '3–4 Million' : '4–5 Million'",
-          "as": "PopulationBin"
-        }
-      ],
+      "filter": "datum.MeasureName == 'Participation rate (%)'"
+    },
+    {
+      "filter": "datum.State == 'Australia'"
+    },
+    {
+      "filter": "datum.Period == '2021-2022'"
+    },
+    {
+      "filter": "datum.Sex == 'Females'"
+    },
+    {
+      "filter": "test(/^(50.54|55.59|60.64|65.69|70.74)$/, datum.AgeGroup)"
+    },
+    {
+      "calculate": "replace(datum.AgeGroup, /[–—-]/g, ' to ')",
+      "as": "AgeGroupTooltip"
+    },
+    {
+      "filter": "isValid(datum.Value) && datum.Value > 0"
+    },
+    {
+      "calculate": "indexof(datum.AgeGroup, '50') == 0 ? 50 : indexof(datum.AgeGroup, '55') == 0 ? 55 : indexof(datum.AgeGroup, '60') == 0 ? 60 : indexof(datum.AgeGroup, '65') == 0 ? 65 : indexof(datum.AgeGroup, '70') == 0 ? 70 : 50",
+      "as": "AgeStart"
+    },
+    {
+      "calculate": "datum.AgeStart + 5",
+      "as": "AgeEnd"
+    },
+    {
+      "calculate": "datum.AgeStart + 2.5",
+      "as": "AgeMid"
+    },
+    {
+      "calculate": "0",
+      "as": "BarBase"
+    }
+  ],
+  "layer": [
+    {
       "mark": {
-        "type": "geoshape",
+        "type": "rect",
+        "color": "#d95f02",
         "stroke": "#ffffff",
-        "strokeWidth": 0.8
+        "strokeWidth": 1
       },
       "encoding": {
-        "color": {
-          "field": "PopulationBin",
-          "type": "ordinal",
-          "title": "Eligible Population",
+        "x": {
+          "field": "AgeStart",
+          "type": "quantitative",
+          "title": "Age (Years)",
           "scale": {
-            "domain": [
-              "0–1 Million",
-              "1–2 Million",
-              "2–3 Million",
-              "3–4 Million",
-              "4–5 Million"
-            ],
-            "range": [
-              "#c6e5fa",
-              "#6cb4e3",
-              "#2b83c3",
-              "#0b4f8a",
-              "#0b1f3a"
-            ]
+            "domain": [50, 75]
           },
-        "legend": {
-          "orient": "bottom",
-          "symbolType": "square",
-          "symbolSize": 100,
-          "titleFontSize": 14,
-          "labelFontSize": 14,
-          "titleFontWeight": "bold",
-          "labelLimit": 250,
-          "padding": 12,
-          "rowPadding": 8
-        }
-                },
+          "axis": {
+            "values": [50, 55, 60, 65, 70, 75],
+            "labelAngle": 0,
+            "labelFontSize": 11,
+            "titleFontSize": 12,
+            "titlePadding": 8
+          }
+        },
+        "x2": {
+          "field": "AgeEnd"
+        },
+        "y": {
+          "field": "Value",
+          "type": "quantitative",
+          "title": "Participation Rate (%)",
+          "scale": {
+            "domain": [0, 60]
+          },
+          "axis": {
+            "grid": true,
+            "tickCount": 6,
+            "titleFontSize": 12
+          }
+        },
+        "y2": {
+          "field": "BarBase"
+        },
         "tooltip": [
           {
-            "field": "properties.STE_NAME21",
+            "field": "AgeGroupTooltip",
             "type": "nominal",
-            "title": "State / Territory"
+            "title": "Age Group"
           },
           {
-            "field": "Eligible Population",
+            "field": "Program",
+            "type": "nominal",
+            "title": "Program"
+          },
+          {
+            "field": "Period",
+            "type": "nominal",
+            "title": "Period"
+          },
+          {
+            "field": "Value",
             "type": "quantitative",
-            "title": "Eligible Population",
-            "format": ","
-          },
-          {
-            "field": "PopulationBin",
-            "type": "nominal",
-            "title": "Population Bin"
+            "title": "Participation Rate (%)",
+            "format": ".1f"
           }
         ]
       }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "bottom",
+        "dy": -5,
+        "fontSize": 11,
+        "fontWeight": 600,
+        "color": "#2c3e50"
+      },
+      "encoding": {
+        "x": {
+          "field": "AgeMid",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Value",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "Value",
+          "type": "quantitative",
+          "format": ".1f"
+        }
+      }
     }
-  ],
-  "config": {
-    "view": {
-      "stroke": null
-    }
-  }
+  ]
 }

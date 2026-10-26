@@ -2,10 +2,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Preventive Screening Diagnostic Outcome Pathway (2017/2018)",
+    "text": "Preventive Screening Diagnostic Outcome Pathway",
+    "subtitle": "2017/2018",
     "fontSize": 14,
-    "subtitleFontSize": 10,
-    "anchor": "start"
+    "subtitleFontSize": 11,
+    "anchor": "middle"
   },
   "width": "container",
   "height": 400,
