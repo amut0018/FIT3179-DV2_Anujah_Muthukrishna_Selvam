@@ -87,8 +87,8 @@
               75
             ],
             "labelAngle": 0,
-            "labelFontSize": 11,
-            "titleFontSize": 12,
+            "labelFontSize": 10,
+            "titleFontSize": 11,
             "titlePadding": 8
           }
         },
@@ -108,7 +108,7 @@
           "axis": {
             "grid": true,
             "tickCount": 6,
-            "titleFontSize": 12
+            "titleFontSize": 11
           }
         },
         "y2": {
@@ -145,8 +145,8 @@
         "align": "center",
         "baseline": "bottom",
         "dy": -5,
-        "fontSize": 11,
-        "fontWeight": 600,
+        "fontSize": 10,
+        "fontWeight": 400,
         "color": "#2c3e50"
       },
       "encoding": {

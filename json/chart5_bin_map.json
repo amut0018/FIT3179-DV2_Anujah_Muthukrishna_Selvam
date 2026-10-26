@@ -1,15 +1,33 @@
 
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Breast Cancer Screening Eligible Population by State",
+  "title": {
+    "text": "Breast Cancer Screening Eligible Population by State",
+    "subtitle": "2021-2022",
+    "font": "Open Sans",
+    "fontSize": 14,
+    "fontWeight": 600,
+    "subtitleFont": "Open Sans",
+    "subtitleFontSize": 11,
+    "subtitleColor": "#555555",
+    "subtitleFontWeight": 400,
+    "anchor": "middle",
+    "offset": 8
+  },
   "width": "container",
-  "height": 450,
+  "height": 500,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
   "projection": {
     "type": "conicConformal",
     "parallels": [-18, -36],
     "rotate": [-133, 0, 0],
-    "center": [0, -28],
-    "scale": 700
+    "center": [0, -27],
+    "scale": {
+      "expr": "min(width * 1.5, 600)"
+    }
   },
   "layer": [
     {
@@ -92,10 +110,21 @@
           },
           "legend": {
             "orient": "bottom",
+            "direction": "horizontal",
+            "columns": 3,
             "symbolType": "square",
-            "symbolSize": 150,
+            "symbolSize": 90,
+            "columnPadding": 12,
+            "rowPadding": 6,
+            "titleFont": "Open Sans",
             "titleFontSize": 11,
-            "labelFontSize": 10
+            "titleFontWeight": 600,
+            "labelFont": "Open Sans",
+            "labelFontSize": 10,
+            "labelFontWeight": 400,
+            "labelLimit": 110,
+            "titleLimit": 180,
+            "padding": 8
           }
         },
         "tooltip": [
@@ -122,6 +151,21 @@
   "config": {
     "view": {
       "stroke": null
+    },
+    "title": {
+      "font": "Open Sans",
+      "fontSize": 14,
+      "fontWeight": 600,
+      "subtitleFont": "Open Sans",
+      "subtitleFontSize": 11,
+      "subtitleColor": "#555555",
+      "subtitleFontWeight": 400
+    },
+    "legend": {
+      "labelLimit": 110,
+      "titleLimit": 180,
+      "columnPadding": 12,
+      "rowPadding": 6
     }
   }
 }

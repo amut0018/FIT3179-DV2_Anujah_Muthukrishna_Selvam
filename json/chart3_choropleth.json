@@ -9,7 +9,7 @@
     "subtitlePadding": 5
   },
   "width": "container",
-  "height": 450,
+  "height": 380,
   "projection": {
     "type": "conicConformal",
     "parallels": [-18, -36],

@@ -1,4 +1,47 @@
-const embedOpt = { "actions": false };
+const embedOpt = {
+  actions: false,
+  config: {
+    font: "Open Sans",
+    title: {
+      font: "Open Sans",
+      fontSize: 14,
+      fontWeight: 600,
+      subtitleFont: "Open Sans",
+      subtitleFontSize: 11,
+      subtitleFontWeight: 400,
+      subtitleColor: "#555555"
+    },
+    axis: {
+      titleFont: "Open Sans",
+      titleFontSize: 11,
+      titleFontWeight: 600,
+      labelFont: "Open Sans",
+      labelFontSize: 10,
+      labelFontWeight: 400
+    },
+    legend: {
+      titleFont: "Open Sans",
+      titleFontSize: 11,
+      titleFontWeight: 600,
+      labelFont: "Open Sans",
+      labelFontSize: 10,
+      labelFontWeight: 400
+    },
+    header: {
+      titleFont: "Open Sans",
+      titleFontSize: 11,
+      titleFontWeight: 600,
+      labelFont: "Open Sans",
+      labelFontSize: 10,
+      labelFontWeight: 400
+    },
+    text: {
+      font: "Open Sans",
+      fontSize: 10,
+      fontWeight: 400
+    }
+  }
+};
 
 // 1. File paths to Vega-Lite JSON specifications
 const spec1 = "json/chart1_bump_chart.json";

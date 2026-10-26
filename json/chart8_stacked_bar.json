@@ -6,11 +6,19 @@
       "Breast Cancer Screening Eligibility",
       "by State and Indigenous Status"
     ],
+    "subtitle": "2021-2022",
     "anchor": "middle",
     "align": "center",
+    "font": "Open Sans",
     "fontSize": 14,
+    "fontWeight": 600,
+    "subtitleFont": "Open Sans",
     "subtitleFontSize": 11,
-    "lineHeight": 17
+    "subtitleColor": "#555555",
+    "subtitleFontWeight": 400,
+    "subtitlePadding": 4,
+    "lineHeight": 17,
+    "offset": 8
   },
   "width": "container",
   "height": 320,
@@ -77,7 +85,11 @@
         "Australian Capital Territory"
       ],
       "axis": {
-        "labelFontSize": 11
+        "labelFont": "Open Sans",
+        "labelFontSize": 10,
+        "titleFont": "Open Sans",
+        "titleFontSize": 11,
+        "titleFontWeight": 600
       }
     },
     "x": {
@@ -91,7 +103,11 @@
       "axis": {
         "format": ".0f",
         "grid": true,
-        "titleFontSize": 12,
+        "labelFont": "Open Sans",
+        "labelFontSize": 10,
+        "titleFont": "Open Sans",
+        "titleFontSize": 11,
+        "titleFontWeight": 600,
         "title": "Percentage of State (%)"
       }
     },
@@ -111,7 +127,13 @@
       },
       "legend": {
         "orient": "bottom",
-        "title": "Indigenous Status"
+        "title": "Indigenous Status",
+        "titleFont": "Open Sans",
+        "titleFontSize": 11,
+        "titleFontWeight": 600,
+        "labelFont": "Open Sans",
+        "labelFontSize": 10,
+        "labelFontWeight": 400
       }
     },
     "tooltip": [
@@ -139,5 +161,11 @@
         "format": ",.0f"
       }
     ]
+  },
+  "config": {
+    "font": "Open Sans",
+    "view": {
+      "stroke": null
+    }
   }
 }

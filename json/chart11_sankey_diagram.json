@@ -244,8 +244,8 @@
         "type": "text",
         "align": "right",
         "dx": -12,
-        "fontSize": 9,
-        "fontWeight": 600
+        "fontSize": 10,
+        "fontWeight": 400
       },
       "encoding": {
         "x": {
@@ -288,8 +288,8 @@
         "baseline": "middle",
         "lineBreak": "\n",
         "dx": 14,
-        "fontSize": 9,
-        "fontWeight": 600
+        "fontSize": 10,
+        "fontWeight": 400
       },
       "encoding": {
         "x": {
@@ -324,8 +324,8 @@
       "mark": {
         "type": "text",
         "align": "center",
-        "fontSize": 11,
-        "fontWeight": "bold"
+        "fontSize": 10,
+        "fontWeight": 400
       },
       "encoding": {
         "x": {

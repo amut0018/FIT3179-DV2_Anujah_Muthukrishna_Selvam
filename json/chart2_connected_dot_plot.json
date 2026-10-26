@@ -1,11 +1,24 @@
+
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Bowel Cancer Screening Participation Rates by Age & Sex",
-    "subtitle": "2020–2021",
-    "anchor": "middle",
+    "text": [
+      "Bowel Cancer Screening Participation",
+      "Rates by Age & Sex"
+    ],
+    "subtitle": "2020-2021",
+    "font": "Open Sans",
     "fontSize": 14,
-    "subtitleFontSize": 11
+    "fontWeight": 600,
+    "subtitleFont": "Open Sans",
+    "subtitleFontSize": 11,
+    "subtitleColor": "#555555",
+    "subtitleFontWeight": 400,
+    "anchor": "middle",
+    "align": "center",
+    "subtitlePadding": 4,
+    "lineHeight": 17,
+    "offset": 8
   },
   "width": "container",
   "height": 300,
@@ -46,7 +59,7 @@
       "mark": {
         "type": "line",
         "color": "#b0bec5",
-        "size": 3
+        "strokeWidth": 3
       },
       "encoding": {
         "y": {
@@ -56,8 +69,12 @@
           "sort": "ascending",
           "axis": {
             "labelAngle": 0,
-            "labelFontSize": 11,
-            "labelPadding": 8
+            "labelFont": "Open Sans",
+            "labelFontSize": 10,
+            "labelPadding": 8,
+            "titleFont": "Open Sans",
+            "titleFontSize": 11,
+            "titleFontWeight": 600
           }
         },
         "x": {
@@ -69,7 +86,12 @@
           },
           "axis": {
             "grid": true,
-            "tickCount": 6
+            "tickCount": 6,
+            "labelFont": "Open Sans",
+            "labelFontSize": 10,
+            "titleFont": "Open Sans",
+            "titleFontSize": 11,
+            "titleFontWeight": 600
           }
         },
         "detail": {
@@ -104,7 +126,9 @@
           "legend": {
             "orient": "top",
             "title": null,
-            "labelFontSize": 11,
+            "labelFont": "Open Sans",
+            "labelFontSize": 10,
+            "labelFontWeight": 400,
             "symbolSize": 80
           }
         },
@@ -128,5 +152,36 @@
         ]
       }
     }
-  ]
+  ],
+  "config": {
+    "font": "Open Sans",
+    "title": {
+      "font": "Open Sans",
+      "fontSize": 14,
+      "fontWeight": 600,
+      "subtitleFont": "Open Sans",
+      "subtitleFontSize": 11,
+      "subtitleColor": "#555555",
+      "subtitleFontWeight": 400,
+      "anchor": "middle",
+      "align": "center"
+    },
+    "axis": {
+      "labelFont": "Open Sans",
+      "labelFontSize": 10,
+      "titleFont": "Open Sans",
+      "titleFontSize": 11,
+      "titleFontWeight": 600
+    },
+    "legend": {
+      "labelFont": "Open Sans",
+      "labelFontSize": 10,
+      "titleFont": "Open Sans",
+      "titleFontSize": 11,
+      "titleFontWeight": 600
+    },
+    "view": {
+      "stroke": null
+    }
+  }
 }

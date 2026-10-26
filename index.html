@@ -9,6 +9,11 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css">
 
+  <!-- Open Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
   <!-- Custom Styling -->
   <link rel="stylesheet" href="css/styles.css">
 
@@ -16,284 +21,510 @@
   <script src="https://cdn.jsdelivr.net/npm/vega@5.25.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.16.3"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.24.0"></script>
+
+  <style>
+    body {
+      background-color: #f4f6f9;
+      margin: 0;
+      padding: 20px 16px;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .dashboard-wrapper {
+      width: min(100%, 1000px);
+      margin: 0 auto;
+      background: #ffffff;
+      padding: clamp(20px, 4vw, 40px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      box-sizing: border-box;
+      border-radius: 8px;
+    }
+
+    .dashboard-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .dashboard-header h1 {
+      margin-top: 10px;
+      font-size: 22px;
+      font-weight: 700;
+      color: #1a2a3a;
+      overflow-wrap: anywhere;
+    }
+
+    .dashboard-header .subtitle {
+      max-width: 750px;
+      margin: 10px auto 0 auto;
+      color: #555555;
+      font-size: 14px;
+      line-height: 1.5;
+      overflow-wrap: anywhere;
+    }
+
+    .badge {
+      background-color: #e3f2fd;
+      color: #0d47a1;
+      padding: 4px 12px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-radius: 4px;
+    }
+
+    .dashboard-section {
+      margin-bottom: 50px;
+    }
+
+    .section-title {
+      border-bottom: 2px solid #eaeaea;
+      padding-bottom: 10px;
+      margin-bottom: 25px;
+    }
+
+    .section-title h2 {
+      font-size: 20px;
+      color: #1a2a3a;
+      margin: 0 0 5px 0;
+      overflow-wrap: anywhere;
+    }
+
+    .section-desc {
+      font-size: 13px;
+      color: #666666;
+      margin: 0;
+    }
+
+    /* 2-column story layout with vertical sightline */
+    .chart-story {
+      display: flex;
+      align-items: stretch;
+      min-width: 0;
+      margin-bottom: 35px;
+      border-bottom: 1px dashed #e0e0e0;
+      padding-bottom: 35px;
+      position: relative;
+    }
+
+    .chart-story::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 35px;
+      width: 1px;
+      background-color: #e0e0e0;
+      transform: translateX(-0.5px);
+    }
+
+    .chart-story--chart-first .narrative-panel {
+      order: 2;
+      padding-left: 30px;
+      padding-right: 0;
+    }
+
+    .chart-story--chart-first .chart-panel {
+      order: 1;
+      padding-right: 30px;
+      padding-left: 0;
+    }
+
+    /* Insight text: vertically centred against the chart, left aligned, black */
+    .narrative-panel {
+      flex: 1 1 0;
+      min-width: 0;
+      padding-right: 30px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-self: stretch;
+      text-align: left;
+      color: #000000;
+    }
+
+    .narrative-panel h3 {
+      font-size: 14px;
+      color: #000000;
+      text-align: left;
+      margin: 0 0 10px 0;
+    }
+
+    .narrative-panel p {
+      font-size: 13px;
+      color: #000000;
+      text-align: left;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Each line holds 6-7 words on desktop */
+    .narrative-panel .line {
+      display: block;
+      white-space: nowrap;
+    }
+
+    .chart-panel {
+      flex: 1 1 0;
+      min-width: 0;
+      max-width: 100%;
+      padding-left: 30px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .vis-container {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .vis-container canvas,
+    .vis-container svg {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 820px) {
+      body {
+        padding: 12px;
+      }
+
+      .chart-story {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .chart-story::after {
+        display: none;
+      }
+
+      .narrative-panel,
+      .chart-panel,
+      .chart-story--chart-first .narrative-panel,
+      .chart-story--chart-first .chart-panel {
+        order: initial;
+        width: 100%;
+        padding: 0;
+      }
+
+      .chart-story--chart-first .chart-panel {
+        order: 2;
+      }
+
+      .chart-story--chart-first .narrative-panel {
+        order: 1;
+      }
+
+      .chart-panel {
+        display: block;
+      }
+
+      /* Let text flow naturally on small screens */
+      .narrative-panel .line {
+        display: inline;
+        white-space: normal;
+      }
+    }
+
+    .dashboard-footer {
+      text-align: center;
+      font-size: 12px;
+      color: #777777;
+      margin-top: 40px;
+    }
+
+    .dashboard-footer hr {
+      border: none;
+      border-top: 1px solid #eaeaea;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 
 <body>
-  <!-- 1000px Centered Dashboard Wrapper -->
   <div class="dashboard-wrapper">
 
-    <!-- Header -->
-    <header class="dashboard-header pure-g">
-      <div class="pure-u-1">
-        <span class="badge">National Health Surveillance</span>
-        <h1>Preventive Health Screening in Australia</h1>
-        <p class="subtitle">
-          An evaluation of population-level participation, demographic disparities,
-          and regional accessibility across the National Bowel, BreastScreen,
-          and Cervical Screening Programs.
-        </p>
-      </div>
+    <header class="dashboard-header">
+      <span class="badge">National Health Surveillance</span>
+      <h1>Preventive Health Screening in Australia</h1>
+      <p class="subtitle">
+        An evaluation of population-level participation, demographic disparities,
+        and regional accessibility across the National Bowel, Breast,
+        and Cervical Screening Programs.
+      </p>
     </header>
 
     <main>
-    <!-- ==================== SECTION 1 ==================== -->
-    <section class="dashboard-section">
-      <div class="section-title pure-g">
-        <div class="pure-u-1">
-          <h2>1. National activity and participation</h2>
+      <!-- ==================== SECTION 1 ==================== -->
+      <section class="dashboard-section">
+        <div class="section-title">
+          <h2>1. Annual Participation Over the Years</h2>
           <p class="section-desc">
-            Annual screening activity and participation rates reveal how outcomes differ
-            across programs, age groups, and sexes.
+            Longitudinal tracking of national screening participation rates from 2018 to 2023 across preventive health programs.
           </p>
         </div>
-      </div>
 
-      <article class="chart-story" aria-labelledby="insight-chart1">
-        <div class="narrative-panel">
-          <h3 id="insight-chart1">Cervical participation rebounded after 2020</h3>
-          <p>
-            Cervical screening participation fell from 61.5% in 2019 to 56.4% in
-            2020, then rose to 68.7% by 2022. The chart compares this trend with
-            bowel and breast screening participation from 2018 to 2023.
-          </p>
-        </div>
-        <div class="chart-panel">
-          <div id="vis_chart1_bump_chart" class="vis-container"
-            role="img" aria-label="Bump chart of annual screening participation rates by program"></div>
-        </div>
-      </article>
+        <article class="chart-story" aria-labelledby="insight-chart1">
+          <div class="narrative-panel">
+            <h3 id="insight-chart1">Cervical screening rebounded after the 2020 dip</h3>
+            <p>
+              <span class="line">Cervical participation fell from 61.5% in</span>
+              <span class="line">2019 to 56.4% in 2020, before</span>
+              <span class="line">climbing to 68.7% by 2022. Bowel</span>
+              <span class="line">and breast screening followed different paths</span>
+              <span class="line">across 2018 to 2023, so each</span>
+              <span class="line">program has its own distinct trajectory.</span>
+            </p>
+          </div>
+          <div class="chart-panel">
+            <div id="vis_chart1_bump_chart" class="vis-container"
+              role="img" aria-label="Bump chart of annual screening participation rates by program"></div>
+          </div>
+        </article>
+      </section>
 
-      <article class="chart-story chart-story--chart-first" aria-labelledby="insight-chart2">
-        <div class="narrative-panel">
-          <h3 id="insight-chart2">Women’s bowel participation was higher</h3>
-          <p>
-            In 2020–2021, national bowel-screening participation for ages 50–74
-            was 42.8% for females and 38.9% for males, a 3.9 percentage-point gap.
-            Female rates were higher in each of the five age bands shown, making
-            the overall difference consistent across the displayed age range.
-          </p>
-        </div>
-        <div class="chart-panel">
-          <div id="vis_chart2_connected_dot_plot" class="vis-container"
-            role="img" aria-label="Connected dot plot comparing bowel participation by sex and age"></div>
-        </div>
-      </article>
-    </section>
-
-    <!-- ==================== SECTION 2 ==================== -->
-    <section class="dashboard-section">
-      <div class="section-title pure-g">
-        <div class="pure-u-1">
-          <h2>2. Regional patterns and population differences</h2>
+      <!-- ==================== SECTION 2 ==================== -->
+      <section class="dashboard-section">
+        <div class="section-title">
+          <h2>2. Bowel Cancer Screening</h2>
           <p class="section-desc">
-            State, SA3, and Primary Health Network results show how participation,
-            eligible population, and age-related rates vary across Australia.
+            Detailed examination of the National Bowel Cancer Screening Program across sexes, age groups, and Primary Health Networks.
           </p>
         </div>
-      </div>
 
-      <article class="chart-story" aria-labelledby="insight-chart3">
-        <div class="narrative-panel">
-          <h3 id="insight-chart3">SA3 participation spans a wide range</h3>
-          <p>
-            Among the 337 SA3 areas with numeric rates, participation ranges from
-            9.1% at Christmas Island to 53.6% in Surf Coast–Bellarine Peninsula,
-            a 44.5-point spread. Such local variation matters when targeting
-            outreach; the map shows where rates differ, not why.
-          </p>
-        </div>
-        <div class="chart-panel">
-          <div id="vis_chart3_choropleth" class="vis-container"
-            role="img" aria-label="Choropleth map of bowel screening participation by SA3"></div>
-        </div>
-      </article>
+        <article class="chart-story chart-story--chart-first" aria-labelledby="insight-chart2">
+          <div class="narrative-panel">
+            <h3 id="insight-chart2">Women lead bowel screening participation</h3>
+            <p>
+              <span class="line">In 2020–2021, participation among ages 50–74</span>
+              <span class="line">was 42.8% for women and 38.9%</span>
+              <span class="line">for men, a 3.9 percentage-point gap.</span>
+              <span class="line">Women also led in all five</span>
+              <span class="line">age bands shown, so the difference</span>
+              <span class="line">is consistent, not a one-off result.</span>
+            </p>
+          </div>
+          <div class="chart-panel">
+            <div id="vis_chart2_connected_dot_plot" class="vis-container"
+              role="img" aria-label="Connected dot plot comparing bowel participation by sex and age"></div>
+          </div>
+        </article>
 
-      <article class="chart-story chart-story--chart-first" aria-labelledby="insight-chart4">
-        <div class="narrative-panel">
-          <h3 id="insight-chart4">Participation also varies between PHNs</h3>
-          <p>
-            In the 31 PHNs shown, bowel participation ranges from 25.3% in the
-            Northern Territory to 47.3% in Gippsland. Even the highest PHN rate
-            is below half, while the spread points to substantial differences
-            between regional screening populations.
-          </p>
-        </div>
-        <div class="chart-panel">
-          <div id="vis_chart4_prop_symbol" class="vis-container"
-            role="img" aria-label="Proportional symbol map of bowel participation by Primary Health Network"></div>
-        </div>
-      </article>
+        <article class="chart-story" aria-labelledby="insight-chart3">
+          <div class="narrative-panel">
+            <h3 id="insight-chart3">Local participation varies widely across Australia</h3>
+            <p>
+              <span class="line">Across 337 SA3 areas with numeric</span>
+              <span class="line">rates, participation ranges from 9.1% at</span>
+              <span class="line">Christmas Island to 53.6% in Surf</span>
+              <span class="line">Coast–Bellarine Peninsula, a wide 44.5-point spread.</span>
+              <span class="line">That gap matters when targeting outreach,</span>
+              <span class="line">but the map shows where, not why.</span>
+            </p>
+          </div>
+          <div class="chart-panel">
+            <div id="vis_chart3_choropleth" class="vis-container"
+              role="img" aria-label="Choropleth map of bowel screening participation by SA3"></div>
+          </div>
+        </article>
 
-      <article class="chart-story" aria-labelledby="insight-chart5">
-        <div class="narrative-panel">
-          <h3 id="insight-chart5">Eligible BreastScreen populations differ in size</h3>
-          <p>
-            This map groups eligible BreastScreen populations into bands of one
-            million women by state and territory. New South Wales has about
-            4.52 million eligible women, while the Northern Territory has about
-            110,000. These counts describe the eligible population, not screening
-            attendance.
-          </p>
-        </div>
-        <div class="chart-panel">
-          <div id="vis_chart5_bin_map" class="vis-container"
-            role="img" aria-label="Binned map of eligible BreastScreen women by state and territory"></div>
-        </div>
-      </article>
+        <article class="chart-story chart-story--chart-first" aria-labelledby="insight-chart4">
+          <div class="narrative-panel">
+            <h3 id="insight-chart4">Regional health networks tell different stories</h3>
+            <p>
+              <span class="line">Across 31 PHNs, bowel participation ranges</span>
+              <span class="line">from 25.3% in the Northern Territory</span>
+              <span class="line">to 47.3% in Gippsland. Even the</span>
+              <span class="line">highest network remains below half, so</span>
+              <span class="line">every region has room to improve,</span>
+              <span class="line">and some have much further to go.</span>
+            </p>
+          </div>
+          <div class="chart-panel">
+            <div id="vis_chart4_prop_symbol" class="vis-container"
+              role="img" aria-label="Proportional symbol map of bowel participation by Primary Health Network"></div>
+          </div>
+        </article>
+      </section>
 
-      <article class="chart-story chart-story--chart-first" aria-labelledby="insight-chart6">
-        <div class="narrative-panel">
-          <h3 id="insight-chart6">Breast participation peaks at ages 65–69</h3>
-          <p>
-            Female participation in 2021–2022 rises from 45.4% at ages 50–54
-            to a peak of 54.5% at ages 65–69, then eases to 52.0% at ages 70–74.
-            The younger eligible age band has the lowest rate among those shown.
-          </p>
-        </div>
-        <div class="chart-panel">
-          <div id="vis_chart6_hist" class="vis-container"
-            role="img" aria-label="Histogram of Breast screening participation by age group"></div>
-        </div>
-      </article>
-    </section>
-
-    <!-- ==================== SECTION 3 ==================== -->
-    <section class="dashboard-section">
-      <div class="section-title pure-g">
-        <div class="pure-u-1">
-          <h2>3. Access and equity</h2>
+      <!-- ==================== SECTION 3 ==================== -->
+      <section class="dashboard-section">
+        <div class="section-title">
+          <h2>3. Breast Cancer Screening</h2>
           <p class="section-desc">
-            Travel distance and the makeup of eligible populations add context
-            for planning screening services that are reachable and inclusive.
+            Evaluating eligible population volumes, age participation peaks, and geographic drive-time accessibility.
           </p>
         </div>
-      </div>
 
-      <article class="chart-story" aria-labelledby="insight-chart7">
-        <div class="narrative-panel">
-          <h3 id="insight-chart7">Long travel distances are concentrated in the NT</h3>
-          <p>
-            For the permanently open service scenario, 36.9% of the Northern
-            Territory’s eligible women are in SA3s more than 120 minutes from a
-            service, versus 0.1% in Victoria. The state-level contrast highlights
-            geographic access as an important part of screening-service planning.
-          </p>
-        </div>
-        <div class="chart-panel">
-          <div id="vis_chart7_heatmap" class="vis-container"
-            role="img" aria-label="Heatmap of eligible women proportions by state and drive time to BreastScreen services"></div>
-        </div>
-      </article>
+        <article class="chart-story" aria-labelledby="insight-chart5">
+          <div class="narrative-panel">
+            <h3 id="insight-chart5">Eligible populations differ greatly by state</h3>
+            <p>
+              <span class="line">New South Wales has about 4.52</span>
+              <span class="line">million eligible women, while the Northern</span>
+              <span class="line">Territory has about 110,000. Population size</span>
+              <span class="line">sets the scale of potential screening</span>
+              <span class="line">demand. These counts show who could</span>
+              <span class="line">be screened, not who actually attended.</span>
+            </p>
+          </div>
+          <div class="chart-panel">
+            <div id="vis_chart5_bin_map" class="vis-container"
+              role="img" aria-label="Binned map of eligible BreastScreen women by state and territory"></div>
+          </div>
+        </article>
 
-      <article class="chart-story chart-story--chart-first" aria-labelledby="insight-chart8">
-        <div class="narrative-panel">
-          <h3 id="insight-chart8">Eligible population composition differs by state</h3>
-          <p>
-            First Nations women make up 24.7% of the combined First Nations and
-            non-Indigenous eligible-women total in the Northern Territory, compared
-            with 0.7% in Victoria. This chart shows population composition—not
-            screening participation—so it informs equitable planning rather than
-            indicating a difference in screening behaviour.
-          </p>
-        </div>
-        <div class="chart-panel">
-          <div id="vis_chart8_stacked_bar" class="vis-container"
-            role="img" aria-label="Stacked percentage bars of eligible women by state and Indigenous status"></div>
-        </div>
-      </article>
-    </section>
+        <article class="chart-story chart-story--chart-first" aria-labelledby="insight-chart6">
+          <div class="narrative-panel">
+            <h3 id="insight-chart6">Participation peaks in the late sixties</h3>
+            <p>
+              <span class="line">In 2021–2022, female participation rises from</span>
+              <span class="line">45.4% at ages 50–54 to a</span>
+              <span class="line">peak of 54.5% at ages 65–69,</span>
+              <span class="line">then eases to 52.0% at ages</span>
+              <span class="line">70–74. The youngest eligible group has</span>
+              <span class="line">the lowest rate of those shown.</span>
+            </p>
+          </div>
+          <div class="chart-panel">
+            <div id="vis_chart6_hist" class="vis-container"
+              role="img" aria-label="Histogram of Breast screening participation by age group"></div>
+          </div>
+        </article>
 
-    <!-- ==================== SECTION 4 ==================== -->
-    <section class="dashboard-section">
-      <div class="section-title pure-g">
-        <div class="pure-u-1">
-          <!-- Placeholder text is invisible but holds the same space as other sections; replace with your own -->
-          <h2 style="visibility:hidden;">4. Placeholder section title</h2>
-          <p class="section-desc" style="visibility:hidden;">
-            Placeholder description text that holds the same space as the other
-            section descriptions until the real text is added in its place.
-          </p>
-        </div>
-      </div>
+        <article class="chart-story" aria-labelledby="insight-chart7">
+          <div class="narrative-panel">
+            <h3 id="insight-chart7">Distance is a Northern Territory challenge</h3>
+            <p>
+              <span class="line">With services permanently open, 36.9% of</span>
+              <span class="line">Northern Territory’s eligible women live in SA3s</span>
+              <span class="line">more than 120 minutes from a</span>
+              <span class="line">service, versus just 0.1% in Victoria.</span>
+              <span class="line">Geography shapes who can realistically reach</span>
+              <span class="line">a service, so access matters for planning.</span>
+            </p>
+          </div>
+          <div class="chart-panel">
+            <div id="vis_chart7_heatmap" class="vis-container"
+              role="img" aria-label="Heatmap of eligible women proportions by state and drive time to BreastScreen services"></div>
+          </div>
+        </article>
+      </section>
 
-      <article class="chart-story" aria-labelledby="insight-chart9">
-        <div class="narrative-panel">
-          <!-- Placeholder text is invisible but holds the same space as other text boxes; replace with your own -->
-          <h3 id="insight-chart9" style="visibility:hidden;">Placeholder insight heading goes here</h3>
-          <p style="visibility:hidden;">
-            Placeholder narrative text that reserves the same width and height as
-            the other narrative panels so the layout stays identical. Replace this
-            paragraph, and the heading above, with the own insight text for the
-            lollipop chart. Placeholder narrative text that reserves the same
-            width and height as the other narrative panels so the layout stays
-            identical until the final wording is written.
+      <!-- ==================== SECTION 4 ==================== -->
+      <section class="dashboard-section">
+        <div class="section-title">
+          <h2>4. Bowel Cancers &amp; Equity</h2>
+          <p class="section-desc">
+            Demographic composition, Indigenous participation weighting, and equitable healthcare planning.
           </p>
         </div>
-        <div class="chart-panel">
-          <div id="vis_chart9_lollipop_chart" class="vis-container"
-            role="img" aria-label="Lollipop chart"></div>
-        </div>
-      </article>
 
-      <article class="chart-story chart-story--chart-first" aria-labelledby="insight-chart10">
-        <div class="narrative-panel">
-          <!-- Placeholder text is invisible but holds the same space as other text boxes; replace with your own -->
-          <h3 id="insight-chart10" style="visibility:hidden;">Placeholder insight heading goes here</h3>
-          <p style="visibility:hidden;">
-            Placeholder narrative text that reserves the same width and height as
-            the other narrative panels so the layout stays identical. Replace this
-            paragraph, and the heading above, with your own insight text for the
-            slope chart. Placeholder narrative text that reserves the same
-            width and height as the other narrative panels so the layout stays
-            identical until the final wording is written.
+        <article class="chart-story chart-story--chart-first" aria-labelledby="insight-chart8">
+          <div class="narrative-panel">
+            <h3 id="insight-chart8">Population makeup differs sharply between states</h3>
+            <p>
+              <span class="line">First Nations women make up 24.7% of</span>
+              <span class="line">the combined First Nations and non-Indigenous</span>
+              <span class="line">eligible women in the Northern Territory,</span>
+              <span class="line">compared with 0.7% in Victoria. This</span>
+              <span class="line">shows who lives there, not screening</span>
+              <span class="line">behaviour, so it guides equitable planning.</span>
+            </p>
+          </div>
+          <div class="chart-panel">
+            <div id="vis_chart8_stacked_bar" class="vis-container"
+              role="img" aria-label="Stacked percentage bars of eligible women by state and Indigenous status"></div>
+          </div>
+        </article>
+
+        <article class="chart-story" aria-labelledby="insight-chart9">
+          <div class="narrative-panel">
+            <h3 id="insight-chart9">Outreach needs differ from region to region</h3>
+            <p>
+              <!-- Add a verified figure from chart 9 here, e.g. highest vs lowest region -->
+              <span class="line">Participation benchmarks differ noticeably between regions,</span>
+              <span class="line">and follow-up referral rates vary too.</span>
+              <span class="line">Seeing these gaps side by side helps</span>
+              <span class="line">decision-makers direct outreach and resources to</span>
+              <span class="line">the places where support is needed.</span>
+            </p>
+          </div>
+          <div class="chart-panel">
+            <div id="vis_chart9_lollipop_chart" class="vis-container"
+              role="img" aria-label="Lollipop chart of screening metrics"></div>
+          </div>
+        </article>
+      </section>
+
+      <!-- ==================== SECTION 5 ==================== -->
+      <section class="dashboard-section">
+        <div class="section-title">
+          <h2>5. Diagnostic Outcome of Preventive Screening</h2>
+          <p class="section-desc">
+            Clinical pathway analysis mapping active screening participation flows directly to definitive diagnostic outcomes.
           </p>
         </div>
-        <div class="chart-panel">
-          <div id="vis_chart10_slope_chart" class="vis-container"
-            role="img" aria-label="Slope chart"></div>
-        </div>
-      </article>
-    </section>
+
+        <article class="chart-story chart-story--chart-first" aria-labelledby="insight-chart10">
+          <div class="narrative-panel">
+            <h3 id="insight-chart10">Screening outcomes shifted between reporting periods</h3>
+            <p>
+              <!-- Add verified positivity / recall figures from chart 10 here -->
+              <span class="line">Test positivity and recall requirements are</span>
+              <span class="line">tracked across reporting periods, showing whether</span>
+              <span class="line">more people are being sent for</span>
+              <span class="line">further checks over time. Participation is</span>
+              <span class="line">only the start, and these outcomes</span>
+              <span class="line">complete the picture of screening impact.</span>
+            </p>
+          </div>
+          <div class="chart-panel">
+            <div id="vis_chart10_slope_chart" class="vis-container"
+              role="img" aria-label="Slope chart of screening outcomes"></div>
+          </div>
+        </article>
+
+        <article class="chart-story" aria-labelledby="insight-chart11">
+          <div class="narrative-panel">
+            <h3 id="insight-chart11">Screening pathways lead to different outcomes</h3>
+            <p>
+              <!-- Add verified outcome shares from chart 11 here -->
+              <span class="line">Participants in the bowel, breast and</span>
+              <span class="line">cervical programs flow towards three outcomes:</span>
+              <span class="line">negative, further assessment or positive. Each</span>
+              <span class="line">program ends differently, so tracking pathways</span>
+              <span class="line">shows how many people move forward</span>
+              <span class="line">and what happens to them next.</span>
+            </p>
+          </div>
+          <div class="chart-panel">
+            <div id="vis_chart11_sankey_diagram" class="vis-container"
+              role="img" aria-label="Sankey diagram of diagnostic pathways"></div>
+          </div>
+        </article>
+      </section>
     </main>
 
-          <article class="chart-story chart-story--chart-first" aria-labelledby="insight-chart11">
-        <div class="narrative-panel">
-          <!-- Placeholder text is invisible but holds the same space as other text boxes; replace with your own -->
-          <h3 id="insight-chart11" style="visibility:hidden;">Placeholder insight heading goes here</h3>
-          <p style="visibility:hidden;">
-            Placeholder narrative text that reserves the same width and height as
-            the other narrative panels so the layout stays identical. Replace this
-            paragraph, and the heading above, with your own insight text for the
-            slope chart. Placeholder narrative text that reserves the same
-            width and height as the other narrative panels so the layout stays
-            identical until the final wording is written.
-          </p>
-        </div>
-        <div class="chart-panel">
-          <div id="vis_chart11_sankey_diagram" class="vis-container"
-            role="img" aria-label="Sankey diagram"></div>
-        </div>
-      </article>
-    </section>
-    </main>
-
-    <!-- Footer Metadata -->
-    <footer class="dashboard-footer pure-g">
-      <div class="pure-u-1">
-        <hr>
-        <p>
-          <strong>FIT3179 Data Visualisation 2 Dashboard</strong>
-          | Author: Anujah Muthukrishna Selvam
-        </p>
-        <p>
-          Data Sources: Australian Institute of Health and Welfare (AIHW) & Australian Bureau of Statistics (ABS)
-        </p>
-      </div>
+    <footer class="dashboard-footer">
+      <hr>
+      <p>
+        <strong>FIT3179 Data Visualisation 2 Dashboard</strong>
+        | Author: Anujah Muthukrishna Selvam
+      </p>
+      <p>
+        Data Sources: Australian Institute of Health and Welfare (AIHW) &amp; Australian Bureau of Statistics (ABS)
+      </p>
     </footer>
 
   </div>
 
-  <!-- JavaScript Rendering Script -->
   <script src="js/vega_lite_vis.js"></script>
 </body>
 </html>

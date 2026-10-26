@@ -1,11 +1,24 @@
 
-{  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Median Time to Colposcopy Following Cervical Screening by State",
+    "text": [
+      "Median Time to Colposcopy Following",
+      "Cervical Screening by State"
+    ],
     "subtitle": "Aged 25-74, 2023",
+    "font": "Open Sans",
     "fontSize": 14,
+    "fontWeight": 600,
+    "subtitleFont": "Open Sans",
     "subtitleFontSize": 11,
-    "anchor": "middle"
+    "subtitleColor": "#555555",
+    "subtitleFontWeight": 400,
+    "anchor": "middle",
+    "align": "center",
+    "subtitlePadding": 4,
+    "lineHeight": 17,
+    "offset": 8
   },
   "width": "container",
   "height": 320,
@@ -31,8 +44,11 @@
       "sort": null,
       "axis": {
         "labelAngle": 0,
-        "labelFontSize": 11,
-        "titleFontSize": 12,
+        "labelFont": "Open Sans",
+        "labelFontSize": 10,
+        "titleFont": "Open Sans",
+        "titleFontSize": 11,
+        "titleFontWeight": 600,
         "titlePadding": 8
       }
     },
@@ -46,7 +62,11 @@
       "axis": {
         "grid": true,
         "tickCount": 6,
-        "titleFontSize": 12
+        "labelFont": "Open Sans",
+        "labelFontSize": 10,
+        "titleFont": "Open Sans",
+        "titleFontSize": 11,
+        "titleFontWeight": 600
       }
     }
   },
@@ -87,5 +107,11 @@
         ]
       }
     }
-  ]
+  ],
+  "config": {
+    "font": "Open Sans",
+    "view": {
+      "stroke": null
+    }
+  }
 }

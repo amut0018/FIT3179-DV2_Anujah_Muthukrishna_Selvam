@@ -1,11 +1,20 @@
+
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Cervical Screening Participation Rate (%) by State",
     "subtitle": "2018 vs 2024",
+    "font": "Open Sans",
     "fontSize": 14,
+    "fontWeight": 600,
+    "subtitleFont": "Open Sans",
     "subtitleFontSize": 11,
-    "anchor": "middle"
+    "subtitleColor": "#555555",
+    "subtitleFontWeight": 400,
+    "anchor": "middle",
+    "align": "center",
+    "subtitlePadding": 4,
+    "offset": 8
   },
   "width": "container",
   "height": 350,
@@ -20,11 +29,25 @@
     }
   },
   "transform": [
-    {"filter": "datum.State != 'Australia'"},
-    {"filter": "datum.Period == '2018' || datum.Period == '2024'"},
     {
-      "window": [{"op": "row_number", "as": "rankUp"}],
-      "sort": [{"field": "Age_Standardised_Rate", "order": "ascending"}],
+      "filter": "datum.State != 'Australia'"
+    },
+    {
+      "filter": "datum.Period == '2018' || datum.Period == '2024'"
+    },
+    {
+      "window": [
+        {
+          "op": "row_number",
+          "as": "rankUp"
+        }
+      ],
+      "sort": [
+        {
+          "field": "Age_Standardised_Rate",
+          "order": "ascending"
+        }
+      ],
       "groupby": ["Period"]
     },
     {
@@ -32,14 +55,35 @@
       "as": "upBase"
     },
     {
-      "window": [{"op": "max", "field": "upBase", "as": "upMax"}],
-      "sort": [{"field": "Age_Standardised_Rate", "order": "ascending"}],
+      "window": [
+        {
+          "op": "max",
+          "field": "upBase",
+          "as": "upMax"
+        }
+      ],
+      "sort": [
+        {
+          "field": "Age_Standardised_Rate",
+          "order": "ascending"
+        }
+      ],
       "groupby": ["Period"],
       "frame": [null, 0]
     },
     {
-      "window": [{"op": "row_number", "as": "rankDown"}],
-      "sort": [{"field": "Age_Standardised_Rate", "order": "descending"}],
+      "window": [
+        {
+          "op": "row_number",
+          "as": "rankDown"
+        }
+      ],
+      "sort": [
+        {
+          "field": "Age_Standardised_Rate",
+          "order": "descending"
+        }
+      ],
       "groupby": ["Period"]
     },
     {
@@ -47,8 +91,19 @@
       "as": "downBase"
     },
     {
-      "window": [{"op": "min", "field": "downBase", "as": "downMin"}],
-      "sort": [{"field": "Age_Standardised_Rate", "order": "descending"}],
+      "window": [
+        {
+          "op": "min",
+          "field": "downBase",
+          "as": "downMin"
+        }
+      ],
+      "sort": [
+        {
+          "field": "Age_Standardised_Rate",
+          "order": "descending"
+        }
+      ],
       "groupby": ["Period"],
       "frame": [null, 0]
     },
@@ -58,8 +113,32 @@
     }
   ],
   "config": {
+    "font": "Open Sans",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Open Sans",
+      "fontSize": 14,
+      "fontWeight": 600,
+      "subtitleFont": "Open Sans",
+      "subtitleFontSize": 11,
+      "subtitleColor": "#555555",
+      "subtitleFontWeight": 400
+    },
+    "axis": {
+      "labelFont": "Open Sans",
+      "labelFontSize": 10,
+      "titleFont": "Open Sans",
+      "titleFontSize": 11,
+      "titleFontWeight": 600
+    },
     "legend": {
-      "layout": {"right": {"anchor": "middle"}}
+      "labelFont": "Open Sans",
+      "labelFontSize": 10,
+      "titleFont": "Open Sans",
+      "titleFontSize": 11,
+      "titleFontWeight": 600
     }
   },
   "layer": [
@@ -73,12 +152,15 @@
           "field": "Period",
           "type": "nominal",
           "title": null,
-          "scale": {"padding": 0.4},
+          "scale": {
+            "padding": 0.4
+          },
           "axis": {
             "orient": "bottom",
             "labelAngle": 0,
-            "labelFontSize": 13,
-            "labelFontWeight": 600,
+            "labelFont": "Open Sans",
+            "labelFontSize": 10,
+            "labelFontWeight": 400,
             "labelPadding": 8,
             "ticks": false,
             "domain": false,
@@ -90,7 +172,9 @@
         "y": {
           "field": "Age_Standardised_Rate",
           "type": "quantitative",
-          "scale": {"domain": [74, 83]},
+          "scale": {
+            "domain": [74, 83]
+          },
           "axis": null
         },
         "color": {
@@ -99,28 +183,49 @@
           "title": "State",
           "scale": {
             "domain": [
-              "NSW", "Vic", "Qld", "SA", "WA",
-              "Tas", "NT", "ACT"
+              "NSW",
+              "Vic",
+              "Qld",
+              "SA",
+              "WA",
+              "Tas",
+              "NT",
+              "ACT"
             ],
             "range": [
-                "#E69F00",
-                "#56B4E9",
-                "#009E73",
-                "#0072B2",
-                "#D55E00",
-                "#F0A3D2",
-                "#882255",
-                "#332288"
-                            ]
+              "#E69F00",
+              "#56B4E9",
+              "#009E73",
+              "#0072B2",
+              "#D55E00",
+              "#F0A3D2",
+              "#882255",
+              "#332288"
+            ]
           },
           "legend": {
             "orient": "right",
+            "title": "State",
+            "titleFont": "Open Sans",
+            "titleFontSize": 11,
+            "titleFontWeight": 600,
+            "labelFont": "Open Sans",
+            "labelFontSize": 10,
+            "labelFontWeight": 400,
             "symbolType": "circle"
           }
         },
         "tooltip": [
-          {"field": "State", "type": "nominal", "title": "State/Territory"},
-          {"field": "Period", "type": "nominal", "title": "Period"},
+          {
+            "field": "State",
+            "type": "nominal",
+            "title": "State/Territory"
+          },
+          {
+            "field": "Period",
+            "type": "nominal",
+            "title": "Period"
+          },
           {
             "field": "Age_Standardised_Rate",
             "type": "quantitative",
@@ -138,49 +243,86 @@
         "opacity": 1
       },
       "encoding": {
-        "x": {"field": "Period", "type": "nominal"},
-        "y": {"field": "Age_Standardised_Rate", "type": "quantitative"},
-        "color": {"field": "State", "type": "nominal"}
+        "x": {
+          "field": "Period",
+          "type": "nominal"
+        },
+        "y": {
+          "field": "Age_Standardised_Rate",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "State",
+          "type": "nominal"
+        }
       }
     },
     {
-      "transform": [{"filter": "datum.Period == '2018'"}],
+      "transform": [
+        {
+          "filter": "datum.Period == '2018'"
+        }
+      ],
       "mark": {
         "type": "text",
         "align": "right",
         "dx": -10,
-        "fontSize": 11,
-        "fontWeight": 600
+        "font": "Open Sans",
+        "fontSize": 10,
+        "fontWeight": 400
       },
       "encoding": {
-        "x": {"field": "Period", "type": "nominal"},
-        "y": {"field": "LabelY", "type": "quantitative"},
+        "x": {
+          "field": "Period",
+          "type": "nominal"
+        },
+        "y": {
+          "field": "LabelY",
+          "type": "quantitative"
+        },
         "text": {
           "field": "Age_Standardised_Rate",
           "type": "quantitative",
           "format": ".1f"
         },
-        "color": {"field": "State", "type": "nominal"}
+        "color": {
+          "field": "State",
+          "type": "nominal"
+        }
       }
     },
     {
-      "transform": [{"filter": "datum.Period == '2024'"}],
+      "transform": [
+        {
+          "filter": "datum.Period == '2024'"
+        }
+      ],
       "mark": {
         "type": "text",
         "align": "left",
         "dx": 10,
-        "fontSize": 11,
-        "fontWeight": 600
+        "font": "Open Sans",
+        "fontSize": 10,
+        "fontWeight": 400
       },
       "encoding": {
-        "x": {"field": "Period", "type": "nominal"},
-        "y": {"field": "LabelY", "type": "quantitative"},
+        "x": {
+          "field": "Period",
+          "type": "nominal"
+        },
+        "y": {
+          "field": "LabelY",
+          "type": "quantitative"
+        },
         "text": {
           "field": "Age_Standardised_Rate",
           "type": "quantitative",
           "format": ".1f"
         },
-        "color": {"field": "State", "type": "nominal"}
+        "color": {
+          "field": "State",
+          "type": "nominal"
+        }
       }
     }
   ]

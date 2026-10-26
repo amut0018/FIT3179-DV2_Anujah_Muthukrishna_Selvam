@@ -2,9 +2,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Breast Screening Population by State and Access",
+    "text": ["Breast Screening Population by State and Access"],
     "subtitle": "2021-2022",
-    "anchor": "middle",
+    "anchor": "center",
     "align": "center",
     "subtitleAlign": "center",
     "fontSize": 14,
@@ -125,7 +125,7 @@
           ],
           "axis": {
             "labelAngle": 0,
-            "labelFontSize": 11,
+            "labelFontSize": 10,
             "titleFontSize": 11,
             "titlePadding": 10
           }
@@ -145,7 +145,7 @@
             "Australian Capital Territory"
           ],
           "axis": {
-            "labelFontSize": 11,
+            "labelFontSize": 10,
             "titleFontSize": 11
           }
         },
@@ -205,7 +205,7 @@
       "mark": {
         "type": "text",
         "fontSize": 10,
-        "fontWeight": 600
+        "fontWeight": 400
       },
       "encoding": {
         "x": {

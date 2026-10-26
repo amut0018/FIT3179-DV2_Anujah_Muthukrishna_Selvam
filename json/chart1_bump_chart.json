@@ -1,12 +1,24 @@
+
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Annual Bowel, Breast and Cervical Cancer Screening Activity",
+    "text": [
+      "Annual Bowel, Breast and",
+      "Cervical Cancer Screening Activity"
+    ],
     "subtitle": "2018-2023",
+    "font": "Open Sans",
     "fontSize": 14,
+    "fontWeight": 600,
+    "subtitleFont": "Open Sans",
     "subtitleFontSize": 11,
+    "subtitleColor": "#555555",
+    "subtitleFontWeight": 400,
     "anchor": "middle",
-    "align": "center"
+    "align": "center",
+    "subtitlePadding": 4,
+    "lineHeight": 17,
+    "offset": 8
   },
   "width": "container",
   "height": 300,
@@ -57,19 +69,16 @@
           "type": "ordinal",
           "title": "Year",
           "scale": {
-            "domain": [
-              2018,
-              2019,
-              2020,
-              2021,
-              2022,
-              2023
-            ]
+            "domain": [2018, 2019, 2020, 2021, 2022, 2023]
           },
           "axis": {
             "labelAngle": 0,
             "labelOverlap": false,
-            "labelFontSize": 12,
+            "labelFont": "Open Sans",
+            "labelFontSize": 10,
+            "titleFont": "Open Sans",
+            "titleFontSize": 11,
+            "titleFontWeight": 600,
             "grid": false
           }
         },
@@ -83,28 +92,30 @@
           },
           "axis": {
             "grid": true,
-            "format": "~s"
+            "format": "~s",
+            "labelFont": "Open Sans",
+            "labelFontSize": 10,
+            "titleFont": "Open Sans",
+            "titleFontSize": 11,
+            "titleFontWeight": 600
           }
         },
         "color": {
           "field": "Program",
           "type": "nominal",
           "scale": {
-            "domain": [
-              "Bowel",
-              "Breast",
-              "Cervical"
-            ],
-            "range": [
-              "#1b9e77",
-              "#d95f02",
-              "#7570b3"
-            ]
+            "domain": ["Bowel", "Breast", "Cervical"],
+            "range": ["#1b9e77", "#d95f02", "#7570b3"]
           },
           "legend": {
             "orient": "top",
             "title": "Screening Program",
-            "labelFont": "sans-serif",
+            "titleFont": "Open Sans",
+            "titleFontSize": 11,
+            "titleFontWeight": 600,
+            "labelFont": "Open Sans",
+            "labelFontSize": 10,
+            "labelFontWeight": 400,
             "symbolType": "circle"
           }
         }
@@ -149,5 +160,34 @@
         ]
       }
     }
-  ]
+  ],
+  "config": {
+    "font": "Open Sans",
+    "title": {
+      "font": "Open Sans",
+      "fontSize": 14,
+      "fontWeight": 600,
+      "subtitleFont": "Open Sans",
+      "subtitleFontSize": 11,
+      "subtitleColor": "#555555",
+      "subtitleFontWeight": 400
+    },
+    "axis": {
+      "labelFont": "Open Sans",
+      "labelFontSize": 10,
+      "titleFont": "Open Sans",
+      "titleFontSize": 11,
+      "titleFontWeight": 600
+    },
+    "legend": {
+      "labelFont": "Open Sans",
+      "labelFontSize": 10,
+      "titleFont": "Open Sans",
+      "titleFontSize": 11,
+      "titleFontWeight": 600
+    },
+    "view": {
+      "stroke": null
+    }
+  }
 }

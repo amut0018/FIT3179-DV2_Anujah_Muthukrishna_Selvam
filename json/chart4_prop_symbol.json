@@ -2,20 +2,31 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Bowel Cancer Screening Participation by PHN",
-    "subtitle": "2020–2021",
+    "subtitle": "2020-2021",
+    "font": "Open Sans",
     "fontSize": 14,
+    "fontWeight": 600,
+    "subtitleFont": "Open Sans",
     "subtitleFontSize": 11,
-    "anchor": "middle"
+    "subtitleColor": "#555555",
+    "subtitleFontWeight": 400,
+    "anchor": "middle",
+    "align": "center",
+    "offset": 8
   },
   "width": "container",
-  "height": 530,
-  "projection": {
-    "type": "conicConformal",
-    "parallels": [-18, -36],
-    "rotate": [-133, 0, 0],
-    "center": [0, -18],
-    "scale": 700
+  "height":500,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
   },
+  "projection": {
+  "type": "conicConformal",
+  "parallels": [-18, -36],
+  "rotate": [-133, 0, 0],
+  "center": [0, -27],
+  "scale": { "expr": "min(width * 1.5, 600)" }
+},
   "layer": [
     {
       "data": {
@@ -75,22 +86,27 @@
           "scale": {
             "type": "linear",
             "domain": [10000, 400000],
-            "range": [40, 750],
+            "range": [30, 450],
             "clamp": true,
             "zero": false
           },
           "legend": {
-            "orient": "top-left",
+            "orient": "bottom",
+            "direction": "horizontal",
             "title": "Eligible Population",
             "values": [100000, 200000, 300000, 400000],
-            "format": ",.0f",
+            "format": "~s",
             "symbolType": "circle",
             "symbolStrokeColor": "#1a252c",
             "symbolFillColor": "#b8a4d9",
+            "titleFont": "Open Sans",
             "titleFontSize": 11,
-            "labelFontSize": 11,
-            "symbolSize": 100,
-            "padding": 10
+            "titleFontWeight": 600,
+            "labelFont": "Open Sans",
+            "labelFontSize": 10,
+            "symbolSize": 70,
+            "padding": 6,
+            "offset": 8
           }
         },
         "color": {
@@ -103,13 +119,18 @@
             "clamp": true
           },
           "legend": {
-            "orient": "top-right",
+            "orient": "bottom",
+            "direction": "horizontal",
             "format": ".1f",
+            "titleFont": "Open Sans",
             "titleFontSize": 11,
-            "labelFontSize": 11,
-            "gradientLength": 180,
-            "gradientThickness": 14,
-            "padding": 10
+            "titleFontWeight": 600,
+            "labelFont": "Open Sans",
+            "labelFontSize": 10,
+            "gradientLength": 140,
+            "gradientThickness": 12,
+            "padding": 6,
+            "offset": 8
           }
         },
         "tooltip": [
@@ -135,11 +156,15 @@
     }
   ],
   "config": {
+    "font": "Open Sans",
     "view": {
       "stroke": null
     },
     "legend": {
-      "labelLimit": 250
+      "labelLimit": 180,
+      "columnPadding": 12,
+      "rowPadding": 4,
+      "titleLimit": 180
     }
   }
 }
