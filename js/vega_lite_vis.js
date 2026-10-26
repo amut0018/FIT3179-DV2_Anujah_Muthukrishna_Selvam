@@ -6,7 +6,7 @@ const spec2 = "json/chart2_connected_dot_plot.json";
 const spec3 = "json/chart3_choropleth.json";
 const spec4 = "json/chart4_prop_symbol.json";
 const spec5 = "json/chart5_bin_map.json";
-const spec6 = "json/chart6_bar_chart.json";
+const spec6 = "json/chart6_hist.json";
 const spec7 = "json/chart7_heatmap.json";
 const spec8 = "json/chart8_stacked_bar.json";
 const spec9 = "json/chart9_lollipop_chart.json";
@@ -94,14 +94,14 @@ vegaEmbed('#vis_chart5_bin_map', spec5, embedOpt)
     }
   });
 
-// 7. Embed Chart 6 (Bar Chart)
-vegaEmbed('#vis_chart6_bar_chart', spec6, embedOpt)
+// 7. Embed Chart 6 (Histogram)
+vegaEmbed('#vis_chart6_hist', spec6, embedOpt)
   .then(result => {
     console.log("Chart 6 loaded successfully", result);
   })
   .catch(error => {
     console.error("Error loading Chart 6:", error);
-    const container = document.getElementById('vis_chart6_bar_chart');
+    const container = document.getElementById('vis_chart6_hist');
     if (container) {
       container.innerHTML = 
         `<div style="color: red; padding: 20px; border: 1px solid red; background: #fff0f0;">

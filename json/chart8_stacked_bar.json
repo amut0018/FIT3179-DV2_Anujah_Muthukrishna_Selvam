@@ -1,4 +1,4 @@
-{
+{  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Breast Cancer Screening Eligibility by State and Indigenous Status",
     "anchor": "start",

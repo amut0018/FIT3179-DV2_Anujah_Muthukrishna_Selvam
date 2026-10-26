@@ -1,12 +1,19 @@
 {
-  "title": "Bowel Cancer Screening Participation by PHN",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Bowel Cancer Screening Participation by PHN",
+    "subtitle": "2020–2021",
+    "fontSize": 20,
+    "subtitleFontSize": 14,
+    "anchor": "middle"
+  },
   "width": "container",
-  "height": 650,
+  "height": 550,
   "projection": {
     "type": "conicConformal",
     "parallels": [-18, -36],
     "rotate": [-133, 0, 0],
-    "center": [0, -28],
+    "center": [0, -18],
     "scale": 700
   },
   "layer": [
@@ -41,6 +48,9 @@
         {
           "calculate": "toNumber(replace(datum.Invited, ',', ''))",
           "as": "EligiblePopulation"
+        },
+        {
+          "filter": "isValid(datum.EligiblePopulation) && isValid(datum.Latitude) && isValid(datum.Longitude) && isValid(datum['Participation (%)'])"
         }
       ],
       "mark": {
@@ -50,42 +60,84 @@
         "strokeWidth": 0.6
       },
       "encoding": {
-        "longitude": {"field": "Longitude", "type": "quantitative"},
-        "latitude": {"field": "Latitude", "type": "quantitative"},
+        "longitude": {
+          "field": "Longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "Latitude",
+          "type": "quantitative"
+        },
         "size": {
-            "field": "EligiblePopulation",
-            "type": "quantitative",
+          "field": "EligiblePopulation",
+          "type": "quantitative",
+          "title": "Eligible Population",
+          "scale": {
+            "type": "linear",
+            "domain": [10000, 400000],
+            "range": [40, 750],
+            "clamp": true,
+            "zero": false
+          },
+          "legend": {
+            "orient": "top-left",
             "title": "Eligible Population",
-            "scale": {
-                "type": "linear",
-                "domain": [13716, 372823],
-                "range": [40, 750],
-                "clamp": true,
-                "zero": false
-            },
-            "legend": {
-                "orient": "bottom-left",
-                "values": [13716, 100000, 200000, 300000, 372823],
-                "format": ",.0f",
-                "title": "Eligible Population",
-                "symbolType": "circle",
-                "symbolStrokeColor": "#1a252c",
-                "symbolFillColor": "#b8a4d9"
-            }
-            },
+            "values": [10000, 100000, 200000, 300000, 400000],
+            "format": ",.0f",
+            "symbolType": "circle",
+            "symbolStrokeColor": "#1a252c",
+            "symbolFillColor": "#b8a4d9",
+            "titleFontSize": 14,
+            "labelFontSize": 12,
+            "symbolSize": 100,
+            "padding": 10
+          }
+        },
         "color": {
           "field": "Participation (%)",
           "type": "quantitative",
           "title": "Participation Rate (%)",
-          "scale": {"scheme": "purples"},
-          "legend": {"orient": "bottom-right", "format": ".1f"}
+          "scale": {
+            "scheme": "purples"
+          },
+          "legend": {
+            "orient": "top-right",
+            "format": ".1f",
+            "titleFontSize": 14,
+            "labelFontSize": 12,
+            "gradientLength": 180,
+            "gradientThickness": 14,
+            "padding": 10
+          }
         },
         "tooltip": [
-          {"field": "PHN name", "type": "nominal", "title": "Primary Health Network"},
-          {"field": "EligiblePopulation", "type": "quantitative", "title": "Eligible Population", "format": ","},
-          {"field": "Participation (%)", "type": "quantitative", "title": "Participation Rate (%)", "format": ".1f"}
+          {
+            "field": "PHN name",
+            "type": "nominal",
+            "title": "Primary Health Network"
+          },
+          {
+            "field": "EligiblePopulation",
+            "type": "quantitative",
+            "title": "Eligible Population",
+            "format": ",.0f"
+          },
+          {
+            "field": "Participation (%)",
+            "type": "quantitative",
+            "title": "Participation Rate (%)",
+            "format": ".1f"
+          }
         ]
       }
     }
-  ]
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "legend": {
+      "labelLimit": 250
+    }
+  }
 }

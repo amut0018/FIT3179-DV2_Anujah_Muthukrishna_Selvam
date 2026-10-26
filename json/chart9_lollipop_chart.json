@@ -1,5 +1,5 @@
 
-{
+{  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Median Time to Colposcopy Following Cervical Screening by State",
     "subtitle": "Aged 25-74, 2023",

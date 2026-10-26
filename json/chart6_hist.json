@@ -1,8 +1,12 @@
 {
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Breast Cancer Screening Participation Rates by Age Group (2021-2022)",
-    "fontSize": 14,
-    "anchor": "start"
+    "text": "Breast Cancer Participation Rates by Age Group",
+    "subtitle": "2021",
+    "fontSize": 20,
+    "subtitleFontSize": 14,
+    "anchor": "middle"
+
   },
   "width": "container",
   "height": 280,
@@ -29,7 +33,7 @@
       "filter": "datum.Period == '2021-2022' || test(/2021.*2022/, datum.Period)"
     },
     {
-      "filter": "datum.Sex == 'Females' || datum.Sex == 'Persons'"
+      "filter": "datum.Sex == 'Females'"
     },
     {
       "filter": "test(/^(50.54|55.59|60.64|65.69|70.74)$/, datum.AgeGroup)"

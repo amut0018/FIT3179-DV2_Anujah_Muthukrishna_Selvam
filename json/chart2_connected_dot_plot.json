@@ -1,11 +1,21 @@
 {
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Bowel Cancer Screening Participation Rates by Age & Sex",
+    "subtitle": "2020–2021",
+    "anchor": "middle",
+    "fontSize": 14,
+    "subtitleFontSize": 11
+  },
   "width": "container",
-  "height": 280,
+  "height": 300,
   "data": {
     "url": "data/chart2_bowelcancer_2020-2021.csv",
     "format": {
       "type": "csv",
-      "parse": {"Value": "number"}
+      "parse": {
+        "Value": "number"
+      }
     }
   },
   "transform": [
@@ -42,7 +52,7 @@
         "y": {
           "field": "AgeGroup",
           "type": "nominal",
-          "title": "Age Cohort",
+          "title": "Age Group",
           "sort": "ascending",
           "axis": {
             "labelAngle": 0,
@@ -54,7 +64,9 @@
           "field": "Value",
           "type": "quantitative",
           "title": "Participation Rate (%)",
-          "scale": {"domain": [0, 80]},
+          "scale": {
+            "domain": [0, 80]
+          },
           "axis": {
             "grid": true,
             "tickCount": 6
@@ -97,11 +109,22 @@
           }
         },
         "tooltip": [
-          {"field": "AgeGroup", "type": "nominal", "title": "Age Group"},
-          {"field": "Sex", "type": "nominal", "title": "Sex"},
-          {"field": "Value", "type": "quantitative", "title": "Participation Rate (%)", "format": ".1f"},
-          {"field": "Period", "type": "nominal", "title": "Period"},
-          {"field": "State", "type": "nominal", "title": "State"}
+          {
+            "field": "AgeGroup",
+            "type": "nominal",
+            "title": "Age Group"
+          },
+          {
+            "field": "Sex",
+            "type": "nominal",
+            "title": "Sex"
+          },
+          {
+            "field": "Value",
+            "type": "quantitative",
+            "title": "Participation Rate (%)",
+            "format": ".1f"
+          }
         ]
       }
     }

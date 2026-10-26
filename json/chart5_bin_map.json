@@ -1,6 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Breast Cancer Screening Eligible Population by State",
+  "subtitle": "2021",
   "width": "container",
   "height": 450,
   "projection": {
@@ -59,7 +60,7 @@
           "as": "BinStart"
         },
         {
-          "calculate": "datum.BinStart == 0 ? '0 - 1,000,000' : datum.BinStart == 1000000 ? '1,000,000 - 2,000,000' : datum.BinStart == 2000000 ? '2,000,000 - 3,000,000' : datum.BinStart == 3000000 ? '3,000,000 - 4,000,000' : '4,000,000 - 5,000,000'",
+          "calculate": "datum.BinStart == 0 ? '0–1 Million' : datum.BinStart == 1000000 ? '1–2 Million' : datum.BinStart == 2000000 ? '2–3 Million' : datum.BinStart == 3000000 ? '3–4 Million' : '4–5 Million'",
           "as": "PopulationBin"
         }
       ],
@@ -75,31 +76,56 @@
           "title": "Eligible Population",
           "scale": {
             "domain": [
-              "0 - 1,000,000",
-              "1,000,000 - 2,000,000",
-              "2,000,000 - 3,000,000",
-              "3,000,000 - 4,000,000",
-              "4,000,000 - 5,000,000"
+              "0–1 Million",
+              "1–2 Million",
+              "2–3 Million",
+              "3–4 Million",
+              "4–5 Million"
             ],
-            "range": ["#c6e5fa", "#6cb4e3", "#2b83c3", "#0b4f8a", "#0b1f3a"]
+            "range": [
+              "#c6e5fa",
+              "#6cb4e3",
+              "#2b83c3",
+              "#0b4f8a",
+              "#0b1f3a"
+            ]
           },
-          "legend": {
-            "orient": "bottom",
-            "symbolType": "square",
-            "symbolSize": 150,
-            "titleFontSize": 10,
-            "labelFontSize": 8
-          }
-        },
+        "legend": {
+          "orient": "bottom",
+          "symbolType": "square",
+          "symbolSize": 100,
+          "titleFontSize": 14,
+          "labelFontSize": 14,
+          "titleFontWeight": "bold",
+          "labelLimit": 250,
+          "padding": 12,
+          "rowPadding": 8
+        }
+                },
         "tooltip": [
-          {"field": "properties.STE_NAME21", "type": "nominal", "title": "State / Territory"},
-          {"field": "Eligible Population", "type": "quantitative", "title": "Eligible Population", "format": ","},
-          {"field": "PopulationBin", "type": "nominal", "title": "Population Bin"}
+          {
+            "field": "properties.STE_NAME21",
+            "type": "nominal",
+            "title": "State / Territory"
+          },
+          {
+            "field": "Eligible Population",
+            "type": "quantitative",
+            "title": "Eligible Population",
+            "format": ","
+          },
+          {
+            "field": "PopulationBin",
+            "type": "nominal",
+            "title": "Population Bin"
+          }
         ]
       }
     }
   ],
   "config": {
-    "view": {"stroke": null}
+    "view": {
+      "stroke": null
+    }
   }
 }

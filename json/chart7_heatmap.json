@@ -1,11 +1,17 @@
 {
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Breast Screening Eligible Women by State and Access",
-    "anchor": "start",
+    "subtitle": "2021-2022",
+    "anchor": "middle",
     "fontSize": 15
   },
   "width": "container",
   "height": 320,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
   "data": {
     "url": "data/sa3_drivetime_screeningbreastcancer.csv",
     "format": {
@@ -17,19 +23,26 @@
       "filter": "datum['Service frequency'] === 'Open permanently' && datum['Indigenous status'] === 'All women aged 50–74'"
     },
     {
-      "calculate": "toNumber(replace(replace(replace(datum['Women (0–20 mins)'], ',', ''), '–', '0'), '<1', '0'))",
+      "calculate": "toNumber(replace(datum['Women (total)'], ',', ''))",
+      "as": "TotalWomen"
+    },
+    {
+      "filter": "isValid(datum.TotalWomen) && datum.TotalWomen > 0"
+    },
+    {
+      "calculate": "toNumber(replace(replace(replace(replace(datum['Proportion (0–20 mins)'], '%', ''), '–', '0'), '<0.1', '0'), '>99.9', '100')) * datum.TotalWomen",
       "as": "Within20"
     },
     {
-      "calculate": "toNumber(replace(replace(replace(datum['Women (>20–60 mins)'], ',', ''), '–', '0'), '<1', '0'))",
+      "calculate": "toNumber(replace(replace(replace(replace(datum['Proportion (>20–60 mins)'], '%', ''), '–', '0'), '<0.1', '0'), '>99.9', '100')) * datum.TotalWomen",
       "as": "Within20To60"
     },
     {
-      "calculate": "toNumber(replace(replace(replace(datum['Women (>60–120 mins)'], ',', ''), '–', '0'), '<1', '0'))",
+      "calculate": "toNumber(replace(replace(replace(replace(datum['Proportion (>60–120 mins)'], '%', ''), '–', '0'), '<0.1', '0'), '>99.9', '100')) * datum.TotalWomen",
       "as": "Within60To120"
     },
     {
-      "calculate": "toNumber(replace(replace(replace(datum['Women (>120 mins)'], ',', ''), '–', '0'), '<1', '0'))",
+      "calculate": "toNumber(replace(replace(replace(replace(datum['Proportion (>120 mins)'], '%', ''), '–', '0'), '<0.1', '0'), '>99.9', '100')) * datum.TotalWomen",
       "as": "Over120"
     },
     {
@@ -37,16 +50,30 @@
         {"op": "sum", "field": "Within20", "as": "Within20"},
         {"op": "sum", "field": "Within20To60", "as": "Within20To60"},
         {"op": "sum", "field": "Within60To120", "as": "Within60To120"},
-        {"op": "sum", "field": "Over120", "as": "Over120"}
+        {"op": "sum", "field": "Over120", "as": "Over120"},
+        {"op": "sum", "field": "TotalWomen", "as": "TotalWomen"}
       ],
       "groupby": ["Jurisdiction"]
     },
     {
-      "fold": ["Within20", "Within20To60", "Within60To120", "Over120"],
-      "as": ["Band", "Women"]
+      "fold": [
+        "Within20",
+        "Within20To60",
+        "Within60To120",
+        "Over120"
+      ],
+      "as": ["Band", "Weighted"]
     },
     {
-      "calculate": "datum.Band === 'Within20' ? 'Women (0–20 mins)' : datum.Band === 'Within20To60' ? 'Women (>20–60 mins)' : datum.Band === 'Within60To120' ? 'Women (>60–120 mins)' : 'Women (>120 mins)'",
+      "calculate": "datum.Weighted / datum.TotalWomen",
+      "as": "Proportion"
+    },
+    {
+      "calculate": "format(datum.Proportion, '.1f') + '%'",
+      "as": "ProportionLabel"
+    },
+    {
+      "calculate": "datum.Band === 'Within20' ? '0–20' : datum.Band === 'Within20To60' ? '>20–60' : datum.Band === 'Within60To120' ? '>60–120' : '>120'",
       "as": "DriveTime"
     }
   ],
@@ -61,23 +88,18 @@
         "x": {
           "field": "DriveTime",
           "type": "ordinal",
-          "title": "Drive Time to Screening Service",
-          "sort": [
-            "Women (0–20 mins)",
-            "Women (>20–60 mins)",
-            "Women (>60–120 mins)",
-            "Women (>120 mins)"
-          ],
+          "title": "Drive Time to Screening Service (minutes)",
+          "sort": ["0–20", ">20–60", ">60–120", ">120"],
           "axis": {
-            "labelAngle": -20,
-            "labelLimit": 180,
-            "labelFontSize": 10
+            "labelAngle": 0,
+            "labelFontSize": 11,
+            "titlePadding": 10
           }
         },
         "y": {
           "field": "Jurisdiction",
           "type": "ordinal",
-          "title": "State / Territory",
+          "title": "State",
           "sort": [
             "New South Wales",
             "Victoria",
@@ -93,24 +115,56 @@
           }
         },
         "color": {
-          "field": "Women",
+          "field": "Proportion",
           "type": "quantitative",
-          "title": "Eligible Women",
+          "title": "Proportion of Eligible Women",
           "scale": {
-            "domain": [0, 900000],
-            "scheme": "blues",
+            "type": "linear",
+            "domain": [0, 100],
+            "range": [
+              "#f7fbff",
+              "#deebf7",
+              "#9ecae1",
+              "#4292c6",
+              "#08519c",
+              "#08306b"
+            ],
             "clamp": true
           },
           "legend": {
-            "orient": "right",
-            "format": ",.0f",
-            "title": "Eligible Women"
+            "orient": "bottom",
+            "direction": "horizontal",
+            "titleAnchor": "middle",
+            "titleAlign": "center",
+            "gradientLength": 200,
+            "gradientThickness": 14,
+            "gradientOpacity": 1,
+            "titleFontSize": 11,
+            "labelFontSize": 9,
+            "titlePadding": 5,
+            "format": ".0f",
+            "labelExpr": "datum.label + '%'",
+            "title": "Proportion of Eligible Women (%)",
+            "offset": 8,
+            "values": [0, 10, 20, 40, 60, 80, 100]
           }
         },
         "tooltip": [
-          {"field": "Jurisdiction", "type": "nominal", "title": "State / Territory"},
-          {"field": "DriveTime", "type": "nominal", "title": "Drive Time Category"},
-          {"field": "Women", "type": "quantitative", "title": "Eligible Women", "format": ",.0f"}
+          {
+            "field": "Jurisdiction",
+            "type": "nominal",
+            "title": "State / Territory"
+          },
+          {
+            "field": "DriveTime",
+            "type": "nominal",
+            "title": "Drive Time (minutes)"
+          },
+          {
+            "field": "ProportionLabel",
+            "type": "nominal",
+            "title": "Proportion of Eligible Women"
+          }
         ]
       }
     },
@@ -124,12 +178,7 @@
         "x": {
           "field": "DriveTime",
           "type": "ordinal",
-          "sort": [
-            "Women (0–20 mins)",
-            "Women (>20–60 mins)",
-            "Women (>60–120 mins)",
-            "Women (>120 mins)"
-          ]
+          "sort": ["0–20", ">20–60", ">60–120", ">120"]
         },
         "y": {
           "field": "Jurisdiction",
@@ -146,13 +195,12 @@
           ]
         },
         "text": {
-          "field": "Women",
-          "type": "quantitative",
-          "format": ",.0f"
+          "field": "ProportionLabel",
+          "type": "nominal"
         },
         "color": {
           "condition": {
-            "test": "datum.Women > 400000",
+            "test": "datum.Proportion > 50",
             "value": "white"
           },
           "value": "#243746"

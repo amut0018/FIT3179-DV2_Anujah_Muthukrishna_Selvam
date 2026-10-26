@@ -1,7 +1,15 @@
 {
-  "title": "Bowel Cancer Screening Participation (2020-2021)",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Bowel Cancer Screening Participation",
+    "subtitle": "2020-2021",
+    "anchor": "middle",
+    "fontSize": 14,
+    "subtitleFontSize": 11,
+    "subtitlePadding": 5
+  },
   "width": "container",
-  "height": 480,
+  "height": 450,
   "projection": {
     "type": "conicConformal",
     "parallels": [-18, -36],
@@ -30,10 +38,7 @@
           }
         },
         "key": "SA3 code",
-        "fields": [
-          "SA3 name",
-          "Participation (%)"
-        ]
+        "fields": ["SA3 name", "Participation (%)"]
       }
     },
     {
@@ -57,8 +62,14 @@
         "clamp": true
       },
       "legend": {
+        "orient": "bottom-left",
+        "direction": "horizontal",
+        "titleAnchor": "start",
         "values": [5, 15, 25, 35, 45, 55],
-        "format": ".0f"
+        "format": ".0f",
+        "labelFontSize": 10,
+        "titleFontSize": 11,
+        "offset": 10
       }
     },
     "tooltip": [
@@ -68,16 +79,19 @@
         "title": "SA3 Region"
       },
       {
-        "field": "SA3 code",
-        "type": "nominal",
-        "title": "SA3 Code"
-      },
-      {
         "field": "Participation (%)",
         "type": "quantitative",
         "title": "Participation Rate (%)",
         "format": ".1f"
       }
     ]
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "legend": {
+      "orient": "bottom-left"
+    }
   }
 }
