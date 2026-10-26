@@ -1,9 +1,16 @@
-{  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Breast Cancer Screening Eligibility by State and Indigenous Status",
+    "text": [
+      "Breast Cancer Screening Eligibility",
+      "by State and Indigenous Status"
+    ],
     "anchor": "middle",
+    "align": "center",
     "fontSize": 14,
-    "subtitleFontSize": 11
+    "subtitleFontSize": 11,
+    "lineHeight": 17
   },
   "width": "container",
   "height": 320,
@@ -58,7 +65,7 @@
     "y": {
       "field": "Jurisdiction",
       "type": "nominal",
-      "title": "Jurisdiction",
+      "title": "State",
       "sort": [
         "New South Wales",
         "Victoria",
@@ -97,10 +104,13 @@
           "First Nations women",
           "Non-Indigenous women"
         ],
-        "range": ["#d95f02", "#4c78a8"]
+        "range": [
+          "#d95f02",
+          "#4c78a8"
+        ]
       },
       "legend": {
-        "orient": "top",
+        "orient": "bottom",
         "title": "Indigenous Status"
       }
     },
