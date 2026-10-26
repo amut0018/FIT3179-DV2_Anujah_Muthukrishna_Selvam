@@ -1,0 +1,105 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Breast Cancer Screening Eligible Population by State",
+  "width": "container",
+  "height": 450,
+  "projection": {
+    "type": "conicConformal",
+    "parallels": [-18, -36],
+    "rotate": [-133, 0, 0],
+    "center": [0, -28],
+    "scale": 700
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/au_states.json",
+        "format": {
+          "type": "topojson",
+          "feature": "STE_2021_AUST_GDA2020"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#f4f6f8",
+        "stroke": "#cbd5e1",
+        "strokeWidth": 0.7
+      }
+    },
+    {
+      "data": {
+        "url": "data/au_states.json",
+        "format": {
+          "type": "topojson",
+          "feature": "STE_2021_AUST_GDA2020"
+        }
+      },
+      "transform": [
+        {
+          "lookup": "properties.STE_NAME21",
+          "from": {
+            "data": {
+              "url": "data/breastscreen_eligible_bystate.csv",
+              "format": {
+                "type": "csv",
+                "parse": {
+                  "Eligible Population": "number"
+                }
+              }
+            },
+            "key": "State",
+            "fields": ["Eligible Population"]
+          }
+        },
+        {
+          "filter": "isValid(datum['Eligible Population'])"
+        },
+        {
+          "calculate": "floor(datum['Eligible Population'] / 1000000) * 1000000",
+          "as": "BinStart"
+        },
+        {
+          "calculate": "datum.BinStart == 0 ? '0 - 1,000,000' : datum.BinStart == 1000000 ? '1,000,000 - 2,000,000' : datum.BinStart == 2000000 ? '2,000,000 - 3,000,000' : datum.BinStart == 3000000 ? '3,000,000 - 4,000,000' : '4,000,000 - 5,000,000'",
+          "as": "PopulationBin"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#ffffff",
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "color": {
+          "field": "PopulationBin",
+          "type": "ordinal",
+          "title": "Eligible Population",
+          "scale": {
+            "domain": [
+              "0 - 1,000,000",
+              "1,000,000 - 2,000,000",
+              "2,000,000 - 3,000,000",
+              "3,000,000 - 4,000,000",
+              "4,000,000 - 5,000,000"
+            ],
+            "range": ["#c6e5fa", "#6cb4e3", "#2b83c3", "#0b4f8a", "#0b1f3a"]
+          },
+          "legend": {
+            "orient": "bottom",
+            "symbolType": "square",
+            "symbolSize": 150,
+            "titleFontSize": 10,
+            "labelFontSize": 8
+          }
+        },
+        "tooltip": [
+          {"field": "properties.STE_NAME21", "type": "nominal", "title": "State / Territory"},
+          {"field": "Eligible Population", "type": "quantitative", "title": "Eligible Population", "format": ","},
+          {"field": "PopulationBin", "type": "nominal", "title": "Population Bin"}
+        ]
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null}
+  }
+}
